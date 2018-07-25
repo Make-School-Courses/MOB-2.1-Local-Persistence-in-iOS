@@ -91,7 +91,7 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
 - [The Green Grass Store]()
 
 **Projects**
-[Snapr - Photo Viewer]()
+- [Snapr - Photo Viewer]()
 
 ## Evaluation
 
