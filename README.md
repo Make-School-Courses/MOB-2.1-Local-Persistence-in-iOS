@@ -44,11 +44,16 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
     - **In Class Activities**
     - **After Class**
     
-1. The iOS FileSystem
+1. The iOS FileSystem - Introductiona
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
     
+1. The iOS FileSystem - Use cases and applications
+    - **Class Topic**
+    - **In Class Activities**
+    - **After Class**
+
 1. CoreData - Introduction - 
     - **Class Topic**
     - **In Class Activities**
