@@ -25,7 +25,7 @@ Students by the end of the course will be able to ...
 
 1. Build apps that store infomation locally on an iOS device
 1. Identify various ways of storing persistent information in iOS
-1. Compare and contrast various persistence options such as Core Data, Realm, NSCoder, UserDefaults, Keychain and chose the best options for their project. 
+1. Compare and contrast various persistence options such as Core Data, Realm, NSCoder, UserDefaults, Keychain and chose the best options for their project.
 1. Use the built in persistence mechanisms in iOS as well as some third party options for persistence
 1. Store and retrieve sensitive information in iOS.
 1. Discover, learn and understand the iOS filesystem.
@@ -43,18 +43,18 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
+
 1. The iOS FileSystem - Introduction
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
+
 1. The iOS FileSystem - Use cases and applications
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
 
-1. CoreData - Introduction - 
+1. CoreData - Introduction -
     - **Class Topic**
     - **In Class Activities**
         - Pair up and diagram the CoreData stack
@@ -65,31 +65,31 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
+
 1. CoreData - Relationships and Heirarchies
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
+
 1. CoreData - Using multiple contexts and child contexts
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
+
 1. CoreData - Retrieving information from the stack
     - **Class Topic**
-        - NSFetchRequests, 
-        - NSSortDescriptors 
+        - NSFetchRequests,
+        - NSSortDescriptors
         - NSFetchedResultsController
     - **In Class Activities**
     - **After Class**
-    
-1. Third Party Persistence Options - Realm 
+
+1. Third Party Persistence Options - Realm
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
-    
+
+
 ## Tutorials & Projects
 
 **Tutorials**
