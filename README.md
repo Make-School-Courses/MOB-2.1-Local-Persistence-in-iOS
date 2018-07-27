@@ -1,4 +1,4 @@
-# MOB-1.5 - Local Persistence in iOS
+# MOB-2.1 - Local Persistence in iOS
 
 ## Course Description
 
