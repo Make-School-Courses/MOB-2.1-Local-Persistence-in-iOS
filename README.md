@@ -2,7 +2,8 @@
 
 ## Course Description
 
-Learn how and why we persist data for later you in mobile development. We will cover the various options for saving data locally in iOS.
+This courses covers how and why to persist data in mobile development. We will learn the various options for saving data locally in iOS including Core Data, Realm, NSCoder, UserDefaults, and Keychain.  Understand best practices in storing and retrieving sensitive data and how to work with the iOS file system.
+
 
 ## Course Specifics
 
@@ -23,7 +24,7 @@ BEW 1.3 <br>
 
 Students by the end of the course will be able to ...
 
-1. Build apps that store infomation locally on an iOS device
+1. Build apps that store information locally on an iOS device
 1. Identify various ways of storing persistent information in iOS
 1. Compare and contrast various persistence options such as Core Data, Realm, NSCoder, UserDefaults, Keychain and chose the best options for their project.
 1. Use the built in persistence mechanisms in iOS as well as some third party options for persistence
@@ -38,7 +39,7 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
     - **Class Topic**
     - **In Class Activities**
     - **After Class**
-    
+
 1. UserDefaults, Keychain and NSCoding
     - **Class Topic**
     - **In Class Activities**
