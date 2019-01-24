@@ -33,62 +33,66 @@ Students by the end of the course will be able to ...
 
 ## Lessons
 
-Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
+### **[INSTRUCTOR NOTE: PLEASE REMOVE THIS BEFORE APRIL 1]**
+If you teach **M/W** or **Tu/Th**, please pick from a template below and delete the other one
 
-1. Introduction to Persistence Technologies in iOS
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
+---
+### M/W Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
+**Course Dates:** Monday, April 1 – Wednesday, May 15, 2019 (7 weeks)
 
-1. UserDefaults, Keychain and NSCoding
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
+**Class Times:** Monday and Wednesday at 3:30–5:20pm (14 class sessions)
 
-1. The iOS FileSystem - Introduction
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] |
+|  2 |  Wednesday, April 3                      | [UserDefaults, Keychain and NSCoding] |
+|  3 |  Monday, April 8                         | [The iOS FileSystem - Introduction] |
+|  4 |  Wednesday, April 10                     | **NO LESSON: The iOS FileSystem - Use cases and applications** |
+|  5 |  Monday, April 15                        | [CoreData - Introduction] |
+|  6 |  Wednesday, April 17                     | **NO LESSON: CoreData - Use cases and drawbacks** |
+|  7 |  Monday, April 22                        | [CoreData - Relationships and Heirarchies] |
+|  8 |  Wednesday, April 24                     | [CoreData - Using multiple contexts and child contexts] |
+|  9 |  Monday, April 29                        | [CoreData - Retrieving information from the stack] |
+| 10 |  Wednesday, May 1                        | [Third Party Persistence Options - Realm] |
+| 11 |  Monday, May 6                           | **NO LESSON** |  
+| 12 |  Wednesday, May 8                        | **NO LESSON** |
+| 13 |  Monday, March 13                        | Final Class (presentations, etc) |
+| 14 |  Wednesday, March 15                     | Final Exams/Presentations |
 
-1. The iOS FileSystem - Use cases and applications
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
+### Tu/Th Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
+**Course Dates:** Tuesday, April 2 – Thursday, May 16, 2019 (7 weeks)
 
-1. CoreData - Introduction -
-    - **Class Topic**
-    - **In Class Activities**
-        - Pair up and diagram the CoreData stack
-        - Discuss the overall architecture of the CoreData stack
-    - **After Class**
+**Class Times:** Tuesday and Thursday at 3:30–5:20pm (14 class sessions)
 
-1. CoreData - Use cases and drawbacks
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Tuesday, April 2                        | [Introduction to Persistence Technologies in iOS] |
+|  2 |  Thursday, April 4                       | [UserDefaults, Keychain and NSCoding] |
+|  3 |  Tuesday, April 9                        | [The iOS FileSystem - Introduction] |
+|  4 |  Thursday, April 11                      | **NO LESSON: The iOS FileSystem - Use cases and applications** |
+|  5 |  Tuesday, April 16                       | [CoreData - Introduction] |
+|  6 |  Thursday, April 18                      | **NO LESSON: CoreData - Use cases and drawbacks** |
+|  7 |  Tuesday, April 23                       | [CoreData - Relationships and Heirarchies] |
+|  8 |  Thursday, April 25                      | [CoreData - Using multiple contexts and child contexts] |
+|  9 |  Tuesday, April 30                       | [CoreData - Retrieving information from the stack] |
+| 10 |  Thursday, May 2                         | [Third Party Persistence Options - Realm] |
+| 11 |  Tuesday, May 7                          | **NO LESSON** |  
+| 12 |  Thursday, May 9                         | **NO LESSON** |  
+| 13 |  Tuesday, March 14                       | Final Class (presentations, etc) |
+| 14 |  Thursday, March 16                      | Final Exams/Presentations |
 
-1. CoreData - Relationships and Heirarchies
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
-
-1. CoreData - Using multiple contexts and child contexts
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
-
-1. CoreData - Retrieving information from the stack
-    - **Class Topic**
-        - NSFetchRequests,
-        - NSSortDescriptors
-        - NSFetchedResultsController
-    - **In Class Activities**
-    - **After Class**
-
-1. Third Party Persistence Options - Realm
-    - **Class Topic**
-    - **In Class Activities**
-    - **After Class**
+[Introduction to Persistence Technologies in iOS]: Lessons/00-Intro-to-Persistence-Technologies/Readme.md
+[UserDefaults, Keychain and NSCoding]: Lessons/01-UserDefaults-Keychain-NSCoding/Readme.md
+[The iOS FileSystem - Introduction]: Lessons/02-FileSystem/Readme.md
+[Lesson 4]: Lessons/Lesson4.md
+[CoreData - Introduction]: Lessons/04-Intro-to-CoreData/Readme.md
+[Lesson 6]: Lessons/Lesson6.md
+[CoreData - Relationships and Heirarchies]: Lessons/06-CoreData-Relationships/Readme.md
+[CoreData - Using multiple contexts and child contexts]: Lessons/07-CoreData-Contexts/Readme.md
+[CoreData - Retrieving information from the stack]: Lessons/08-CoreData-Retrieving-Info/Readme.md
+[Third Party Persistence Options - Realm]: Lessons/09-Realm-Intro/Readme.md
+[Lesson 11]: Lessons/Lesson11.md
+[Lesson 12]: Lessons/Lesson12.md
 
 
 ## Tutorials & Projects
