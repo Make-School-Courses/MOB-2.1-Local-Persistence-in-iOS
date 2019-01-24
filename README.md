@@ -17,7 +17,7 @@ Class Sessions:  14 classes, 7 labs
 
 ## Prerequisites:  
 
-- MOB 1.4
+- [MOB 1.3](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps)
 - [BEW 1.3](https://github.com/Make-School-Courses/BEW-1.3-Server-Side-Architectures-and-Frameworks)
 
 ## Learning Outcomes
