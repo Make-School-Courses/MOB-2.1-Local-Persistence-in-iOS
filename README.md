@@ -47,7 +47,7 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 |  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] |
 |  2 |  Wednesday, April 3                      | [UserDefaults, Keychain and NSCoding] |
 |  3 |  Monday, April 8                         | [The iOS FileSystem - Introduction] |
-|  4 |  Wednesday, April 10                     | **[NO LESSON]: The iOS FileSystem - Use cases and applications** |
+|  4 |  Wednesday, April 10                     | **NO LESSON]: The iOS FileSystem - Use cases and applications** |
 |  5 |  Monday, April 15                        | [CoreData - Introduction] |
 |  6 |  Wednesday, April 17                     | **[NO LESSON]: CoreData - Use cases and drawbacks** |
 |  7 |  Monday, April 22                        | [CoreData - Relationships and Heirarchies] |
@@ -97,7 +97,7 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 
 ## Class Assignments
 
-###Tutorials
+### Tutorials
 **[NEED TO ADD]**
 
 ### Other Class assignments
@@ -105,9 +105,10 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 
 [Keychain Playground]: Assignments/KeychainSwiftPlayground
 
-###Projects
+### Projects
 - [Course Planner]
 - [Document Management]
+    - **[BROKEN API IN THIS PROJECT]**
 
 [Course Planner]: Assignments/Project-Course-Planner/Readme.md
 [Document Management]: Assignments/Project-Document-Management/Readme.md
