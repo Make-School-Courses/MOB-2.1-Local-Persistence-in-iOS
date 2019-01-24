@@ -1,13 +1,38 @@
 # NSFetchRequests, NSSortDescriptors & NSFetchedResultsController
 
-## Objectives
+## Minute-by-Minute [OPTIONAL]
+
+| **Elapsed** | **Time**  | **Activity**              |
+| ----------- | --------- | ------------------------- |
+| 0:00        | 0:05      | Objectives                |
+| 0:05        | 0:15      | Overview                  |
+| 0:20        | 0:45      | In Class Activity I       |
+| 1:05        | 0:10      | BREAK                     |
+| 1:15        | 0:45      | In Class Activity II      |
+| TOTAL       | 2:00      |                           |
+
+## Why you should know this or industry application (optional) (5 min)
+
+Explain why students should care to learn the material presented in this class.
+
+## Learning Objectives (5 min)
 
 - Fetch data from Core Data with NSFetchedRequest
 - Filter through data stored in Core Data with NSPredicate
 - Sort data with NSSortDescriptor
 - Fetch and display data with NSFetchedResultsController
 
-## Predicates
+## Overview/TT I (20 min)
+
+- Why learn this?
+- Industry examples of usage
+- Best practices
+- Personal anecdote
+
+## In Class Activity I (30 min)
+
+
+### Predicates
 
 Provides an interface for querying much like a mixture of sql and a regular expression
 
@@ -21,7 +46,7 @@ let firstName = "Bubbles"
 fetchRequest.predicate = NSPredicate(format: "firstName == %@", firstName)
 ```
 
-### Gist of Predicates
+#### Gist of Predicates
 
 1. Simple Comparison Operators
 We can use ```>, <, >=, <=, ==, !=```
@@ -70,12 +95,13 @@ let pred = NSPredicate(format: "quantity > %i", 4)
 let pred = NSPredicate(format: "name == %@", "Eliel")
 ```
 
-#### Full Cheatsheet of Predicates
+##### Full Cheatsheet of Predicates
 
 [Realm Predicate Cheatsheet](https://academy.realm.io/posts/nspredicate-cheatsheet/)
 
+## In Class Activity II (30 min)
 
-## Sort Descriptors
+### Sort Descriptors
 
 Sort Descriptors enables us to sort results from a fetch request.
 
@@ -84,7 +110,7 @@ let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
 fetchRequest.sortDescriptors = [sortDescriptor]
 ```
 
-## NSFetchedResultsController
+### NSFetchedResultsController
 
 Performing queries to Core Data and displaying them has never been easier.
 Using NSFetchedResultsController, we can perform 
@@ -159,10 +185,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
 ```
 
-
 8. Fetch from FetchedResultsController and reload data as needed
-```swift
 
+```swift
 override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 

@@ -1,9 +1,16 @@
 # UserDefaults and Keychain
 
-## Objectives
-- Learn about storing basic data types in iOS
-- Brainstorm use cases for persisting informatin with UserDefaults in iOS
-- Learn about storing sensitive information with Keychain in iOS
+## Minute-by-Minute
+
+| **Elapsed** | **Time**  | **Activity**              |
+| ----------- | --------- | ------------------------- |
+| 0:00        | 0:05      | Objectives                |
+| 0:05        | 0:15      | Overview                  |
+| 0:20        | 0:45      | In Class Activity I       |
+| 1:05        | 0:10      | BREAK                     |
+| 1:15        | 0:45      | In Class Activity II      |
+| TOTAL       | 2:00      |                           |
+
 
 ## Class Materials
 
@@ -11,8 +18,21 @@ Slides:
 
 [Intro To Persistence - Slides](intro-to-persistence.key)
 
+## Why you should know this or industry application (optional) (5 min)
 
-## UserDefaults
+Explain why students should care to learn the material presented in this class.
+
+## Learning Objectives (5 min)
+- Learn about storing basic data types in iOS
+- Brainstorm use cases for persisting informatin with UserDefaults in iOS
+- Learn about storing sensitive information with Keychain in iOS
+
+
+## Overview (20 min)
+
+## In Class Activity I (30 min)
+
+### UserDefaults
 
 UserDefaults allows to store Strings, Numbers, Dates, Data and
 Arrays or Dictionaries
@@ -34,7 +54,7 @@ let value = UserDefaults.standard.bool(forKey: "FirstTimeUser")
 
 Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
 
-## Keychain
+### Keychain
 
 Is used to store sensitive information, such as passwords. All information is stored encrypted. Meaning you can use this to store sensitive user information.
 
@@ -52,7 +72,9 @@ Apple’s API is arcane - Open Source Libraries such as
 KeychainSwift will make your life easier!
 
 
-## Encoding/Decoding
+## In Class Activity II (30 min)
+
+### Encoding/Decoding
 
 Encoding: Creating a binary/textual representation (that can
 be stored on disk, transferred via network) from an object
@@ -66,7 +88,7 @@ representation
 To Encode/Decode, your class has to be NSCoding compliant. That means it has to conform to NSCoding. This gives you two methods that correspond to decoding an object, and encoding it.
 
 
-### Step 1: Implement NSCoding
+#### Step 1: Implement NSCoding
 
 ```swift
 class Movie: NSObject, NSCoding {
@@ -94,7 +116,7 @@ class Movie: NSObject, NSCoding {
 
 ```
 
-### Step 2: User Archiver - Archiving to filesystem
+#### Step 2: User Archiver - Archiving to filesystem
 
 Archive
 

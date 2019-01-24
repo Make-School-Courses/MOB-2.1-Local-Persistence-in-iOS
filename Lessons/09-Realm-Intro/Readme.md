@@ -1,21 +1,46 @@
 # Introduction to Realm
 
+## Minute-by-Minute [OPTIONAL]
+
+| **Elapsed** | **Time**  | **Activity**              |
+| ----------- | --------- | ------------------------- |
+| 0:00        | 0:05      | Objectives                |
+| 0:05        | 0:15      | Overview                  |
+| 0:20        | 0:45      | In Class Activity I       |
+| 1:05        | 0:10      | BREAK                     |
+| 1:15        | 0:45      | In Class Activity II      |
+| TOTAL       | 2:00      |                           |
+
+## Why you should know this or industry application (optional) (5 min)
+
+Explain why students should care to learn the material presented in this class.
+
+## Learning Objectives (5 min)
+
+1. Identify and describe
+1. Define
+1. Design
+1. Implement
+
+## Overview (20 min)
 Realm is a cross platform database(iOS, Android, Web). It can be used in place of CoreData for persisting data in iOS.
 
-## Installation up Realm
+## In Class Activity I (30 min)
+
+### Installation up Realm
 
 Download Realm here(Manual, Cocoapod, Carthage)
 
 [Realm Download](https://realm.io/docs/swift/latest#installation)
 
-### Realm
+#### Realm
 
 Realm has two products, a RealmObjectServer and RealmDatabase. We will be using the RealmDatabase product its open source and free to use in production.
 
 Realms can be in *memory, synchronized or local.*
 
 
-### Realm Setup
+#### Realm Setup
 
 ```swift
 // Setups the default Realm
@@ -23,7 +48,7 @@ Realms can be in *memory, synchronized or local.*
 let realm = try! Realm()
 ```
 
-### Modeling Objects
+#### Modeling Objects
 
 Instances of items stored in Realm are referred to as *Objects* - Similar to ManagedObject in CoreData.
 
@@ -38,7 +63,7 @@ class Inventory: Object {
 ```
 
 
-### Writing Objects
+#### Writing Objects
 
 ```swift
 
@@ -53,7 +78,7 @@ try! realm.write {
 
 ```
 
-### Fetching Objects
+#### Fetching Objects
 
 **Fetching**
 ```swift

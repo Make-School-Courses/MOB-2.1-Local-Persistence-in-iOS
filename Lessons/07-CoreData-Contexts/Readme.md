@@ -1,13 +1,36 @@
 # CoreData - More on Contexts
 
+## Minute-by-Minute [OPTIONAL]
 
-## Objectives
+| **Elapsed** | **Time**  | **Activity**              |
+| ----------- | --------- | ------------------------- |
+| 0:00        | 0:05      | Objectives                |
+| 0:05        | 0:15      | Overview                  |
+| 0:20        | 0:45      | In Class Activity I       |
+| 1:05        | 0:10      | BREAK                     |
+| 1:15        | 0:45      | In Class Activity II      |
+| TOTAL       | 2:00      |                           |
+
+## Why you should know this or industry application (optional) (5 min)
+
+Explain why students should care to learn the material presented in this class.
+
+## Learning Objectives (5 min)
 
 - Learn about ManagedObjectContexts
 - Discuss and use child contexts
 - Discuss thread safety with ManagedObjectContexts
 
-## ManagedObjectContexts & Concurrency
+## Overview/TT I (20 min)
+
+- Why learn this?
+- Industry examples of usage
+- Best practices
+- Personal anecdote
+
+## In Class Activity I (30 min)
+
+### ManagedObjectContexts & Concurrency
 
 ManagedObjectContexts are not threadsafe. We have to use them with caution when concurrency is at play.
 
@@ -20,7 +43,7 @@ But complex operation such as saving multiple ManagedObjects in core data take a
 
 What we want to do is hand off saves to a background context so write operations can be performed on the background.
 
-### Problem: Fetching ManagedObjects from the main ManagedObjectContext & saving on a background Context
+#### Problem: Fetching ManagedObjects from the main ManagedObjectContext & saving on a background Context
 
 One way we can handle a save in this situation is to change the ManagedObjectContext.
 Since fetching from the main context, all objects retrieved will be associated with the main managed object context.
@@ -40,7 +63,9 @@ let myBackgroundManagedObject = coreDataStack.privateContext.object(with: object
 
 **Option 2: Using Child Contexts**
 
-## Child ManagedObjectContexts
+## In Class Activity II (optional) (30 min)
+
+### Child ManagedObjectContexts
 
 You can set one ManagedObjectContext as a child to another.
 
@@ -60,14 +85,14 @@ privateMOC.performBlock {
 }
 ```
 
-#### Contexts & Saves
+##### Contexts & Saves
 
 *Notes*
 When you save on the child context, changes don't persist until a save happens on the parent context.
 
 ![Contexts](contexts.png)
 
-### Using the private context with the PersistentContainer
+#### Using the private context with the PersistentContainer
 
 The PersistentContainer makes dealing with private contexts easy.
 

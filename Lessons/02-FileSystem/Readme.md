@@ -1,17 +1,37 @@
 # FileSystem
 
-## Objectives
+## Minute-by-Minute [OPTIONAL]
+
+| **Elapsed** | **Time**  | **Activity**              |
+| ----------- | --------- | ------------------------- |
+| 0:00        | 0:05      | Objectives                |
+| 0:05        | 0:15      | Overview                  |
+| 0:20        | 0:45      | In Class Activity I       |
+| 1:05        | 0:10      | BREAK                     |
+| 1:15        | 0:45      | In Class Activity II      |
+| TOTAL       | 2:00      |                           |
+
+## Why you should know this or industry application (optional) (5 min)
+
+Explain why students should care to learn the material presented in this class.
+
+## Learning Objectives (5 min)
+
 - Identify the parts of the filesystem in an iOS app
 - List the important parts of an iOS app filesystem
 - Practice accessing files from the filesystem
 
-## Filesystem
+## Overview/TT I (20 min)
+
+## In Class Activity I (30 min)
+
+### Filesystem
 
 Apps can only read/write files within their sandbox
 
 ![App structure](app-structure.png)
 
-### Important Directories
+#### Important Directories
 
 **Main App Bundle**
 
@@ -81,7 +101,9 @@ file in the caches directory.
 directory) are backed up to iTunes by default. You can change
 this by using a file attribute
 
-## Accessing files
+## In Class Activity II (30 min)
+
+### Accessing files
 
 Accessing files within the application bundle:
 
@@ -96,12 +118,12 @@ Short form:
 UIImage(named: "file1.jpg")
 ```
 
-### Accessing files within the documents directory:
-#### The FileManager
+#### Accessing files within the documents directory:
+##### The FileManager
 
 Its a class that allows us to interact with the filesystem.
 
-#### Using the FileManager
+##### Using the FileManager
 
 ```swift
 let fileManager = FileManager.default
@@ -117,7 +139,7 @@ if let documentDirectory: URL = urls.first {
 }
  ```
 
-### Writing files
+#### Writing files
 
 Writing a file to the documents directory:
 
@@ -138,7 +160,7 @@ Visit the documentation page for info on how to access specific directories in t
 [FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)
 
 
-### When to use filesystem
+#### When to use filesystem
 
 - Primarily when storing/caching binary data such as images/ audio/ video
 - Can also be used to store serialized Objects, allows to persist objects and Object Graphs from your application
