@@ -47,15 +47,15 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 |  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] |
 |  2 |  Wednesday, April 3                      | [UserDefaults, Keychain and NSCoding] |
 |  3 |  Monday, April 8                         | [The iOS FileSystem - Introduction] |
-|  4 |  Wednesday, April 10                     | **NO LESSON: The iOS FileSystem - Use cases and applications** |
+|  4 |  Wednesday, April 10                     | **[NO LESSON]: The iOS FileSystem - Use cases and applications** |
 |  5 |  Monday, April 15                        | [CoreData - Introduction] |
-|  6 |  Wednesday, April 17                     | **NO LESSON: CoreData - Use cases and drawbacks** |
+|  6 |  Wednesday, April 17                     | **[NO LESSON]: CoreData - Use cases and drawbacks** |
 |  7 |  Monday, April 22                        | [CoreData - Relationships and Heirarchies] |
 |  8 |  Wednesday, April 24                     | [CoreData - Using multiple contexts and child contexts] |
 |  9 |  Monday, April 29                        | [CoreData - Retrieving information from the stack] |
 | 10 |  Wednesday, May 1                        | [Third Party Persistence Options - Realm] |
-| 11 |  Monday, May 6                           | **NO LESSON** |  
-| 12 |  Wednesday, May 8                        | **NO LESSON** |
+| 11 |  Monday, May 6                           | **[NO LESSON]** |  
+| 12 |  Wednesday, May 8                        | **[NO LESSON]** |
 | 13 |  Monday, March 13                        | Final Class (presentations, etc) |
 | 14 |  Wednesday, March 15                     | Final Exams/Presentations |
 
@@ -69,15 +69,15 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 |  1 |  Tuesday, April 2                        | [Introduction to Persistence Technologies in iOS] |
 |  2 |  Thursday, April 4                       | [UserDefaults, Keychain and NSCoding] |
 |  3 |  Tuesday, April 9                        | [The iOS FileSystem - Introduction] |
-|  4 |  Thursday, April 11                      | **NO LESSON: The iOS FileSystem - Use cases and applications** |
+|  4 |  Thursday, April 11                      | **[NO LESSON]: The iOS FileSystem - Use cases and applications** |
 |  5 |  Tuesday, April 16                       | [CoreData - Introduction] |
-|  6 |  Thursday, April 18                      | **NO LESSON: CoreData - Use cases and drawbacks** |
+|  6 |  Thursday, April 18                      | **[NO LESSON]: CoreData - Use cases and drawbacks** |
 |  7 |  Tuesday, April 23                       | [CoreData - Relationships and Heirarchies] |
 |  8 |  Thursday, April 25                      | [CoreData - Using multiple contexts and child contexts] |
 |  9 |  Tuesday, April 30                       | [CoreData - Retrieving information from the stack] |
 | 10 |  Thursday, May 2                         | [Third Party Persistence Options - Realm] |
-| 11 |  Tuesday, May 7                          | **NO LESSON** |  
-| 12 |  Thursday, May 9                         | **NO LESSON** |  
+| 11 |  Tuesday, May 7                          | **[NO LESSON]** |  
+| 12 |  Thursday, May 9                         | **[NO LESSON]** |  
 | 13 |  Tuesday, March 14                       | Final Class (presentations, etc) |
 | 14 |  Thursday, March 16                      | Final Exams/Presentations |
 
@@ -95,13 +95,22 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 [Lesson 12]: Lessons/Lesson12.md
 
 
-## Tutorials & Projects
+## Class Assignments
 
 ###Tutorials
-- [The Green Grass Store]()
+**[NEED TO ADD]**
+
+### Other Class assignments
+- [Keychain Playground]
+
+[Keychain Playground]: Assignments/KeychainSwiftPlayground
 
 ###Projects
-- [Snapr - Photo Viewer]()
+- [Course Planner]
+- [Document Management]
+
+[Course Planner]: Assignments/Project-Course-Planner/Readme.md
+[Document Management]: Assignments/Project-Document-Management/Readme.md
 
 **All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
 
