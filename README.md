@@ -45,7 +45,7 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] NEEDS REVIEW |
-|  2 |  Wednesday, April 3                      | [Plist, UserDefaults] NEEDS CREATION/REVIEW|
+|  2 |  Wednesday, April 3                      | [Plist and UserDefaults] NEEDS CREATION/REVIEW|
 |  3 |  Monday, April 8                         | [Keychain and NSCoding] NEEDS CREATION/REVIEW|
 |  4 |  Wednesday, April 10                     | [The iOS FileSystem - Introduction] NEEDS REVIEW|
 |  5 |  Monday, April 15                        | [CoreData - Introduction] NEEDS REVIEW|
@@ -60,12 +60,12 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 | 14 |  Wednesday, March 15                     | Final Exams/Presentations |
 
 [Introduction to Persistence Technologies in iOS]: Lessons/00-Intro-to-Persistence-Technologies/Readme.md
-[PList, UserDefaults]: Lessons/01-Plist-UserDefaults/Readme.md
-[Keychain and NSCoding]: Lessons/02/Keychain-NSCoding/Readme.md
+[PList and UserDefaults]: Lessons/01-Plist-UserDefaults/Readme.md
+[Keychain and NSCoding]: Lessons/02-Keychain-NSCoding/Readme.md
 [The iOS FileSystem - Introduction]: Lessons/03-FileSystem/Readme.md
 [CoreData - Introduction]: Lessons/04-Intro-to-CoreData/Readme.md
 [CoreData - Relationships and Heirarchies]: Lessons/05-CoreData-Relationships/Readme.md
-[CoreData - Caching]: Lessons/06-CoreData-Caching/Readme.md10
+[CoreData - Caching]: Lessons/06-CoreData-Caching/Readme.md
 [CoreData - Using multiple contexts and child contexts]: Lessons/07-CoreData-Contexts/Readme.md
 [CoreData - Retrieving information from the stack]: Lessons/08-CoreData-Retrieving-Info/Readme.md
 [Third Party Persistence Options - Realm]: Lessons/09-Realm-Intro/Readme.md
