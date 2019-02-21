@@ -102,8 +102,9 @@ A relational database that can be used by iOS apps. It is contained in a C-libra
 
 ## Closing Exercise
 
-List two things you are hoping to learn in this course
+In a pice of paper, list two things you are hoping to get out of this course.
 
+Turn in your answer to the instructor.
 
 ## Wrap Up
 - Update the tracker with your Github profile link.
@@ -111,5 +112,5 @@ List two things you are hoping to learn in this course
 ## Additional resources
 [Slides]()<br>
 [Realm](https://github.com/realm/realm-cocoa)<br>
-[What is CoreData](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html)
+[What is CoreData](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html)<br>
 [SQLite](https://www.simplifiedios.net/swift-sqlite-tutorial)
