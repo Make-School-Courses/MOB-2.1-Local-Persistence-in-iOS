@@ -69,6 +69,7 @@ Each group will fill out the corresponding slide for their method with the 4 ide
 At the end of each mini presentation, if a student from another team wants to add something they know already, their contributions can be added to the slide.
 
 ## Advanced Persistence Technologies
+![databases](assets/databases.png)
 
 ### Core Data
 The last method covered was Core Data.
@@ -92,7 +93,6 @@ From the official Github site:
 - Simple: Data exposed as objects and queryable by code. Most of our users pick it up intuitively, getting simple apps up & running in minutes.
 - Modern: Supports relationships, generics, vectorization and Swift.
 - Fast: Faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.
-
 
 ### SQLite
 A relational database that can be used by iOS apps. It is contained in a C-library embedded to the app.
