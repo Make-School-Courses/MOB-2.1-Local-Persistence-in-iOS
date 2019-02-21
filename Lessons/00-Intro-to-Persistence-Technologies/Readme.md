@@ -5,12 +5,12 @@
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:10      | Intro to course           |
-| 0:10        | 0:10      | Initial Exercise          |
-| 0:20        | 0:05      | Objectives                |
-| 0:25        | 0:05      | Overview                  |
-| 0:30        | 0:45      | In Class Activity I       |
-| 1:15        | 0:10      | BREAK                     |
-| 1:25        | 0:15      | Advanced persistence      |
+| 0:10        | 0:05      | Objectives                |
+| 0:15        | 0:05      | Overview                  |
+| 0:20        | 0:45      | In Class Activity I       |
+| 1:05        | 0:10      | BREAK                     |
+| 1:15        | 0:15      | Advanced persistence      |
+| 1:30        | 0:10      | Closing Exercise          |
 | 1:40        | 0:05      | Wrap Up                   |
 | TOTAL       | 1:45      |                           |
 
@@ -23,9 +23,6 @@ Go over the course repo identifying:
   - Course tracker link
   - Projects and Tutorials
   - Evaluation criteria
-
-## Initial Exercise
-<!-- Active learning opportunity to identify course expectations/what I know vs what I want to learn? -->
 
 ## Why you should know this
 
@@ -102,6 +99,11 @@ A relational database that can be used by iOS apps. It is contained in a C-libra
 - Works as part of the app, no extra services needed
 - Fast & reliable
 - SQL knowledge can be used
+
+## Closing Exercise
+
+List two things you are hoping to learn in this course
+
 
 ## Wrap Up
 - Update the tracker with your Github profile link.
