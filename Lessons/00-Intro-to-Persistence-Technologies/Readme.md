@@ -107,7 +107,7 @@ A relational database that can be used by iOS apps. It is contained in a C-libra
 - Update the tracker with your Github profile link.
 
 ## Additional resources
-[Slides]()
+[Slides]()<br>
 [Realm](https://github.com/realm/realm-cocoa)<br>
 [What is CoreData](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html)
 [SQLite](https://www.simplifiedios.net/swift-sqlite-tutorial)
