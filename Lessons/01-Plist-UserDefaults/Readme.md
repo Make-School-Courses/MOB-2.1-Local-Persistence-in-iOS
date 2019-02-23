@@ -23,12 +23,79 @@ Slides:
 Explain why students should care to learn the material presented in this class.
 
 ## Learning Objectives (5 min)
-- Learn about storing basic data types in iOS
-- Brainstorm use cases for persisting informatin with UserDefaults in iOS
-- Learn about storing sensitive information with Keychain in iOS
+
+- Identify use cases for persisting information in a plist.
+- Use a plist to store data and retrieve it.
+- Identify use cases for persisting information with UserDefaults in iOS
+- Use UserDefaults to store data and retrieve it.
+
+## The plist (15 min)
+
+A property list, or plist, is an XML file that contains key-value data. In iOS, a common plist is the Info.plist file. An information property list file is a structured text file that contains essential configuration information for a bundled executable.
+
+Typically the contents are structured using XML. The root XML node is always an array or a dictionary, whose contents are a set of keys and values describing the bundle. These values are used by the system to obtain information about the app and its configuration.
+
+The file is called Info.plist by convention. The file name is case sensitive so it should have a capital letter I.
+
+The file is created automatically by Xcode when you create a new project.
+
+### Creating an Information Property List File
+
+The easiest way to create an information property list file is letting Xcode create it for us. Every project we create in Xcode comes with a file named <project>-Into.plist. The file comes preconfigured with keys that every plist should have.
+
+To edit the contents of the file, select the file in files inspector. Then double-click the value to select it and type a new value. Most of these values are specified as strings but Xcode also supports other types likes arrays, dictionaries, booleans, date, Data and numbers.
+
+![plist](assets/plist.png)
+This is an example of a default plist that gets created with every new project. To see the XML structure, we right-click on the file and choose Open As/ Source Code.
+
+### Reading from a plist
+We can save information in the form of key-value pairs in a plist. And here's how to read the information:
+
+```Swift
+func getPlist(key name: String) -> [String]?
+{
+  // we first check to see if the path exists before trying to read the content
+    if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
+        let content = FileManager.default.contents(atPath: path)
+    {
+      // deserializing the data from xml as a plist, this will be returned as an array, but needs casting to [String]
+        return (try? PropertyListSerialization.propertyList(from: content, options: .mutableContainersAndLeaves, format: nil)) as? [String]
+    }
+    return nil
+}
+```
+#### Usage
+```Swift
+if let items = getPlist(key: "Name of your key in the plist") {
+    print(items)
+}
+```
+
+### Writing to a plist
+Aside from manually adding new elements to the plist, we can also write to a it.
+
+```Swift
+let encoder = PropertyListEncoder()
+encoder.outputFormat = .xml
+
+let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("APIkey.plist")
+
+do {
+    let data = try encoder.encode("00000000000000")
+    try data.write(to: path)
+} catch {
+    print(error)
+}
+```
 
 
-## Overview (20 min)
+### Adding keys
+The default Into.plist file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
+
+To add a new item, right-click on the editor and select *Add Row*.
+To change the value's type, click on the select button in the Type column.
+To change the value, double-click on the Value column.
+To remove a row, select it and hit Backspace.
 
 ## In Class Activity I (30 min)
 
@@ -44,7 +111,8 @@ Usually should be used to store user preferences, can be used to store small amo
 Should never be used for sensitive data as its not encrypted (eg. Authentication Token, passwords).
 
 **Example - Storing a boolean indicating a user first downloaded(opened) an app**
-```swift
+
+```Swift
 // Set
 UserDefaults.standard.set(false, forKey: "FirstTimeUser")
 
@@ -53,6 +121,7 @@ let value = UserDefaults.standard.bool(forKey: "FirstTimeUser")
 ```
 
 Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
+
 
 ### Keychain
 
@@ -153,5 +222,6 @@ c. When making a request that requires the API key, retrieve it securely to use 
 
 
 ## Resources
-
+[Plist - article](https://learnappmaking.com/plist-property-list-swift-how-to/)<br>
+[Info.plist - Apple Docs](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-102276)<br>
 [Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)

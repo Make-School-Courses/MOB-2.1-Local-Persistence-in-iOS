@@ -4,7 +4,6 @@
 
 This courses covers how and why to persist data in mobile development. We will learn the various options for saving data locally in iOS including Core Data, Realm, NSCoder, UserDefaults, and Keychain.  Understand best practices in storing and retrieving sensitive data and how to work with the iOS file system.
 
-
 ## Course Specifics
 
 Weeks to Completion:  7 <br>
@@ -95,7 +94,7 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 
 - **Good Example:** 40+ commits throughout the length of the course, looking for a healthy spattering of commits each week (such as 3-5 per day).
 - **Bad Example:** 10 commits on one day during the course and no others. Students who do this will be at severe risk of not passing the class.
-- **Unacceptable Example:** 2 commits the day before a project is due. Students who do this should not expect to pass the class. 
+- **Unacceptable Example:** 2 commits the day before a project is due. Students who do this should not expect to pass the class.
 
 #### Why are we doing this?
 
@@ -124,7 +123,7 @@ Attendance requirements for scheduled sessions are:
 - No more than two no call no shows per term in any scheduled session.
 - No more than four excused absences per term in any scheduled session.
 
-Failure to meet these requirements will result in a PIP (Participation Improvement Plan).  Failure to improve after the PIP is cause for not being allowed to continue at Make School. 
+Failure to meet these requirements will result in a PIP (Participation Improvement Plan).  Failure to improve after the PIP is cause for not being allowed to continue at Make School.
 
 
 ## Make School Course Policies
