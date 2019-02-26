@@ -48,58 +48,136 @@ To edit the contents of the file, select the file in files inspector. Then doubl
 ![plist](assets/plist.png)
 This is an example of a default plist that gets created with every new project. To see the XML structure, we right-click on the file and choose Open As/ Source Code.
 
+### Adding keys
+The default Into.plist file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
+
+- To add a new item, right-click on the editor and select *Add Row*.
+- To change the value's type, click on the select button in the Type column.
+- To change the value, double-click on the Value column.
+- To remove a row, select it and hit Backspace.
+
 ### Reading from a plist
 We can save information in the form of key-value pairs in a plist. And here's how to read the information:
 
 ```Swift
-func getPlist(key name: String) -> [String]?
-{
-  // we first check to see if the path exists before trying to read the content
-    if  let path = Bundle.main.path(forResource: name, ofType: "plist"),
-        let content = FileManager.default.contents(atPath: path)
-    {
-      // deserializing the data from xml as a plist, this will be returned as an array, but needs casting to [String]
-        return (try? PropertyListSerialization.propertyList(from: content, options: .mutableContainersAndLeaves, format: nil)) as? [String]
-    }
-    return nil
-}
-```
-#### Usage
-```Swift
-if let items = getPlist(key: "Name of your key in the plist") {
-    print(items)
+var format = PropertyListSerialization.PropertyListFormat.xml
+var data:[String:AnyObject] = [:]
+let path:String? = Bundle.main.path(forResource: "name of your plist", ofType: "plist")!
+let xmlContents = FileManager.default.contents(atPath: path!)!
+do{
+    data = try PropertyListSerialization.propertyList(from: xmlContents,options: .mutableContainersAndLeaves,format: &format)as! [String:AnyObject]
+    // data is available now
+catch{
+    print("Error reading plist: \(error)")
 }
 ```
 
 ### Writing to a plist
-Aside from manually adding new elements to the plist, we can also write to a it.
+Aside from manually adding new elements to the plist, we can also write to it. The issue here is that we can't write to our app bundle. This means we first need to to save the existing file into a Documents folder and then write and read from there.
+
+#### What's the difference?
+The main bundle is everything that the user gets when they install the app.
+- This is read only.
+- When the app is updated, the bundle gets replaced by a new one.
+
+The documents directory is where everything that the user generates is stored.
+- This is read/write
+- Remains the same even with updates.
+
+Going back to writing to the plist, we can write small helper methods to help handling plists easier. [This suggestion](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift) made by someone on StackOverflow keeps all operations on plists contained in a single place and prevents errors caused by typing the wrong file name over and over.
 
 ```Swift
-let encoder = PropertyListEncoder()
-encoder.outputFormat = .xml
+struct Plist {
 
-let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("APIkey.plist")
-
-do {
-    let data = try encoder.encode("00000000000000")
-    try data.write(to: path)
-} catch {
-    print(error)
+enum PlistError: ErrorType {
+    case FileNotWritten
+    case FileDoesNotExist
 }
+
+let name:String
+
+var sourcePath:String? {
+    guard let path = NSBundle.mainBundle().pathForResource(name, ofType: "plist") else { return .None }
+    return path
+}
+
+var destPath:String? {
+    guard sourcePath != .None else { return .None }
+    let dir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+    return (dir as NSString).stringByAppendingPathComponent("\(name).plist")
+}
+
+init?(name:String) {
+
+    self.name = name
+
+    let fileManager = NSFileManager.defaultManager()
+
+    guard let source = sourcePath else { return nil }
+    guard let destination = destPath else { return nil }
+    guard fileManager.fileExistsAtPath(source) else { return nil }
+
+    if !fileManager.fileExistsAtPath(destination) {
+
+        do {
+            try fileManager.copyItemAtPath(source, toPath: destination)
+        } catch let error as NSError {
+            print("Unable to copy file. ERROR: \(error.localizedDescription)")
+            return nil
+        }
+    }
+}
+
+
+func getValuesInPlistFile() -> NSDictionary?{
+    let fileManager = NSFileManager.defaultManager()
+    if fileManager.fileExistsAtPath(destPath!) {
+        guard let dict = NSDictionary(contentsOfFile: destPath!) else { return .None }
+        return dict
+    } else {
+        return .None
+    }
+}
+
+func getMutablePlistFile() -> NSMutableDictionary?{
+    let fileManager = NSFileManager.defaultManager()
+    if fileManager.fileExistsAtPath(destPath!) {
+        guard let dict = NSMutableDictionary(contentsOfFile: destPath!) else { return .None }
+        return dict
+    } else {
+        return .None
+    }
+}
+
+func addValuesToPlistFile(dictionary:NSDictionary) throws {
+    let fileManager = NSFileManager.defaultManager()
+    if fileManager.fileExistsAtPath(destPath!) {
+        if !dictionary.writeToFile(destPath!, atomically: false) {
+            print("File not written successfully")
+            throw PlistError.FileNotWritten
+        }
+    } else {
+        throw PlistError.FileDoesNotExist
+    }
+}
+}
+
 ```
 
+## In Class Activity I (25 min)
+Create a project and a new plist file. The goal for your plist is to have these items:
 
-### Adding keys
-The default Into.plist file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
+![plistimg](assets/plistexample.png)
 
-To add a new item, right-click on the editor and select *Add Row*.
-To change the value's type, click on the select button in the Type column.
-To change the value, double-click on the Value column.
-To remove a row, select it and hit Backspace.
+Using the methods to handle plists or your own implementation if you want, display the items in the Scores dictionary in a UITableView. It should look something like this:
 
-## In Class Activity I (30 min)
+![table](assets/table.png)
 
-### UserDefaults
+Try adding new elements to the dictionary both manually and in code. Add two more entries.
+
+In every step you write or each method you use be sure to know what is happening at a lower level in the app's files. Be prepared to explain your implementation when asked.
+
+## UserDefaults
 
 UserDefaults allows to store Strings, Numbers, Dates, Data and
 Arrays or Dictionaries
@@ -123,105 +201,9 @@ let value = UserDefaults.standard.bool(forKey: "FirstTimeUser")
 Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
 
 
-### Keychain
-
-Is used to store sensitive information, such as passwords. All information is stored encrypted. Meaning you can use this to store sensitive user information.
-
-**Keychain Use Case - Logging in a User**
-
-For instance, when loggin in a *user*, you will typically have some token/secret that is used to authorize a user's requests to a server. That information should be stored in the keychain.
-
-Items stored in the keychain belong to a container that is shared by the operating system.
-This means that if you store a key-value pair in the keychain, and delete your app without clearing the keychain, that item will persist.
-
-
-> An app can access only its own keychain items, or those shared with a group to which the app belongs. It can't manage the keychain container itself. - Apple
-
-Apple’s API is arcane - Open Source Libraries such as
-KeychainSwift will make your life easier!
-
-
-## In Class Activity II (30 min)
-
-### Encoding/Decoding
-
-Encoding: Creating a binary/textual representation (that can
-be stored on disk, transferred via network) from an object
-graph
-
-Decoding: Creating an object graph from a binary/textual
-representation
-
-**Implementing NSCoding**
-
-To Encode/Decode, your class has to be NSCoding compliant. That means it has to conform to NSCoding. This gives you two methods that correspond to decoding an object, and encoding it.
-
-
-#### Step 1: Implement NSCoding
-
-```swift
-class Movie: NSObject, NSCoding {
-    var title: String
-    var duration: Int
-
-    init(title: String, duration: Int) {
-        self.title = title
-        self.duration = duration
-    }
-
-    required convenience init?(coder aDecoder: NSCoder) {
-        guard let title = aDecoder.decodeObject(forKey: "title") as? String
-            else { return nil }
-        let duration = aDecoder.decodeInteger(forKey: "duration")
-
-        self.init(title: title, duration: duration)
-    }
-
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.title, forKey: "title")
-        aCoder.encode(self.duration, forKey: "duration")
-    }
-}
-
-```
-
-#### Step 2: User Archiver - Archiving to filesystem
-
-Archive
-
-```swift
-let data = NSKeyedArchiver.archivedData(withRootObject: movie)
-```
-
-Unarchive
-
-```
-let unarchivedMovies = NSKeyedUnarchiver.unarchiveObject(with: data) as? Movie
-```
-
-### When to use NSCoding
-
-Use NSCoding when main goal of persistence in your App is
-to store the current state of the application
-If you additionally want to create queries, need migrations,
-etc, there are better solutions (e.g., CoreData)
-
-
-## Challenges
-
-1. Interate Cocoapods into a project(Trip Planner)
-Download KeychainSwift though cocoapods to use the keychain:
-
-[KeychainSwift Link](https://github.com/evgenyneu/keychain-swift#keychain_access_groups)
-
-a. Using the trip planner app from MOB2, only bring up the login screen if the user hasn't logged in. If they have, take them straight to the list of trips.
-
-b. Generate and store the Basic Auth token securely in the keychain.
-
-c. When making a request that requires the API key, retrieve it securely to use in your request headers.
-
 
 ## Resources
 [Plist - article](https://learnappmaking.com/plist-property-list-swift-how-to/)<br>
 [Info.plist - Apple Docs](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-102276)<br>
-[Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
+[Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)<br>
+[Plist struct](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift)
