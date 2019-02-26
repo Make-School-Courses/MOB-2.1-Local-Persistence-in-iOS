@@ -31,7 +31,7 @@ Most iOS applications have a way of persisting data. Whether an app needs to sto
 ## Learning Objectives (5 min)
 
 - Identify the main tools to persist data in iOS.
-- Compare and contrast at a hight level every method of persistence.
+- Compare and contrast – at a high level – every method of persistence.
 - List some advanced persistence technologies for iOS.
 
 ## Overview (5 min)
@@ -65,24 +65,24 @@ Each group will fill out the corresponding slide for their method with the 4 ide
 
 At the end of each mini presentation, if a student from another team wants to add something they know already, their contributions can be added to the slide.
 
-## Advanced Persistence Technologies
+## Advanced Persistence Technologies (15 min)
 ![databases](assets/databases.png)
 
 ### Core Data
-The last method covered was Core Data.
+The last method covered was [Core Data](https://developer.apple.com/documentation/coredata).
 
 "Core Data is a framework that you use to manage the model layer objects in your application. It provides generalized and automated solutions to common tasks associated with object life cycle and object graph management, including persistence."
 
 This is a powerful tool that has a lot of built in features. Getting comfortable using Core data takes time and a lot of errors.
 
 ### Realm
-Realm is a good alternative for Core Data.
+[Realm](https://realm.io/) is a good alternative for Core Data.
 
 "Realm is a mobile database that runs directly inside phones, tablets or wearables."
 
 Its purpose is to make managing data faster and simpler.
 
-From the official Github site:
+From the official [Github site](https://github.com/realm/realm-cocoa):
 
 #### Features
 
@@ -92,7 +92,7 @@ From the official Github site:
 - Fast: Faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.
 
 ### SQLite
-A relational database that can be used by iOS apps. It is contained in a C-library embedded to the app.
+[SQLite](https://www.sqlite.org/index.html) is a relational database that can be used by iOS apps. It is contained in a C-library embedded to the app.
 
 #### Features
 - Lightweight
@@ -100,13 +100,13 @@ A relational database that can be used by iOS apps. It is contained in a C-libra
 - Fast & reliable
 - SQL knowledge can be used
 
-## Closing Exercise
+## Closing Exercise (10)
 
-In a pice of paper, list two things you are hoping to get out of this course.
+In a piece of paper, list two things you are hoping to get out of this course.
 
 Turn in your answer to the instructor.
 
-## Wrap Up
+## Wrap Up (5 min)
 - Update the tracker with your Github profile link.
 
 ## Additional resources
