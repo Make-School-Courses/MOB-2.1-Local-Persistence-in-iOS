@@ -11,17 +11,13 @@
 | 1:15        | 0:45      | In Class Activity II      |
 | TOTAL       | 2:00      |                           |
 
-
-## Class Materials
-
-Slides:
-
-[Intro To Persistence - Slides](intro-to-persistence.key)
+<!-- [Intro To Persistence - Slides](intro-to-persistence.key) OLD SLIDES -->
 
 ## Why you should know this or industry application (optional) (5 min)
 
 Explain why students should care to learn the material presented in this class.
 
+## Initial Exercise
 ## Learning Objectives (5 min)
 
 - Identify use cases for persisting information in a plist.
@@ -179,16 +175,17 @@ In every step you write or each method you use be sure to know what is happening
 
 ## UserDefaults
 
-UserDefaults allows to store Strings, Numbers, Dates, Data and
-Arrays or Dictionaries
+UserDefaults allows us to store Strings, Numbers, Dates, Data and Arrays or Dictionaries. Keep in mind that it is a **small** amount of data what we should be storing in UserDefaults.
 
-Usually should be used to store user preferences, can be used to store small amount of persistent information.
+Usually it should be used to store user preferences, or anything as long as it's a small amount of persistent information.
+
+Every piece of data we store will have a unique *key*, if we try saving things with the same key, new data will only replace the old data.
 
 **Note:**
 
 Should never be used for sensitive data as its not encrypted (eg. Authentication Token, passwords).
 
-**Example - Storing a boolean indicating a user first downloaded(opened) an app**
+**Example - Storing a boolean indicating if a user first downloaded(opened) an app**
 
 ```Swift
 // Set
@@ -198,12 +195,59 @@ UserDefaults.standard.set(false, forKey: "FirstTimeUser")
 let value = UserDefaults.standard.bool(forKey: "FirstTimeUser")
 ```
 
+**Example - Storing a string**
+
+```Swift
+// Set
+UserDefaults.standard.set("Karl", forKey: "name")
+
+// Get
+let name = UserDefaults.standard.string(forKey: "name") ?? ""
+```
+
 Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
 
+## In Class Activity I (20 min)
 
+Let's say we want to manage saving a user's token with UserDefaults. We will be accessing this token in several parts within the app. We can make the process of requesting data much easier if we have the UserDefault request in one place only, in a way that we can reuse that piece of code.
+
+Complete the implementation of this helper struct and then test it out to see if you can successfully store and retrieve the token.
+
+```Swift
+   struct Defaults {
+
+        static let token = "token"
+        static let tokenKey = "tokenKey"
+
+        struct Model {
+            var token: String?
+
+            init(token: String) {
+              //complete the initializer
+            }
+        }
+
+        static var saveToken = { (token: String) in
+          //complete the method
+        }
+
+        static var getToken = { () -> Model in
+          //complete the method
+        }
+
+        static func clearUserData(){
+          //complete the method using removeObject
+        }
+    }
+
+```
+
+**Q:** Is there potential to extend the Model struct to represent an object? How would the methods and the initializer change? <br>
+**Q:** What are some use cases for the code you just completed?
 
 ## Resources
 [Plist - article](https://learnappmaking.com/plist-property-list-swift-how-to/)<br>
 [Info.plist - Apple Docs](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-102276)<br>
 [Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)<br>
 [Plist struct](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift)
+[User defaults - exercise](https://medium.com/@nimjea/userdefaults-in-swift-4-d1a278a0ec79)
