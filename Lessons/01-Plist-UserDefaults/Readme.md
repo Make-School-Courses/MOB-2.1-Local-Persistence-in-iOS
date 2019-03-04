@@ -1,4 +1,4 @@
-# UserDefaults and Keychain
+# Plist and UserDefaults
 
 ## Minute-by-Minute
 
@@ -18,6 +18,7 @@
 Explain why students should care to learn the material presented in this class.
 
 ## Initial Exercise
+
 ## Learning Objectives (5 min)
 
 - Identify use cases for persisting information in a plist.
