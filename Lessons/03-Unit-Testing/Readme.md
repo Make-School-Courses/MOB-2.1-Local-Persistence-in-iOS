@@ -40,7 +40,7 @@ A unit is the smallest testable part of any software. (ex. a method)
 
 ### Benefits of unit tests
 
-The faster we can build features, the faster users get updates in their apps. We increase the peace in which we develop if we can trust our existing code while rolling out new features. Making sure the newly added code doesn't break our existing code. That's when unit tests really show their value.
+The faster we can build features, the faster users get updates in their apps. We increase the pace in which we develop if we can trust our existing code while rolling out new features. Making sure the newly added code doesn't break our existing code. That's when unit tests really show their value.
 - You can detect bugs earlier and fix them faster.
 - Saving time means saving resources and money.
 - Users are happy with an app that doesn't break with every update.
