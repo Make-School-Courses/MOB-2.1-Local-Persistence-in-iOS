@@ -45,30 +45,30 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] NEEDS REVIEW |
 |  2 |  Wednesday, April 3                      | [Plist and UserDefaults] NEEDS CREATION/REVIEW|
-|  3 |  Monday, April 8                         | [Keychain and NSCoding] NEEDS CREATION/REVIEW|
-|  4 |  Wednesday, April 10                     | [The iOS FileSystem - Introduction] NEEDS REVIEW|
-|  5 |  Monday, April 15                        | [CoreData - Introduction] NEEDS REVIEW|
-|  6 |  Wednesday, April 17                     | [CoreData - Relationships and Hierarchies] NEEDS REVIEW|
-|  7 |  Monday, April 22                        | [CoreData - Caching] NEEDS CREATION |
-|  8 |  Wednesday, April 24                     | [CoreData - Using multiple contexts and child contexts] NEEDS REVIEW|
-|  9 |  Monday, April 29                        | [CoreData - Retrieving information from the stack] NEEDS REVIEW|
-| 10 |  Wednesday, May 1                        | [Third Party Persistence Options - Realm] NEEDS REVIEW|
-| 11 |  Monday, May 6                           | [Syncing Offline Data] NEEDS CREATION |  
+|  3 |  Monday, April 8                         | [Unit Testing] NEEDS CREATION |
+|  4 |  Wednesday, April 10                     | [Keychain and NSCoding] NEEDS CREATION/REVIEW |
+|  5 |  Monday, April 15                        | [The iOS FileSystem - Introduction] NEEDS REVIEW |
+|  6 |  Wednesday, April 17                     | [CoreData - Introduction] NEEDS REVIEW |
+|  7 |  Monday, April 22                        | [CoreData - Relationships and Hierarchies] NEEDS REVIEW |
+|  8 |  Wednesday, April 24                     | [CoreData - Caching] NEEDS CREATION |
+|  9 |  Monday, April 29                        | [CoreData - Using multiple contexts and child contexts] NEEDS REVIEW |
+| 10 |  Wednesday, May 1                        | [CoreData - Retrieving information from the stack] NEEDS REVIEW |
+| 11 |  Monday, May 6                           | [Third Party Persistence Options - Realm] NEEDS REVIEW |  
 | 12 |  Wednesday, May 8                        | Project Work Day |
 | 13 |  Monday, March 13                        | Final Class (presentations, etc) |
 | 14 |  Wednesday, March 15                     | Final Exams/Presentations |
 
-[Introduction to Persistence Technologies in iOS]: Lessons/00-Intro-to-Persistence-Technologies/Readme.md
-[PList and UserDefaults]: Lessons/01-Plist-UserDefaults/Readme.md
-[Keychain and NSCoding]: Lessons/02-Keychain-NSCoding/Readme.md
-[The iOS FileSystem - Introduction]: Lessons/03-FileSystem/Readme.md
-[CoreData - Introduction]: Lessons/04-Intro-to-CoreData/Readme.md
-[CoreData - Relationships and Hierarchies]: Lessons/05-CoreData-Relationships/Readme.md
-[CoreData - Caching]: Lessons/06-CoreData-Caching/Readme.md
-[CoreData - Using multiple contexts and child contexts]: Lessons/07-CoreData-Contexts/Readme.md
-[CoreData - Retrieving information from the stack]: Lessons/08-CoreData-Retrieving-Info/Readme.md
-[Third Party Persistence Options - Realm]: Lessons/09-Realm-Intro/Readme.md
-[Syncing Offline Data]: Lessons/10-Syncing-Offline-Data/Readme.md
+[Introduction to Persistence Technologies in iOS]: Lessons/01-Intro-to-Persistence-Technologies/Readme.md
+[PList and UserDefaults]: Lessons/02-Plist-UserDefaults/Readme.md
+[Unit Testing]: Lessons/03-Unit-Testing/Readme.md
+[Keychain and NSCoding]: Lessons/04-Keychain-NSCoding/Readme.md
+[The iOS FileSystem - Introduction]: Lessons/05-FileSystem/Readme.md
+[CoreData - Introduction]: Lessons/06-Intro-to-CoreData/Readme.md
+[CoreData - Relationships and Hierarchies]: Lessons/07-CoreData-Relationships/Readme.md
+[CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md
+[CoreData - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
+[CoreData - Retrieving information from the stack]: Lessons/10-CoreData-Retrieving-Info/Readme.md
+[Third Party Persistence Options - Realm]: Lessons/11-Realm-Intro/Readme.md
 
 
 
