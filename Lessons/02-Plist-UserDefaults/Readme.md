@@ -21,32 +21,39 @@ Explain why students should care to learn the material presented in this class.
 
 ## Learning Objectives (5 min)
 
+By the end of this lesson, students should be able to...
+
 - Identify use cases for persisting information in a plist.
-- Use a plist to store data and retrieve it.
+- Use a plist to store and retrieve data.
 - Identify use cases for persisting information with UserDefaults in iOS
-- Use UserDefaults to store data and retrieve it.
+- Use UserDefaults to store and retrieve data.
 
 ## The plist (15 min)
 
-A property list, or plist, is an XML file that contains key-value data. In iOS, a common plist is the Info.plist file. An information property list file is a structured text file that contains essential configuration information for a bundled executable.
+A property list, or plist, is an XML file that contains key-value data. In iOS, a common plist is the `Info.plist` file. An information property list file is a structured text file that contains essential configuration information for a bundled executable.
 
 Typically the contents are structured using XML. The root XML node is always an array or a dictionary, whose contents are a set of keys and values describing the bundle. These values are used by the system to obtain information about the app and its configuration.
 
-The file is called Info.plist by convention. The file name is case sensitive so it should have a capital letter I.
+The file is called `Info.plist` by convention. The file name is case sensitive so it should have a capital letter I.
 
 The file is created automatically by Xcode when you create a new project.
 
 ### Creating an Information Property List File
 
-The easiest way to create an information property list file is letting Xcode create it for us. Every project we create in Xcode comes with a file named <project>-Into.plist. The file comes preconfigured with keys that every plist should have.
+The easiest way to create an information property list file is letting Xcode create it for us. Every project we create in Xcode comes with a file named `<project>-Info.plist`. The file comes preconfigured with keys that every plist should have.
 
-To edit the contents of the file, select the file in files inspector. Then double-click the value to select it and type a new value. Most of these values are specified as strings but Xcode also supports other types likes arrays, dictionaries, booleans, date, Data and numbers.
+To edit the contents of the file:
+
+1. Select the file in files inspector.
+1. Double-click the value to select it and type a new value.
+
+Most of these values are specified as strings but Xcode also supports other types likes arrays, dictionaries, booleans, date, Data and numbers.
 
 ![plist](assets/plist.png)
 This is an example of a default plist that gets created with every new project. To see the XML structure, we right-click on the file and choose Open As/ Source Code.
 
 ### Adding keys
-The default Into.plist file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
+The default `Info.plist` file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
 
 - To add a new item, right-click on the editor and select *Add Row*.
 - To change the value's type, click on the select button in the Type column.
@@ -70,18 +77,18 @@ catch{
 ```
 
 ### Writing to a plist
-Aside from manually adding new elements to the plist, we can also write to it. The issue here is that we can't write to our app bundle. This means we first need to to save the existing file into a Documents folder and then write and read from there.
+Aside from manually adding new elements to the plist, we can also write to it. The issue here is that we _can't write to our app bundle_. This means we first need to to save the existing file into a Documents folder and then write and read from there.
 
 #### What's the difference?
-The main bundle is everything that the user gets when they install the app.
+The **main bundle** is everything that the user gets when they install the app.
 - This is read only.
 - When the app is updated, the bundle gets replaced by a new one.
 
-The documents directory is where everything that the user generates is stored.
+The **documents directory** is where everything that the user generates is stored.
 - This is read/write
 - Remains the same even with updates.
 
-Going back to writing to the plist, we can write small helper methods to help handling plists easier. [This suggestion](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift) made by someone on StackOverflow keeps all operations on plists contained in a single place and prevents errors caused by typing the wrong file name over and over.
+Going back to writing to the plist, we can write small helper methods to help handling plists easier. [This suggestion](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift) made on StackOverflow keeps all operations on plists contained in a single place and prevents errors caused by typing the wrong file name over and over.
 
 ```Swift
 struct Plist {
