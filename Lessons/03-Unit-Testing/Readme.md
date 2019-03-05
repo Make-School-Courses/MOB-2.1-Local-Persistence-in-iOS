@@ -107,4 +107,4 @@ Take a look at [this gist](https://gist.github.com/annjose/1baa75b0796d0d2fef1a1
 1. [XCTest in Apple's Docs](https://developer.apple.com/documentation/xctest)
 1. [Book resource (not free)](https://roadfiresoftware.com/unit-testing-in-swift/)
 1. [A LOT of testing resources](https://medium.com/flawless-app-stories/a-complete-list-of-articles-on-unit-testing-with-swift-from-2017-9be8f046ef25)
-1.[Testing techniques](https://www.marisibrothers.com/2017/03/common-unit-testing-techniques-on-ios.html#1a)
+1. [Testing techniques](https://www.marisibrothers.com/2017/03/common-unit-testing-techniques-on-ios.html#1a)
