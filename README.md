@@ -43,9 +43,9 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] NEEDS REVIEW |
-|  2 |  Wednesday, April 3                      | [Plist and UserDefaults] NEEDS CREATION/REVIEW|
-|  3 |  Monday, April 8                         | [Unit Testing] NEEDS CREATION |
+|  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] |
+|  2 |  Wednesday, April 3                      | [Plist and UserDefaults] |
+|  3 |  Monday, April 8                         | [Unit Testing] |
 |  4 |  Wednesday, April 10                     | [Keychain and NSCoding] NEEDS CREATION/REVIEW |
 |  5 |  Monday, April 15                        | [The iOS FileSystem - Introduction] NEEDS REVIEW |
 |  6 |  Wednesday, April 17                     | [CoreData - Introduction] NEEDS REVIEW |
