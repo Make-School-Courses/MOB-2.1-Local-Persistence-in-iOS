@@ -1,4 +1,4 @@
-# UserDefaults and Keychain
+# Keychain and NSCoding
 
 ## Minute-by-Minute
 
@@ -11,56 +11,29 @@
 | 1:15        | 0:45      | In Class Activity II      |
 | TOTAL       | 2:00      |                           |
 
+<!-- [Intro To Persistence - Slides](intro-to-persistence.key) OLD SLIDES -->
 
-## Class Materials
-
-Slides:
-
-[Intro To Persistence - Slides](intro-to-persistence.key)
-
-## Why you should know this or industry application (optional) (5 min)
+## Why you should know this
 
 Explain why students should care to learn the material presented in this class.
 
 ## Learning Objectives (5 min)
-- Learn about storing basic data types in iOS
-- Brainstorm use cases for persisting informatin with UserDefaults in iOS
-- Learn about storing sensitive information with Keychain in iOS
-
+- Learn about storing sensitive information with Keychain in iOS.
+- Store and retrieve data from Keychain.
 
 ## Overview (20 min)
 
-## In Class Activity I (30 min)
-
-### UserDefaults
-
-UserDefaults allows to store Strings, Numbers, Dates, Data and
-Arrays or Dictionaries
-
-Usually should be used to store user preferences, can be used to store small amount of persistent information.
-
-**Note:**
-
-Should never be used for sensitive data as its not encrypted (eg. Authentication Token, passwords).
-
-**Example - Storing a boolean indicating a user first downloaded(opened) an app**
-```swift
-// Set
-UserDefaults.standard.set(false, forKey: "FirstTimeUser")
-
-// Get
-let value = UserDefaults.standard.bool(forKey: "FirstTimeUser")
-```
-
-Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
-
 ### Keychain
 
-Is used to store sensitive information, such as passwords. All information is stored encrypted. Meaning you can use this to store sensitive user information.
+The keychain services API gives an app a mechanism to store small bits of user data in an encrypted database called a keychain.
+
+Is used to store sensitive information, such as passwords. All information is stored encrypted.
+
+![keychain](assets/keychain.png)
 
 **Keychain Use Case - Logging in a User**
 
-For instance, when loggin in a *user*, you will typically have some token/secret that is used to authorize a user's requests to a server. That information should be stored in the keychain.
+For instance, when logging in a *user*, you will typically have some token/secret that is used to authorize a user's requests to a server. That information should be stored in the keychain.
 
 Items stored in the keychain belong to a container that is shared by the operating system.
 This means that if you store a key-value pair in the keychain, and delete your app without clearing the keychain, that item will persist.
@@ -68,20 +41,28 @@ This means that if you store a key-value pair in the keychain, and delete your a
 
 > An app can access only its own keychain items, or those shared with a group to which the app belongs. It can't manage the keychain container itself. - Apple
 
-Apple’s API is arcane - Open Source Libraries such as
-KeychainSwift will make your life easier!
+Apple’s API might be complex at first - Open Source Libraries such as
+[KeychainSwift](https://github.com/evgenyneu/keychain-swift) will make your life easier!
 
+## In Class Activity I (30 min)
+1. Interate Cocoapods into a new project.
+Download KeychainSwift though Cocoapods to use the keychain: [KeychainSwift Link](https://github.com/evgenyneu/keychain-swift#keychain_access_groups)
 
-## In Class Activity II (30 min)
+1. Simulate you're logging in to a service and getting back a token.
 
-### Encoding/Decoding
+1. Generate and store the Basic Auth token securely in the keychain.
 
-Encoding: Creating a binary/textual representation (that can
-be stored on disk, transferred via network) from an object
-graph
+1. When making a request that requires the token (make a dummy method for it), retrieve it securely to use in your request headers.
 
-Decoding: Creating an object graph from a binary/textual
-representation
+### NSKeyedArchiver (Review)
+
+NSKeyedArchiver encodes and decodes classes as long as they are NSCoding compliant.
+
+NSCoding is a protocol that requires two methods — required init(coder decoder: NSCoder) and encode(with coder: NSCoder). If we have a class that conforms to NSObject AND NSCoder, then that class can be serialized and deserialized into data that can be saved to a user’s disk.
+
+Encoding: Creating a binary representation (that can be stored on disk, transferred via network) from an data structure.
+
+Decoding: Creating a data structure from a binary/textual representation.
 
 **Implementing NSCoding**
 
@@ -120,38 +101,28 @@ class Movie: NSObject, NSCoding {
 
 Archive
 
-```swift
-let data = NSKeyedArchiver.archivedData(withRootObject: movie)
+```Swift
+NSKeyedArchiver.archivedData(withRootObject: someObject, requiringSecureCoding: false)
 ```
 
 Unarchive
 
+```Swift
+NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(someData)
 ```
-let unarchivedMovies = NSKeyedUnarchiver.unarchiveObject(with: data) as? Movie
-```
 
-### When to use NSCoding
-
-Use NSCoding when main goal of persistence in your App is
-to store the current state of the application
-If you additionally want to create queries, need migrations,
-etc, there are better solutions (e.g., CoreData)
+A keyed archive differs from a non-keyed archive in that all the objects and values encoded into the archive are given names, or keys. When decoding a non-keyed archive, values have to be decoded in the same order in which they were encoded. When decoding a keyed archive, because values are requested by name, values can be decoded out of sequence or not at all.
 
 
-## Challenges
+## In Class Activity II (20 min)
 
-1. Interate Cocoapods into a project(Trip Planner)
-Download KeychainSwift though cocoapods to use the keychain:
+Take the Movie class and in an Xcode project use it to store an instance of it using the NSKeyedArchiver.
 
-[KeychainSwift Link](https://github.com/evgenyneu/keychain-swift#keychain_access_groups)
-
-a. Using the trip planner app from MOB2, only bring up the login screen if the user hasn't logged in. If they have, take them straight to the list of trips.
-
-b. Generate and store the Basic Auth token securely in the keychain.
-
-c. When making a request that requires the API key, retrieve it securely to use in your request headers.
+- Combine it with UserDefaults to store the data with a key.
+- Make it modular to reuse a save and load method in more than one place.
 
 
 ## Resources
 
-[Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
+1. [Apple Documentation on Keychain](https://developer.apple.com/documentation/security/keychain_services)
+1. [Apple Documentation on NSKeyedArchiver](https://developer.apple.com/documentation/foundation/nskeyedarchiver)
