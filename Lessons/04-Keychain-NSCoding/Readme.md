@@ -15,11 +15,11 @@
 
 ## Why you should know this
 
-Explain why students should care to learn the material presented in this class.
+At some point you'll need to handle sensitive data in an iOS app. We *never* want to just store or pass that data around as plain text, so we utilize Keychain in iOS to securely store that information. 
 
 ## Learning Objectives (5 min)
-- Learn about storing sensitive information with Keychain in iOS.
-- Store and retrieve data from Keychain.
+- Practice storing sensitive information with Keychain in iOS.
+- Implement data storing/retrieval through Keychain.
 
 ## Overview (20 min)
 
@@ -45,7 +45,7 @@ Apple’s API might be complex at first - Open Source Libraries such as
 [KeychainSwift](https://github.com/evgenyneu/keychain-swift) will make your life easier!
 
 ## In Class Activity I (30 min)
-1. Interate Cocoapods into a new project.
+1. Intergate Cocoapods into a new project.
 Download KeychainSwift though Cocoapods to use the keychain: [KeychainSwift Link](https://github.com/evgenyneu/keychain-swift#keychain_access_groups)
 
 1. Simulate you're logging in to a service and getting back a token.
