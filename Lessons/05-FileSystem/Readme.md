@@ -1,6 +1,6 @@
-# FileSystem
+# FileSystem and Review
 
-## Minute-by-Minute [OPTIONAL]
+## Minute-by-Minute
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
@@ -11,23 +11,39 @@
 | 1:15        | 0:45      | In Class Activity II      |
 | TOTAL       | 2:00      |                           |
 
-## Why you should know this or industry application (optional) (5 min)
+## Why you should know this (5 min)
 
-Explain why students should care to learn the material presented in this class.
+Knowing about how the file system works in an iOS app will enable us to correctly manage how we store and access data. There's a lot of things to consider when using the file system, and as iOS developers it is in our best interest to responsibly handle these resources. This includes not abusing how much we save into files, using the correct file hierarchy and storing data only in files we are allowed to.
+
+## Initial Exercise
 
 ## Learning Objectives (5 min)
 
-- Identify the parts of the filesystem in an iOS app
-- List the important parts of an iOS app filesystem
-- Practice accessing files from the filesystem
+- Identify the parts of the filesystem in an iOS app.
+- Access, store & edit data from the filesystem.
+- Combine persistence methods with the filesystem.
 
-## Overview/TT I (20 min)
-
-## In Class Activity I (30 min)
+## Overview
 
 ### Filesystem
 
-Apps can only read/write files within their sandbox
+A file system handles the persistent storage of data files, apps, and the files associated with the operating system itself.
+Therefore, the file system is one of the fundamental resources used by all processes.
+
+Important things to consider:
+- Because the number of files can easily be many millions, the file system uses directories to create a hierarchical organization.
+- Make sure that the user's files remain easily discoverable and that the files your code uses internally are kept out of the user's way.
+- Users of iOS devices do not have direct access to the file system and apps are expected to follow this convention.
+- Apps can only read/write files within their sandbox.
+
+
+When installing a new app, the installer creates container directories for the app inside the sandbox directory. Each container directory has a specific role.
+
+- The bundle container directory holds the app's bundle.  
+- The data container directory holds data for both the app and the user. This can further be divided into a number of subdirectories that the app can use to sort and organize its data.
+- The app may also request access to additional container directories—for example, the iCloud container—at runtime.
+
+These container directories constitute the app’s primary view of the file system
 
 ![App structure](app-structure.png)
 
@@ -46,6 +62,8 @@ Xcode) and cannot be modified at runtime!
 
 Bundle contains binary along with resource files
 
+You cannot write to this directory.
+
 
 **Documents Directory**
 
@@ -58,7 +76,7 @@ This is the place to store data that is critical to your application
 regenerated)
 
 This directory is backed up with iTunes Backups and it can be
-made available to iTunes users via Filesharing
+made available to iTunes.
 
 
 **Temporary Directory**
@@ -72,6 +90,8 @@ permanently.
 
 You are responsible for removing files from this
 directory when they are no longer needed.
+
+The system may purge this directory when your app is not running.
 
 
 **Library Directory**
@@ -90,8 +110,7 @@ This folder should be used to store cached information (e.g.
 profile pictures that have been downloaded).
 
 iOS will remove files from this directory when it needs to free
-disk space, your app needs to be able to handle deletion of
-file in the caches directory.
+disk space.
 
 *Note*
 
@@ -100,6 +119,18 @@ file in the caches directory.
 - All files in the Library directory (excluding the Library/Caches
 directory) are backed up to iTunes by default. You can change
 this by using a file attribute
+
+## In Class Activity I (15 min)
+
+Discuss where should you store the following content in an app.
+
+- Drawing created by a user in a graphics app.
+- Any data that you don't need to persist for a long time.
+- Text files from a notes app.
+- Configuration files.
+- Data files.
+- Downloaded images (ex. profile pictures)
+- Videos and audio files.
 
 ## In Class Activity II (30 min)
 
@@ -168,11 +199,20 @@ Visit the documentation page for info on how to access specific directories in t
 
 ## Challenges
 
-Clone/Download the repo below to get started:
+There are ways in which different persistence methods can work together. In this challenge you will use NSCoding and the file system together to add persistence support to an app that reviews meals.
 
-[Bundle Challenge - Robo Profiles](https://github.com/Product-College-Labs/RoboProfiles)
+Use [this project](https://developer.apple.com/sample-code/swift/downloads/08_ImplementEditAndDeleteBehavior.zip) that has all the functionality you need except for persistence. If you delete the app, all the content will be gone. Your job is to fix this.
+
+Follow Apple's guide to lead your way into this task and if you get stuck at some point, there's always the final solutions so you can compare it with yours.
+
+[Link to guide](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/PersistData.html#//apple_ref/doc/uid/TP40015214-CH14-SW1)
+
+<!--Clone/Download the repo below to get started:
+
+[Bundle Challenge - Robo Profiles](https://github.com/Product-College-Labs/RoboProfiles) -->
 
 
 ## Resources
 
 [FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)
+[Apple's File system basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)
