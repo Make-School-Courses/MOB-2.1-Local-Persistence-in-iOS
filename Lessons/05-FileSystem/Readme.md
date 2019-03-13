@@ -132,9 +132,8 @@ Discuss where should you store the following content in an app.
 - Downloaded images (ex. profile pictures)
 - Videos and audio files.
 
-## In Class Activity II (30 min)
 
-### Accessing files
+## Accessing files
 
 Accessing files within the application bundle:
 
@@ -197,13 +196,13 @@ Visit the documentation page for info on how to access specific directories in t
 - Can also be used to store serialized Objects, allows to persist objects and Object Graphs from your application
 
 
-## Challenges
+## In Class Activity II
 
 There are ways in which different persistence methods can work together. In this challenge you will use NSCoding and the file system together to add persistence support to an app that reviews meals.
 
 Use [this project](https://developer.apple.com/sample-code/swift/downloads/08_ImplementEditAndDeleteBehavior.zip) that has all the functionality you need except for persistence. If you delete the app, all the content will be gone. Your job is to fix this.
 
-Follow Apple's guide to lead your way into this task and if you get stuck at some point, there's always the final solutions so you can compare it with yours.
+Follow Apple's guide to lead your way into this task and if you get stuck at some point, there's always the final solution so you can compare it with yours.
 
 [Link to guide](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/PersistData.html#//apple_ref/doc/uid/TP40015214-CH14-SW1)
 
@@ -214,5 +213,5 @@ Follow Apple's guide to lead your way into this task and if you get stuck at som
 
 ## Resources
 
-[FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)
+[FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)<br>
 [Apple's File system basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)
