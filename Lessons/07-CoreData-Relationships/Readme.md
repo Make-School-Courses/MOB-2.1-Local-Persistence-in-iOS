@@ -39,29 +39,33 @@ Slides to explain the following concepts:
 
 ### Creating a managed object model
 
-Much of Core Data’s functionality depends on the schema you create to describe your application’s entities, their properties, and the relationships between them. Core Data uses a schema called a managed object model — an instance of NSManagedObjectModel. In general, the richer the model, the better Core Data is able to support your application.
+Much of Core Data’s functionality depends on the schema you create to describe your application’s entities, their properties, and the relationships between them. Core Data uses a schema called a **managed object model** — an instance of `NSManagedObjectModel`. In general, the richer the model, the better Core Data is able to support your application.
 
-A managed object model allows Core Data to map from records in a persistent store to managed objects that you use in your application. The model is a collection of entity description objects (instances of NSEntityDescription). An entity description describes an entity (which you can think of as a table in a database) in terms of its name, the name of the class used to represent the entity in your application, and what properties (attributes and relationships) it has.
+**A managed object model allows Core Data to map from records in a persistent store to managed objects that you use in your application.** The model is a collection of entity description objects (instances of `NSEntityDescription`). An entity description describes an entity (which you can think of as a table in a database) in terms of the following properties:
 
-Walkthrough the creation of Entities, Attributes and Relationships [here](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/KeyConcepts.html)
+- Its name
+- The name of the class used to represent the entity in your application
+- What properties (attributes and relationships) it has
+
+Walkthrough the creation of Entities, Attributes and Relationships can be found [here](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/KeyConcepts.html)
 
 
-More documentation on the same topic
+More documentation on the same topic:
 
-Configuring entities [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
-Configuring attributes [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
-Configuring relationships [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_relationships)
+- Configuring entities [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
+- Configuring attributes [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
+- Configuring relationships [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_relationships)
 
 ## In Class Activity I (15 min)
 Using the same app idea from last class, model how the relationships will work.
 
-**Favorites:**
+### Favorites:
 Lets create a User. A "logged in" *User* will have only one cart. You can add products to this cart.
 We will also have favorites, a "logged in user" can favorite many products.
 
-8. Create a *User* NSManagedObject.
-9. There should be only one instance of a user in your app.
-10. Add a favorites tab. Users can *favorite* products, and that will appeart on the favorites tab.
+1. Create a *User* NSManagedObject.
+1. There should be only one instance of a user in your app.
+1. Add a favorites tab. Users can *favorite* products, and that will appeart on the favorites tab.
 
 Then move to the model editor in a new project to map it out.
 
