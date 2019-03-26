@@ -75,7 +75,7 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 ## Class Assignments
 
 ### Tutorials
-**[NEED TO ADD]**
+- [Core Data](https://www.makeschool.com/academy/track/core-data-uy)
 
 ### Other Class assignments
 - [Keychain Playground]
