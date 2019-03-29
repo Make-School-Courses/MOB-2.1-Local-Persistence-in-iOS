@@ -32,11 +32,6 @@ Students by the end of the course will be able to ...
 
 ## Lessons
 
-### **[INSTRUCTOR NOTE: PLEASE REMOVE THIS BEFORE APRIL 1]**
-If you teach **M/W** or **Tu/Th**, please pick from a template below and delete the other one
-
----
-### M/W Template **[PLEASE REMOVE THIS HEADER BEFORE APRIL 1]**
 **Course Dates:** Monday, April 1 – Wednesday, May 15, 2019 (7 weeks)
 
 **Class Times:** Monday and Wednesday at 3:30–5:20pm (14 class sessions)
@@ -46,14 +41,14 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 |  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] |
 |  2 |  Wednesday, April 3                      | [Plist and UserDefaults] |
 |  3 |  Monday, April 8                         | [Unit Testing] |
-|  4 |  Wednesday, April 10                     | [Keychain and NSCoding] NEEDS CREATION/REVIEW |
-|  5 |  Monday, April 15                        | [The iOS FileSystem - Introduction] NEEDS REVIEW |
-|  6 |  Wednesday, April 17                     | [CoreData - Introduction] NEEDS REVIEW |
-|  7 |  Monday, April 22                        | [CoreData - Relationships and Hierarchies] NEEDS REVIEW |
-|  8 |  Wednesday, April 24                     | [CoreData - Caching] NEEDS CREATION |
-|  9 |  Monday, April 29                        | [CoreData - Using multiple contexts and child contexts] NEEDS REVIEW |
-| 10 |  Wednesday, May 1                        | [CoreData - Retrieving information from the stack] NEEDS REVIEW |
-| 11 |  Monday, May 6                           | [Third Party Persistence Options - Realm] NEEDS REVIEW |  
+|  4 |  Wednesday, April 10                     | [Keychain and NSCoding]  |
+|  5 |  Monday, April 15                        | [The iOS FileSystem - Introduction] |
+|  6 |  Wednesday, April 17                     | [CoreData - Introduction]  |
+|  7 |  Monday, April 22                        | [CoreData - Relationships and Hierarchies] |
+|  8 |  Wednesday, April 24                     | [CoreData - Caching] |
+|  9 |  Monday, April 29                        | [CoreData - Using multiple contexts and child contexts] |
+| 10 |  Wednesday, May 1                        | [CoreData - Retrieving information from the stack] |
+| 11 |  Monday, May 6                           | [Third Party Persistence Options - Realm] |  
 | 12 |  Wednesday, May 8                        | Project Work Day |
 | 13 |  Monday, March 13                        | Final Class (presentations, etc) |
 | 14 |  Wednesday, March 15                     | Final Exams/Presentations |
@@ -85,7 +80,6 @@ If you teach **M/W** or **Tu/Th**, please pick from a template below and delete 
 ### Projects
 - [Course Planner]
 - [Document Management]
-    - **[BROKEN API IN THIS PROJECT]**
 
 [Course Planner]: Assignments/Project-Course-Planner/Readme.md
 [Document Management]: Assignments/Project-Document-Management/Readme.md
