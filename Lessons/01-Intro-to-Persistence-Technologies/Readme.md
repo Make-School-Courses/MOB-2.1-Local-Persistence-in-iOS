@@ -110,7 +110,7 @@ Turn in your answer to the instructor.
 - Update the tracker with your Github profile link.
 
 ## Additional resources
-[Slides]()<br>
+[Slides](https://docs.google.com/presentation/d/17TMA-xdVtfvTO-fGrwvNyFn-7-tuau6ONJZD42FmFfE/edit?usp=sharing)<br>
 [Realm](https://github.com/realm/realm-cocoa)<br>
 [What is CoreData](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html)<br>
 [SQLite](https://www.simplifiedios.net/swift-sqlite-tutorial)
