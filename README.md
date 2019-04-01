@@ -36,6 +36,13 @@ Students by the end of the course will be able to ...
 
 **Class Times:** Monday and Wednesday at 3:30–5:20pm (14 class sessions)
 
+**Office hours:**
+
+Adriana: Tue/Thu 11:30 - 12:00, Wed 11:00 - 12:00<br>
+Tom: Wed 11:00 - 12:00<br>
+Matthew: Wed/Fri 1:00 - 2:00
+
+
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Monday, April 1                         | [Introduction to Persistence Technologies in iOS] |
