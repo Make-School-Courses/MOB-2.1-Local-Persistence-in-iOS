@@ -28,7 +28,7 @@ Students by the end of the course will be able to ...
 1. Compare and contrast various persistence options such as Core Data, Realm, NSCoder, UserDefaults, Keychain and chose the best options for their project.
 1. Use the built in persistence mechanisms in iOS as well as some third party options for persistence
 1. Store and retrieve sensitive information in iOS.
-1. Discover, learn and understand the iOS filesystem.
+1. Learn and understand the iOS filesystem.
 
 ## Lessons
 
@@ -78,11 +78,15 @@ Students by the end of the course will be able to ...
 [Keychain Playground]: Assignments/KeychainSwiftPlayground
 
 ### Projects
-- [Course Planner]
+<!-- - [Course Planner]
 - [Document Management]
-
 [Course Planner]: Assignments/Project-Course-Planner/Readme.md
-[Document Management]: Assignments/Project-Document-Management/Readme.md
+[Document Management]: Assignments/Project-Document-Management/Readme.md -->
+
+[Trip Planner]
+
+[Trip Planner]: Assignments/ProjectSpecifications.md
+
 
 **All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
 
