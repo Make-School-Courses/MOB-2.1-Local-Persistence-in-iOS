@@ -50,8 +50,8 @@ Students by the end of the course will be able to ...
 | 10 |  Wednesday, May 1                        | [CoreData - Retrieving information from the stack] |
 | 11 |  Monday, May 6                           | [Third Party Persistence Options - Realm] |  
 | 12 |  Wednesday, May 8                        | Project Work Day |
-| 13 |  Monday, March 13                        | Final Class (presentations, etc) |
-| 14 |  Wednesday, March 15                     | Final Exams/Presentations |
+| 13 |  Monday, May 13                        | Final Class (presentations, etc) |
+| 14 |  Wednesday, May 15                     | Final Exams/Presentations |
 
 [Introduction to Persistence Technologies in iOS]: Lessons/01-Intro-to-Persistence-Technologies/Readme.md
 [PList and UserDefaults]: Lessons/02-Plist-UserDefaults/Readme.md
