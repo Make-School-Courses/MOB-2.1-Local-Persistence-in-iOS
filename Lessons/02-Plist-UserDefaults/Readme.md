@@ -4,12 +4,15 @@
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:45      | In Class Activity I       |
-| 1:05        | 0:10      | BREAK                     |
-| 1:15        | 0:45      | In Class Activity II      |
-| TOTAL       | 2:00      |                           |
+| 0:00        | 0:05      | Initial Exercise          |
+| 0:05        | 0:05      | Objectives                |
+| 0:10        | 0:20      | Overview - Plist          |
+| 0:30        | 0:30      | In Class Activity I       |
+| 1:00        | 0:10      | BREAK                     |
+| 1:10        | 0:10      | Overview - NSUserDefaults |
+| 1:20        | 0:20      | In Class Activity II.     |
+| 1:40        | 0:05      | Wrap Up.                  |
+| TOTAL       | 1:45      |                           |
 
 <!-- [Intro To Persistence - Slides](intro-to-persistence.key) OLD SLIDES -->
 
@@ -18,6 +21,13 @@
 Explain why students should care to learn the material presented in this class.
 
 ## Initial Exercise
+
+### Swift podcasts recommendations:
+- [Swift over coffee](https://itunes.apple.com/us/podcast/swift-over-coffee/id1435076502?mt=2) by Paul Hudson and Sean Allen (also on Spotify)<br>
+- [Swift community podcast](https://www.swiftcommunitypodcast.org)<br>
+- [Swift by Sundell](https://www.swiftbysundell.com/podcast)<br>
+- [Swift Unwrapped](https://spec.fm/podcasts/swift-unwrapped)<br>
+- [Fireside Swift](https://www.firesideswift.com)
 
 ## Learning Objectives (5 min)
 
@@ -28,7 +38,7 @@ By the end of this lesson, students should be able to...
 - Identify use cases for persisting information with UserDefaults in iOS
 - Use UserDefaults to store and retrieve data.
 
-## The plist (15 min)
+## The plist (20 min)
 
 A property list, or plist, is an XML file that contains key-value data. In iOS, a common plist is the `Info.plist` file. An information property list file is a structured text file that contains essential configuration information for a bundled executable.
 
@@ -168,7 +178,7 @@ func addValuesToPlistFile(dictionary:NSDictionary) throws {
 
 ```
 
-## In Class Activity I (25 min)
+## In Class Activity I (30 min)
 Create a project and a new plist file. The goal for your plist is to have these items:
 
 ![plistimg](assets/plistexample.png)
@@ -181,7 +191,7 @@ Try adding new elements to the dictionary both manually and in code. Add two mor
 
 In every step you write or each method you use be sure to know what is happening at a lower level in the app's files. Be prepared to explain your implementation when asked.
 
-## UserDefaults
+## UserDefaults (10 min)
 
 UserDefaults allows us to store Strings, Numbers, Dates, Data and Arrays or Dictionaries. Keep in mind that it is a **small** amount of data what we should be storing in UserDefaults.
 
@@ -215,7 +225,7 @@ let name = UserDefaults.standard.string(forKey: "name") ?? ""
 
 Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
 
-## In Class Activity I (20 min)
+## In Class Activity II (20 min)
 
 Let's say we want to manage saving a user's token with UserDefaults. We will be accessing this token in several parts within the app. We can make the process of requesting data much easier if we have the UserDefault request in one place only, in a way that we can reuse that piece of code.
 
