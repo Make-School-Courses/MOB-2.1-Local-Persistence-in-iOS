@@ -101,74 +101,102 @@ The **documents directory** is where everything that the user generates is store
 Going back to writing to the plist, we can write small helper methods to help handling plists easier. [This suggestion](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift) made on StackOverflow keeps all operations on plists contained in a single place and prevents errors caused by typing the wrong file name over and over.
 
 ```Swift
-struct Plist {
-    
-    let name:String
-    
-    var sourcePath:String? {
-        guard let path = Bundle.main.path(forResource: name, ofType: "plist") else { return .none }
-        return path
-    }
-    
-    var destPath:String? {
-        guard sourcePath != .none else { return .none }
-        let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        return (dir as NSString).appendingPathComponent("\(name).plist")
-    }
-    
-    init?(name:String) {
-        
-        self.name = name
-        
-        let fileManager = FileManager.default
-        
-        guard let source = sourcePath else { return nil }
-        guard let destination = destPath else { return nil }
-        guard fileManager.fileExists(atPath: source) else { return nil }
-        
-        if !fileManager.fileExists(atPath: destination) {
-            
-            do {
-                try fileManager.copyItem(atPath: source, toPath: destination)
-            } catch let error as NSError {
-                print("Unable to copy file. ERROR: \(error.localizedDescription)")
-                return nil
-            }
-        }
-    }
-    
-    
-    func getValuesInPlistFile() -> NSDictionary?{
-        let fileManager = FileManager.default
-        if fileManager.fileExists(atPath: destPath!) {
-            guard let dict = NSDictionary(contentsOfFile: destPath!) else { return .none }
-            return dict
-        } else {
-            return .none
-        }
-    }
-    
-    func getMutablePlistFile() -> NSMutableDictionary?{
-        let fileManager = FileManager.default
-        if fileManager.fileExists(atPath: destPath!) {
-            guard let dict = NSMutableDictionary(contentsOfFile: destPath!) else { return .none }
-            return dict
-        } else {
-            return .none
-        }
-    }
-    
-    func addValuesToPlistFile(dictionary:NSDictionary) throws {
-        let fileManager = FileManager.default
-        if fileManager.fileExists(atPath: destPath!) {
-            if !dictionary.write(toFile: destPath!, atomically: false) {
-                print("File not written successfully")
-            }
-        } else {
-        }
-    }
-}
+ 20
+0
+Github repo: http://make.sc/mob-2.1 tracker:  http://make.sc/mob-2.1-tracker
 
+
+
+
+
+
+
+3
+Message List
+
+Noah Woodward [4:27 PM]
+Updated Plist stack overflow solution 
+struct Plist {
+  
+  enum PlistError: Error {
+    
+    case FileNotWritten
+    case FileDoesNotExist
+  }
+  
+  let name:String
+  
+  var sourcePath:String? {
+    guard let path = Bundle.main.path(forResource: name, ofType: "plist") else { return nil }
+    return path
+  }
+  
+  var destPath:String? {
+    guard sourcePath != nil else { return nil }
+    let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    return (dir as NSString).appendingPathComponent("\(name).plist")
+  }
+  
+  init?(name:String) {
+    
+    self.name = name
+    
+    let fileManager = FileManager.default
+    
+    guard let source = sourcePath else { return nil }
+    guard let destination = destPath else { return nil }
+    guard fileManager.fileExists(atPath: source) else { return nil }
+    
+    if !fileManager.fileExists(atPath: destination) {
+      
+      do {
+        try fileManager.copyItem(atPath: source, toPath: destination)
+      } catch let error as NSError {
+        print("Unable to copy file. ERROR: \(error.localizedDescription)")
+        return nil
+      }
+    }
+  }
+  
+  
+  func getValuesInPlistFile() -> NSDictionary?{
+    let fileManager = FileManager.default
+    if fileManager.fileExists(atPath: destPath!) {
+      guard let dict = NSDictionary(contentsOfFile: destPath!) else { return nil }
+      return dict
+    } else {
+      return nil
+    }
+  }
+  
+  func getMutablePlistFile() -> NSMutableDictionary?{
+    let fileManager = FileManager.default
+    if fileManager.fileExists(atPath: destPath!) {
+      guard let dict = NSMutableDictionary(contentsOfFile: destPath!) else { return nil }
+      return dict
+    } else {
+      return nil
+    }
+  }
+  
+  func addValuesToPlistFile(dictionary:NSDictionary) throws {
+    let fileManager = FileManager.default
+    if fileManager.fileExists(atPath: destPath!) {
+      if !dictionary.write(toFile: destPath!, atomically: false) {
+        print("File not written successfully")
+        throw PlistError.FileNotWritten
+      }
+    } else {
+      throw PlistError.FileDoesNotExist
+    }
+  }
+}
+Collapse
+
+Message Input
+
+
+Message #mob2-1
 
 ```
 
