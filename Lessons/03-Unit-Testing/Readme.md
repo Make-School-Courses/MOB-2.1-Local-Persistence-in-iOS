@@ -24,12 +24,7 @@ We all know how time consuming it is to make manual testing. It looks something 
 
 ## Initial Exercise (15 min)
 
-- Funny comic
-- Prime the Pump (e.g. think and jot, think pair share, etc)
-- Productivity Tip/Tool
-- Review of current event (e.g. tech news relevant to your track/topic)
-- Quiz on homework or topic(s) of past class
-- Concept Test
+Read and discuss: [Tutorial Syndrome](https://medium.com/arkflections/tutorial-syndrome-821588bd2fc8)
 
 ## Overview (20 min)
 ### What is unit testing?
