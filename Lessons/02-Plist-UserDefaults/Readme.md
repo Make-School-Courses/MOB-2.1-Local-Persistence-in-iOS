@@ -101,21 +101,7 @@ The **documents directory** is where everything that the user generates is store
 Going back to writing to the plist, we can write small helper methods to help handling plists easier. [This suggestion](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift) made on StackOverflow keeps all operations on plists contained in a single place and prevents errors caused by typing the wrong file name over and over.
 
 ```Swift
- 20
-0
-Github repo: http://make.sc/mob-2.1 tracker:  http://make.sc/mob-2.1-tracker
 
-
-
-
-
-
-
-3
-Message List
-
-Noah Woodward [4:27 PM]
-Updated Plist stack overflow solution 
 struct Plist {
   
   enum PlistError: Error {
@@ -191,12 +177,7 @@ struct Plist {
     }
   }
 }
-Collapse
 
-Message Input
-
-
-Message #mob2-1
 
 ```
 
