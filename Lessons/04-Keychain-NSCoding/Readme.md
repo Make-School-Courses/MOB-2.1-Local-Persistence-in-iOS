@@ -13,9 +13,13 @@
 
 <!-- [Intro To Persistence - Slides](intro-to-persistence.key) OLD SLIDES -->
 
+## Initial Exercise (15 min)
+
+Read and discuss: [Tutorial Syndrome](https://medium.com/arkflections/tutorial-syndrome-821588bd2fc8)
+
 ## Why you should know this
 
-At some point you'll need to handle sensitive data in an iOS app. We *never* want to just store or pass that data around as plain text, so we utilize Keychain in iOS to securely store that information. 
+At some point you'll need to handle sensitive data in an iOS app. We *never* want to just store or pass that data around as plain text, so we utilize Keychain in iOS to securely store that information.
 
 ## Learning Objectives (5 min)
 - Practice storing sensitive information with Keychain in iOS.
