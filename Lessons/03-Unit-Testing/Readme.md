@@ -145,7 +145,7 @@ func makeTitle(string: String) -> String {
     }
 
     headline.remove(at:headline.endIndex)
-    return headline
+    return headline.dropLast()
 }
 ```
 
