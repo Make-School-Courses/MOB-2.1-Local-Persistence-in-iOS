@@ -1,4 +1,4 @@
-elements# Unit Testing
+# Unit Testing
 
 ## Minute-by-Minute
 
@@ -103,12 +103,6 @@ Xcode compiles the project and runs the test. You should see all diamonds green,
 
 ### Test No. 1
 
-Now let's try doing the same thing for a different component in the app.
-
-Add a UITextfield to a view controller, include a placeholder to it and test the integrity of the message, make sure it's the right one.
-
-### Test No. 2
-
 Sometimes we need to test things that are part of processing data, not necessarily graphical elements that we can see in the app. Testing business logic is even more important than testing how the app looks.
 
 Let's simulate a scenario in which we need to test the following method.
@@ -130,7 +124,7 @@ Add the method to you view controller and then write a test for it.
 
 Stretch challenge: Just for fun and practice, try refactoring `vowelsInAString` to use the higher order function `reduce`.
 
-### Test No. 3
+### Test No. 2
 
 We want to have a function that given a title, it formats it to have each word capitalized to become a title.
 
@@ -152,6 +146,14 @@ func makeTitle(string: String) -> String {
 Write a test to make sure this works.
 
 Stretch challenge: Try refactoring `makeTitle` to use the higher order function `map`.
+
+### Test No. 3
+
+Now let's try doing the same thing for a different component in the app.
+
+Add a UITextfield to a view controller, include a placeholder to it and test the integrity of the message, make sure it's the right one.
+
+Note: This might need more XCTest UI related components, feel free to google how to.
 
 ## Overview/TT
 
@@ -206,6 +208,7 @@ TodoTests.defaultTestSuite.run()
 
 ## Additional Resources
 
+1. [Slides](https://docs.google.com/presentation/d/1h519-4J6P5sj9xbunEg9Il-LR4MlUgbbXEHFqV_40ss/edit?usp=sharing)
 1. [Unit testing tutorial](https://www.raywenderlich.com/709-ios-unit-testing-and-ui-testing-tutorial)
 1. [XCTest in Apple's Docs](https://developer.apple.com/documentation/xctest)
 1. [Book resource (not free)](https://roadfiresoftware.com/unit-testing-in-swift/)
