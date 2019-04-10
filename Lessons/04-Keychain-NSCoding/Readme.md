@@ -103,7 +103,7 @@ Download KeychainSwift though Cocoapods to use the keychain: [KeychainSwift Link
 
 When you finish, you will have a class that you can reuse in other projects to manage storing sensitive data in Keychain. 😀
 
-### NSKeyedArchiver (Review)
+### NSKeyedArchiver (10 min)
 
 NSKeyedArchiver encodes and decodes classes as long as they are NSCoding compliant.
 
@@ -146,7 +146,7 @@ class Movie: NSObject, NSCoding {
 
 ```
 
-#### Step 2: User Archiver - Archiving to filesystem
+<!-- #### Step 2: User Archiver - Archiving to filesystem
 
 Archive
 
@@ -159,6 +159,7 @@ Unarchive
 ```Swift
 NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(someData)
 ```
+-->
 
 A keyed archive differs from a non-keyed archive in that all the objects and values encoded into the archive are given names, or keys. When decoding a non-keyed archive, values have to be decoded in the same order in which they were encoded. When decoding a keyed archive, because values are requested by name, values can be decoded out of sequence or not at all.
 
@@ -170,6 +171,7 @@ Take the Movie class and in an Xcode project use it to store an instance of it u
 - Combine it with UserDefaults to store the data with a key.
 - Make it modular to reuse a save and load method in more than one place.
 
+Use this as a guide: https://nshipster.com/nscoding/
 
 ## Resources
 
