@@ -79,10 +79,10 @@ Matthew: Wed/Fri 1:00 - 2:00
 ### Tutorials
 - [Core Data](https://www.makeschool.com/academy/track/core-data-uy)
 
-### Other Class assignments
+<!--### Other Class assignments
 - [Keychain Playground]
 
-[Keychain Playground]: Assignments/KeychainSwiftPlayground
+[Keychain Playground]: Assignments/KeychainSwiftPlayground-->
 
 ### Projects
 <!-- - [Course Planner]
