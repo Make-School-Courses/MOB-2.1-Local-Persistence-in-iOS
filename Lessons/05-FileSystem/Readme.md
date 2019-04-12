@@ -102,6 +102,7 @@ The system may purge this directory when your app is not running.
 ```
 Used to store files that you don't want to expose to the user
 
+**Library Cache**
 
 ```swift
 <Application_Home>/Library/Caches
