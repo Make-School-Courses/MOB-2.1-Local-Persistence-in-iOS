@@ -215,5 +215,6 @@ Follow Apple's guide to lead your way into this task and if you get stuck at som
 
 ## Resources
 
+[Slides](https://docs.google.com/presentation/d/1AJy3P2IqTQG4LpCUhodxFwHFIdtucSY5EeBBk0sF5yk/edit?usp=sharing)
 [FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)<br>
 [Apple's File system basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)
