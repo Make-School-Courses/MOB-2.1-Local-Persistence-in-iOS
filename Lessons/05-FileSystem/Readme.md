@@ -122,6 +122,8 @@ this by using a file attribute
 
 ## In Class Activity I (15 min)
 
+[Worksheet](https://drive.google.com/open?id=19eaA6deNcarLYG32CTksrT1aOcMN-_4br0spyyOn-uo)
+
 Discuss where should you store the following content in an app.
 
 - Drawing created by a user in a graphics app.
@@ -132,6 +134,31 @@ Discuss where should you store the following content in an app.
 - Downloaded images (ex. profile pictures)
 - Videos and audio files.
 
+
+#### Writing files
+
+##### The FileManager
+
+Its a class that allows us to interact with the filesystem.
+
+Writing a file to the documents directory:
+
+```swift
+let fileManager = FileManager.default
+let urls = fileManager.urls(for: .documentDirectory,
+                                    in: .userDomainMask)
+
+if let documentDirectory: URL = urls.first {
+    let documentURL = documentDirectory.appendingPathComponent("txtFile.txt")
+    // data you want to write to file
+    let data: Data? = "Hello World".data(using: .utf8)
+    do{
+      try data!.write(to: documentURL, options: .atomic)
+    }catch{
+        // some error    
+    }
+}
+```
 
 ## Accessing files
 
@@ -149,42 +176,26 @@ UIImage(named: "file1.jpg")
 ```
 
 #### Accessing files within the documents directory:
-##### The FileManager
-
-Its a class that allows us to interact with the filesystem.
 
 ##### Using the FileManager
 
 ```swift
 let fileManager = FileManager.default
 let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
-
 if let documentDirectory: URL = urls.first {
     let documentURL = documentDirectory.appendingPathComponent("txtFile.txt")
     do {
-        let content = try String(contentsOfURL: documentURL)
+        print(documentURL)
+
+        let content = try String(contentsOf: documentURL, encoding: .utf8)
+        print(content)
+
     } catch let error {
         print(error.localizedDescription)
     }
 }
  ```
 
-#### Writing files
-
-Writing a file to the documents directory:
-
-```swift
-let fileManager = FileManager.default
-let urls = fileManager.urls(for: .documentDirectory,
-in: .userDomainMask)
-
-if let documentDirectory: URL = urls.first {
-    let documentURL = documentDirectory.appendingPathComponent("txtFile.txt")
-    // data you want to write to file
-    let data = Data()
-    data.write(to: documentURL, options: .atomic)
-}
-```
 Visit the documentation page for info on how to access specific directories in the filesystem
 
 [FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)
@@ -209,6 +220,12 @@ Follow Apple's guide to lead your way into this task and if you get stuck at som
 <!--Clone/Download the repo below to get started:
 
 [Bundle Challenge - Robo Profiles](https://github.com/Product-College-Labs/RoboProfiles) -->
+
+## Stretch challenges
+
+1. Figure out a way to list all the contents inside the Documents directory.
+1. Can we access and list all the assets inside the Assets.xcassets folder? Why or How?
+1. Refactor the last activity to have a proper way to manage persistence in the app.
 
 
 ## Resources
