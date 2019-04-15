@@ -15,8 +15,8 @@
 
 Knowing about how the file system works in an iOS app will enable us to correctly manage how we store and access data. There's a lot of things to consider when using the file system, and as iOS developers it is in our best interest to responsibly handle these resources. This includes not abusing how much we save into files, using the correct file hierarchy and storing data only in files we are allowed to.
 
-## Initial Exercise
-Read and discuss: [Tutorial Syndrome](https://medium.com/arkflections/tutorial-syndrome-821588bd2fc8)
+<-- ## Initial Exercise
+Read and discuss: [Tutorial Syndrome](https://medium.com/arkflections/tutorial-syndrome-821588bd2fc8)-->
 
 ## Learning Objectives (5 min)
 
@@ -215,6 +215,6 @@ Follow Apple's guide to lead your way into this task and if you get stuck at som
 
 ## Resources
 
-[Slides](https://docs.google.com/presentation/d/1AJy3P2IqTQG4LpCUhodxFwHFIdtucSY5EeBBk0sF5yk/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1AJy3P2IqTQG4LpCUhodxFwHFIdtucSY5EeBBk0sF5yk/edit?usp=sharing)<br>
 [FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)<br>
 [Apple's File system basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)
