@@ -1,6 +1,6 @@
 # Intro to CoreData
 
-## Minute-by-Minute [OPTIONAL]
+## Minute-by-Minute
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
@@ -15,15 +15,15 @@
 
 [CoreData - Intro](core_data_intro.pdf)
 
-## Why you should know this or industry application (optional) (5 min)
-
-Explain why students should care to learn the material presented in this class.
+## Why you should know this
+Sometimes we want the data in our apps to remain the same even when the app is relaunched, after a device restart or in the event iOS ejects the app from memory when not in active use. When data becomes large and more complex, Core Data is an alternative to deal with the goal.
 
 ## Learning Objectives (5 min)
 
-1. Describe CoreData, what it is and how it works.
-1. Design models to use with CoreData.
-1. Understand key concepts and components of CoreData.
+1. Describe Core Data, what it is and how it works.
+1. Design models to use with Core Data using Xcode's model editor.
+1. Understand key concepts and components of the Core Data Stack.
+1. Get started with Core Data in Xcode (add/fetch/display)
 
 ## Overview (20 min)
 
@@ -31,7 +31,7 @@ Core Data is a framework that you use to manage the model layer objects in your 
 
 You can use Core Data to save your application’s permanent data for:
 
-- Offline use 
+- Offline use
 - To cache temporary data
 - To add undo functionality to your app on a single device.
 
@@ -43,42 +43,138 @@ Through Core Data’s Data Model editor, you define your data’s types and rela
 - **Background Data Tasks** - Perform potentially UI-blocking data tasks, like parsing JSON into objects, in the background. You can then cache or store the results to reduce server roundtrips.
 - **View Synchronization** - Core Data also helps keep your views and data synchronized by providing data sources for table and collection views.
 
-### Creating a Core Data Model
-The first step in working with Core Data is to create a **data model file**. Here you define the structure of your application’s objects, including their object types, properties, and relationships.
+## What it is
+CoreData is a framework from Apple that allows you to create and describe your model objects and their relationships to one another.
 
+It assumes responsibility for the lifetimes of these objects, ensuring their relationships are kept consistent and up to date.
 
-You can add a Core Data model file to your Xcode project when you create the project, or you can add it to an existing project.
+Because these objects can be thought of as nodes, and their interrelationships as vertices in a mathematical graph, such a collection of objects is often referred to as an object graph.
 
-#### Add Core Data to a New Xcode Project
+## Object Graphs
+Object-oriented applications contain complex webs of interrelated objects where objects are linked to each other by one object either owning, containing, or holding a reference to another object.
 
-In the dialog for creating a new project, select the Use Core Data checkbox.
-![first](firstoption.png)
+This web of objects is called an object graph — an abstract structure that can be used to describe an application's state at a particular point in time.
 
+< insert object-graph-example diagram >
 
-The resulting project includes an `.xcdatamodeld` file.
-![result](result.png)
+The above diagram from Apple is of an object graph depicting the relationships between a subset of an application’s high-level objects in memory at a particular moment in time.
 
-#### Add a Core Data Model to an Existing Project
+First and foremost, CoreData is a framework for managing an object graph.
 
-Choose File > New > File and select from the iOS templates. Scroll down to the Core Data section, and choose Data Model:
-![second](secondoption.png)
+## What it isn’t
+As CoreData has been a source of much confusion, especially among new iOS developers, understanding what the framework is not goes along way toward understanding what it does and how to implement it.
 
-Click Next. Name your model file, and select its group and targets.
-![targets](targets.png)
+### Not ORM
+The framework borrows a few concepts from object-relational-mapping (ORM), but it is not a full ORM system (more on ORM later).
 
-An `.xcdatamodeld` file with the name you specified is added to your project.
+And, unlike an ORM, CoreData takes complete control of storage, but you do not have to describe things like foreign keys, a database schema, etc, 00 CoreData handles all of that.
 
-### Setting Up a Core Data Stack
- Set up the classes that collaboratively support your app’s model layer. These classes are referred to collectively as the **Core Data stack.**
+### Not A Database / Not SQLite
+Though it can be used to manage a database, CoreData is much more than that: It manages, stores and reloads a complex object graph into memory.
+
+Though it is most often used to persist data to a SQLite database, it is not tied to SQLite, and it can be used without any database at all.
+
+When implemented to use SQLite, CoreData provides a layer of abstraction on top of SQLite that provides a convenient API for maintaining the relationships between records stored in the database.*
+
+## Where does it fit?
+In the context of Apple’s definition of MVC, CoreData fits neatly as a component of your application’s Model as it potentially constitutes an entire data layer.
+
+## Components
+
+**The Managed Object** — Subclasses of NSManagedObject. Used to represent the entities in your application.<br>
+**The CoreData Stack** - Contains all the Core Data components you need to fetch, create, and manipulate managed objects.<br>
+**SQLite** — A C-language library that implements a small, fast, full-featured and highly-reliable SQL database engine.
+
+### The Managed Object
+An NSManagedObject instance implements the basic behavior required of a Core Data model object.
+
+An instance of NSManagedObject requires two elements:
+- an entity description (an NSEntityDescription instance)
+- a managed object context (an NSManagedObjectContext instance)
+
+## The CoreData Stack
+CoreData is composed of a collection of objects often referred to as the CoreData Stack.
+
+The stack is composed of one or more managed object contexts connected to a single persistent store coordinator, which is in turn connected to one or more persistent stores.
+
+Minimally, it contains:<br>
+**Managed Object Model** — Describes the entities in the stores<br>
+**Managed Object Context** — The object used to create and fetch managed objects and to manage undo and redo operations<br>
+**Persistent Store Coordinator** — Aggregates all the stores.<br>
+**Persistent Object Store** — Maps between records in the store and objects in your application<br>
+
 
  ![corestack](corestack.png)
 
-- An instance of `NSManagedObjectModel` represents your app’s model file describing your app’s types, properties, and relationships.
+<!-- - An instance of `NSManagedObjectModel` represents your app’s model file describing your app’s types, properties, and relationships.
 - An instance of `NSManagedObjectContext` tracks changes to instances of your app’s types.
 - An instance of `NSPersistentStoreCoordinator` saves and fetches instances of your app’s types from stores.
-- An instance of `NSPersistentContainer` sets up the model, context, and store coordinator all at once.
+- An instance of `NSPersistentContainer` sets up the model, context, and store coordinator all at once. -->
 
-Instructions to set up a **Persistence Container** can be found [here](https://developer.apple.com/documentation/coredata/setting_up_a_core_data_stack).
+### The Managed Object Model (NSManagedObjectModel)
+An in-memory representation of the .xcdatamodeld file which you create and use to define your CoreData managed objects. Describes app's types, properties and relationships.
+
+### The Managed Object Context
+An instance of NSManagedObjectContext, the context is a powerful object that plays the central object in a CoreData application.
+
+Its primary responsibility is to manage a collection of managed objects, with responsibilities from life-cycle management (including faulting) to validation, inverse relationship handling, and undo/redo.
+
+It represents a single object space — or scratch pad — where you create the managed objects.
+
+These managed objects represent an internally consistent view, in memory, of the contents of one or more persistent stores.
+
+**The context tracks changes to and relationships between managed objects.**
+
+Within a given context, there is at most one managed object to represent any given record in a persistent store.
+
+### The Persistent Store Coordinator
+The NSPersistentStoreCoordinator is instantiated first when the Core Data stack is created.
+
+It sits in the middle of the Core Data stack and is responsible for creating new instances of entities that are defined inside the model.
+
+It **retrieves** existing instances from a persistent store, and passes these objects off to the context requesting them.
+
+### The Persistent (Object) Store
+The framework is only useful if the persistent store coordinator is connected to one or more persistent stores.
+
+CoreData can persist data using a few different formats:
+SQLite — Data is saved to disk using a SQLite database. This is the most commonly-used store type.<br>
+Atomic — Data saved to disk using a binary format.
+XML — Data saved to disk using an XML format. (Not available in iOS).<br>
+In-Memory — Data is not saved to disk, but instead is stored in memory.
+
+### The Store
+The persistent store communicates directly with the actual storage structure used for persistence: the store.
+
+For CoreData, SQLite is the most frequently used store.
+
+The store that underlies a SQLite-based CoreData implementation is simply a single flat file saved locally on the device.
+
+### NSPersistentContainer
+Starting with iOS 10, Apple introduced the NSPersistentContainer class, which encapsulates the entire CoreData Stack into a single object.
+
+Advantages of implementing the stack using the NSPersistentContainer include that it simplifies development of:
+- the CoreData stack — by abstracting away the need to implement each of the individual objects
+- CoreData Concurrency — by providing built-in contexts and functions associated with the main and background queues
+
+Even though this standard practice works well for most apps, an app’s data requirements may require customization of the stack to achieve greater efficiency, performance, or control over specific data persistence factors.
+
+## SQLite
+SQLite is the most widely-used database engine in the world.
+
+It is built in to all mobile devices and most computers, and it comes bundled inside countless applications that people use every day.
+
+A short list of SQLite’s most noteworthy features:
+- self-contained, highly-reliable, highly-performant, transactional
+- stored locally on the device — no server needed
+needs no configuration
+- lightweight — uses very little RAM
+- small — takes up very little (precious) device real estate (only a single flat file)
+
+All of those characteristics render SQLite an ideal fit for mobile devices.
+
+As a C-language library, it is native to the iOS system, and it is available by default on iOS.
+
 
 ## In Class Activity I (15 min)
 
@@ -93,9 +189,52 @@ Define in your own words the following key terms and save them for future refere
 - NSPersistentStore
 - NSManagedObjectModel
 
-## In Class Activity II (15 min)
+Draw a diagram that will help you remember how these elements work together to make Core Data work.
 
-Diagram how you think core data components work in the app described below. Include all the components needed.
+## Creating a Core Data Model
+The first step in working with Core Data is to create a **managed object model**, which describes the way Core Data represents data on disk. Here you define the structure of your application’s objects, including their object types, properties, and relationships.
+
+By default, Core Data uses a SQLite database as the persistent store, so you can think of the Data Model as the database schema.
+
+You can add a Core Data model file to your Xcode project when you create the project, or you can add it to an existing project.
+
+#### Add Core Data to a New Xcode Project
+
+In the dialog for creating a new project, select the Use Core Data checkbox.
+![first](firstoption.png)
+
+The resulting project includes an `.xcdatamodeld` file.
+![result](result.png)
+
+When we create a new project using Core Data, we get boilerplate for the `NSPersistentContainer` in the AppDelegate.
+
+“The NSPersistentContainer consists of a set of objects that facilitate saving and retrieving information from Core Data. Inside this container is an object to manage the Core Data state as a whole, an object representing the Data Model, and so on."
+
+#### Add a Core Data Model to an Existing Project
+
+Choose File > New > File and select from the iOS templates. Scroll down to the Core Data section, and choose Data Model:
+![second](secondoption.png)
+
+Click Next. Name your model file, and select its group and targets.
+![targets](targets.png)
+
+An `.xcdatamodeld` file with the name you specified is added to your project.
+
+
+## Core Data key terms
+
+- An entity is a class definition in Core Data. The classic example is an Employee or a Company. In a relational database, an entity corresponds to a table.
+- An attribute is a piece of information attached to a particular entity. For example, an Employee entity could have attributes for the employee’s name, position and salary. In a database, an attribute corresponds to a particular field in a table.
+- A relationship is a link between multiple entities. In Core Data, relationships between two entities are called to-one relationships, while those between one and many entities are called to-many relationships.
+
+Excerpt From: By Pietro Rea. “Core Data by Tutorials.” Apple Books.
+
+
+## In Class Activity II (20 min)
+
+Follow Along in the creation of a tableview that stores the names of your Friends and diplays them in a Tableview.
+
+<!-- Diagram how you think core data components work in the app described below. Include all the components needed.
 
 **Favorites:**
 
@@ -109,6 +248,7 @@ We will also have favorites, a "logged in user" can favorite many products.
 *Sample App Image*
 
 ![App Sample](sample.jpeg)
+-->
 
 ## In Class Activity III (30 min)
 
@@ -122,7 +262,7 @@ Clone the this repo:
 1. Edit an inventory item and save the changes.
 1. Add way to delete an inventory item.
 
-**Stretch Challenge:**
+<!-- **Stretch Challenge:**
 
 Lets model a shopping cart. There will only be one *Cart*. A Cart can have many *Products*. *Products* can belong to only one *Cart*.
 
@@ -133,4 +273,4 @@ Lets model a shopping cart. There will only be one *Cart*. A Cart can have many 
 1. Have a add to cart button on each *Product* cell in the list.
 1. When a user taps the *Add to Cart* button, you add the product to the cart.
 1. When a user taps the Cart button, it displays the cart with all the *products*.
-1. Make sure to save the cart every time a new item is added to it. If the app is closed and opened, the *products* in the cart should persist.
+1. Make sure to save the cart every time a new item is added to it. If the app is closed and opened, the *products* in the cart should persist. -->
