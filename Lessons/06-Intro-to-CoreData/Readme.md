@@ -11,9 +11,6 @@
 | 1:15        | 0:45      | In Class Activity II      |
 | TOTAL       | 2:00      |                           |
 
-## Class Materials
-
-[CoreData - Intro](core_data_intro.pdf)
 
 ## Why you should know this
 Sometimes we want the data in our apps to remain the same even when the app is relaunched, after a device restart or in the event iOS ejects the app from memory when not in active use. When data becomes large and more complex, Core Data is an alternative to deal with the goal.
