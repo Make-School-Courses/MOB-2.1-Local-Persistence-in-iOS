@@ -5,11 +5,13 @@
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:45      | In Class Activity I       |
-| 1:05        | 0:10      | BREAK                     |
-| 1:15        | 0:45      | In Class Activity II      |
-| TOTAL       | 2:00      |                           |
+| 0:05        | 0:20      | Overview                  |
+| 0:25        | 0:15      | In Class Activity I       |
+| 0:40        | 0:15      | Overview                  |
+| 0:55        | 0:10      | BREAK                     |
+| 1:05        | 0:40      | In Class Activity II      |
+| 1:45        | 0:05      | Wrap Up                   |
+| TOTAL       | 1:50      |                           |
 
 ## Why you should know this (5 min)
 
@@ -135,7 +137,7 @@ Discuss where should you store the following content in an app.
 - Videos and audio files.
 
 
-#### Writing files
+### Writing files
 
 ##### The FileManager
 
