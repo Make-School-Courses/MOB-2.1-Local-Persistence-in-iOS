@@ -176,20 +176,21 @@ All of those characteristics render SQLite an ideal fit for mobile devices.
 As a C-language library, it is native to the iOS system, and it is available by default on iOS.
 
 
-## In Class Activity I (15 min)
+## In Class Activity I (25 min)
 
 Define in your own words the following key terms and save them for future reference.
 
 - Object Graph
-- Queries
 - NSManagedObject
-- NSEntityDescription
 - NSManagedObjectContext
 - NSPersistentStoreCoordinator
 - NSPersistentStore
 - NSManagedObjectModel
+- NSPersistentContainer
 
 Draw a diagram that will help you remember how these elements work together to make Core Data work.
+
+[Worksheet](https://docs.google.com/document/d/19c2pzBkKVTdMj9aNBCDtRpFhIIzQOeNsLmIwzWjePtM/edit?usp=sharing)
 
 ## Creating a Core Data Model
 The first step in working with Core Data is to create a **managed object model**, which describes the way Core Data represents data on disk. Here you define the structure of your application’s objects, including their object types, properties, and relationships.
@@ -230,9 +231,143 @@ An `.xcdatamodeld` file with the name you specified is added to your project.
 Excerpt From: By Pietro Rea. “Core Data by Tutorials.” Apple Books.
 
 
-## In Class Activity II (20 min)
+## In Class Activity II (45 min)
 
-Follow Along in the creation of a tableview that stores the names of your Friends and diplays them in a Tableview.
+This activity needs a volunteer to drive the class. The rest will help out reading the instructions and following along.
+
+
+Follow Along in the creation of a tableview that stores the names of your Friends and displays them in a Tableview.
+
+Create a New Xcode project. Call it Friends and make sure to check the box for Core Data.
+
+This generates boilerplate in the App delegate with the NSPersistentContainer. - set of objects that facilitate saving and retrieving information from Core Data.
+
+The idea of the app is to add names of our Friends and then make sure to use Core Data to persist the list even when we terminate the app and open it again.
+
+Set up a navigation controller and a table view the way you prefer.
+
+Set up the datasource methods for the tableview.
+
+```swift
+extension ViewController: UITableViewDataSource {
+
+ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return names.count
+ }
+
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    cell.textLabel?.text = names[indexPath.row]
+    return cell
+
+    }
+}
+```
+
+Add a navigation button with the title “Add” we’ll use it to add entries to the table.
+
+Set up Large titles and set “Friends” as a title. Run the app to make sure it works so far.
+
+Add an action to the bar button item.
+
+Set up the model for the table view. An array of Strings to hold the names of your friends.
+```swift
+var names : [String] = []
+```
+
+Implement the add action.
+```swift
+let alert = UIAlertController(title: "New Friend", message: "Add the name of your friend", preferredStyle: .alert)
+
+let saveAction = UIAlertAction(title: "Add Now", style: .default) { [unowned self] action in
+
+      guard let textField = alert.textFields?.first, let nameToSave = textField.text else { return }
+
+      self.names.append(nameToSave)
+      self.tableView.reloadData()
+  }
+
+  let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+  alert.addTextField()
+  alert.addAction(saveAction)
+  alert.addAction(cancelAction)
+  present(alert, animated: true)
+```
+
+Run the app and add a few names. See what happens when you close the app and open it again.
+
+It's time to model the data. Te first step is creating a Managed Object Model. Go and open the xcdatamodeld file.
+
+Add an entity and call it Person.
+Add an attribute to it for `name`.
+
+Now we'll use Core Data to save. Go to the main ViewController and import Core Data.
+
+Replace the names variable with this `var people: [NSManagedObject] = []`
+
+“NSManagedObject represents a single object stored in Core Data; you must use it to create, edit, save and delete from your Core Data persistent store. NSManagedObject is a shape-shifter. It can take the form of any entity in your Data Model, appropriating whatever attributes and relationships you defined."
+
+Go ahead and modify the tableview's datasource to be able to use this new Managed Object.
+```swift
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return people.count
+    }
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)  -> UITableViewCell {
+
+    let person = people[indexPath.row]
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    cell.textLabel?.text = person.value(forKeyPath: "name") as? String
+    return cell
+
+
+}
+```
+The only way Core Data provides to read the value is key-value coding, commonly referred to as KVC.
+
+Modify the save call in the add method too.
+
+```swift
+guard let textField = alert.textFields?.first, let nameToSave = textField.text else { return }
+self.save(name: nameToSave)
+self.tableView.reloadData()
+```
+
+Looks like we need a new method `save`. Let's add this one now.
+```swift
+func save(name: String) {
+
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+
+    // 1
+    let managedContext = appDelegate.persistentContainer.viewContext
+
+    // 2
+    let entity = NSEntityDescription.entity(forEntityName: "Person",
+                                       in: managedContext)!
+
+    let person = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+
+    // 3
+    person.setValue(name, forKeyPath: "name")
+
+    // 4
+    do {
+        try managedContext.save()
+        people.append(person)
+    } catch let error as NSError {
+        print("Could not save. \(error), \(error.userInfo)")
+    }
+}
+```
+
+### Stretch Challenge
+
+- Add more properties to our only Entity and display them in the cell. For example: age and birthday.
+- Find out how to delete records from the table view to complete the app. It's not realistic that ALL friends are forever. 🙃
 
 <!-- Diagram how you think core data components work in the app described below. Include all the components needed.
 
@@ -250,7 +385,7 @@ We will also have favorites, a "logged in user" can favorite many products.
 ![App Sample](sample.jpeg)
 -->
 
-## In Class Activity III (30 min)
+<!-- # In Class Activity III (30 min)
 
 Clone the this repo:
 
@@ -262,6 +397,7 @@ Clone the this repo:
 1. Edit an inventory item and save the changes.
 1. Add way to delete an inventory item.
 
+-->
 <!-- **Stretch Challenge:**
 
 Lets model a shopping cart. There will only be one *Cart*. A Cart can have many *Products*. *Products* can belong to only one *Cart*.
@@ -274,3 +410,6 @@ Lets model a shopping cart. There will only be one *Cart*. A Cart can have many 
 1. When a user taps the *Add to Cart* button, you add the product to the cart.
 1. When a user taps the Cart button, it displays the cart with all the *products*.
 1. Make sure to save the cart every time a new item is added to it. If the app is closed and opened, the *products* in the cart should persist. -->
+
+# Additional Resources
+- Quoted excerpts from “Core Data by Tutorials.” By Pietro Rea.
