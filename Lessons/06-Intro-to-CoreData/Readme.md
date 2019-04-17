@@ -307,8 +307,6 @@ Now we'll use Core Data to save. Go to the main ViewController and import Core D
 
 Replace the names variable with this `var people: [NSManagedObject] = []`
 
-“NSManagedObject represents a single object stored in Core Data; you must use it to create, edit, save and delete from your Core Data persistent store. NSManagedObject is a shape-shifter. It can take the form of any entity in your Data Model, appropriating whatever attributes and relationships you defined."
-
 Go ahead and modify the tableview's datasource to be able to use this new Managed Object.
 ```swift
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -359,10 +357,20 @@ func save(name: String) {
         try managedContext.save()
         people.append(person)
     } catch let error as NSError {
-        print("Could not save. \(error), \(error.userInfo)")
+        print(error.userInfo)
     }
 }
 ```
+What happens here?
+
+1. Before we save or get anything from the store, we need a NSManagedObjectContext. Remember it serves as a scratchpad for us to work with objects.
+
+1. We create a new managed object and insert it into the managed object context. Using NSManagedObject’s static method: `entity(forEntityName:in:).`
+
+1. Once we have the NSManagedObject we set the name attribute using key-value coding. We must spell the KVC key  exactly as in the Data Model.
+
+1. We save our changes to person and call save on the managed object context. Saving can throw an error, so we use a do-catch block. Finally, we insert the new managed object into the array and reload the table.
+
 
 ### Stretch Challenge
 
