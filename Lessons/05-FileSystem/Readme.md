@@ -200,7 +200,7 @@ if let documentDirectory: URL = urls.first {
 
 Visit the documentation page for info on how to access specific directories in the filesystem
 
-[FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)
+[FileManager Documentation](https://developer.apple.com/documentation/foundation/filemanager)
 
 
 #### When to use filesystem
