@@ -52,9 +52,6 @@ Object-oriented applications contain complex webs of interrelated objects where 
 
 This web of objects is called an object graph — an abstract structure that can be used to describe an application's state at a particular point in time.
 
-< insert object-graph-example diagram >
-
-The above diagram from Apple is of an object graph depicting the relationships between a subset of an application’s high-level objects in memory at a particular moment in time.
 
 First and foremost, CoreData is a framework for managing an object graph.
 
