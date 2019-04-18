@@ -365,6 +365,19 @@ What happens here?
 
 1. We save our changes to person and call save on the managed object context. Saving can throw an error, so we use a do-catch block. Finally, we insert the new managed object into the array and reload the table.
 
+Now just fetch the data when we open the app.
+
+```swift
+//2
+ let fetchRequest =  NSFetchRequest<NSManagedObject>(entityName: "Person")
+        
+ //3
+  do {
+    people = try managedContext.fetch(fetchRequest)
+   } catch let error as NSError {
+       print("Could not fetch. \(error), \(error.userInfo)")
+  }
+```
 
 ### Stretch Challenge
 
