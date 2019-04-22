@@ -162,9 +162,9 @@ Go to `ViewController.swift` and import Core Data. then add a property for the m
 
 Now go to the app delegate and import Core Data. Add a property to hold the stack.
 
-``swift
+```swift
 lazy var coreDataStack = CoreDataStack(modelName: "WaterLog")
-``
+```
 
 **Q: Why do you think this is a lazy initialization?**
 <!-- The stack won't be set up until we need to access the property -->
