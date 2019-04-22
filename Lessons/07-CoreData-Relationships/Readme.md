@@ -4,16 +4,24 @@
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:45      | In Class Activity I       |
-| 1:05        | 0:10      | BREAK                     |
-| 1:15        | 0:45      | In Class Activity II      |
-| TOTAL       | 2:00      |                           |
+| 0:00        | 0:05      | Initial activity          |
+| 0:05        | 0:05      | Objectives                |
+| 0:10        | 0:10      | Core Data Stack           |
+| 0:20        | 0:15      | Relationships             |
+| 0:35        | 0:25      | In Class Activity I       |
+| 1:00        | 0:10      | BREAK                     |
+| 1:10        | 0:25      | In Class Activity I       |
+| 1:35        | 0:10      | Wrap Up                   |
+| TOTAL       | 1:45      |                           |
 
 <!--## Class Materials
 
 Slides: [CoreData Relationships Slides](core_data_relationships.key) -->
+
+## Initial Activity
+- Reminder of updating missing activities. This Friday mid term grades will be sent.
+- Any questions with the current tutorial?
+- Any questions with the final project?
 
 ## Why you should know this
 
@@ -28,14 +36,14 @@ Another situation in which you would encounter the need to write your own CoreDa
 - Use the model editor to create relationships between properties.
 - Identify different types of relationships.
 
-## The Core Data Stack (15 min)
+## The Core Data Stack (10 min)
 
 Let's remember the components that make up the Core Data stack:
 - **NSManagedObjectModel**
 Represents each object type in the data model, along with its properties and relationships.
 
 - **NSPersistentStore**
-Reads and write data to the storage we want. Core Data gives us four types of NSPersistentStore: three atomic and one non-atomic.
+Reads and writes data to the storage we want. Core Data gives us four types of NSPersistentStore: three atomic and one non-atomic.
 
   *Atomic*: needs to be deserialized and loaded into memory before performing any read or write operation.<br>
   *Non-atomic*: can load itself onto memory as needed.
@@ -64,7 +72,7 @@ We ALWAYS need one of these to work with Core Data.
 Container that holds everything together (the managed model, the store coordinator, persistent store and managed context)
 
 
-## Relationships
+## Relationships (15 min)
 
 A relationship describes how an entity affects another entity. At minimum, a relationship specifies a name, a destination entity, a delete rule, a cardinality type (To One or To Many), settings for whether the relationship should be saved in the store (transient), and whether it is required to have a value when saved (optional). You should also configure every relationship with an inverse relationship.
 
@@ -85,7 +93,7 @@ Relationships are modeled similar to relational database modeling that means: we
 - Count
 
 
-## In Class Activity I (45 min)
+## In Class Activity I (50 min)
 
 Instead of having the stack in the app delegate, we'll create a separate class for it. Let's pair program this time. This means all the coding will be made in just ONE computer while the other person guides with the instructions.
 
@@ -269,7 +277,10 @@ Finally modify the add method to create new Dates accordingly.
 - Walkthrough the creation of Entities, Attributes and Relationships can be found [here](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/KeyConcepts.html)
 - Configuring entities [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
 - Configuring attributes [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
-- Configuring relationships [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_relationships)
+- Configuring relationships [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_relationships)<br>
+- [Modern Core Data article](https://stoeffn.de/posts/modern-core-data-in-swift/)
+- Theory and activity based on content from “Core Data by Tutorials.” By Pietro Rea.
+
 
 
 <!--## In Class Activity I (40 min)
