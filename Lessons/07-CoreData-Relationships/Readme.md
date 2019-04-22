@@ -223,7 +223,7 @@ Go back to the main ViewController. Suppose we can only see the data of one plan
 
 Add the following to `viewDidLoad`
 ```swift
-//we will look for Fido for this example. We'll go over how to query in future lessons.
+   //we will look for Cactus as the current plan. We'll go over how to query in future lessons.
 
    let species = "Cactus"
    let mainPlant: NSFetchRequest<Plant> = Plant.fetchRequest()
