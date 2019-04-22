@@ -97,6 +97,8 @@ Relationships are modeled similar to relational database modeling that means: we
 
 Instead of having the stack in the app delegate, we'll create a separate class for it. Let's pair program this time. This means all the coding will be made in just ONE computer while the other person guides with the instructions.
 
+Download the [starter project here](https://github.com/amelinagzz/coredata-starter) and work from there.
+
 **File -> New -> File -> iOS -> Source -> Swift File template -> Next**
 And name it CoreDataStack, then save it.
 
@@ -223,7 +225,7 @@ Go back to the main ViewController. Suppose we can only see the data of one plan
 
 Add the following to `viewDidLoad`
 ```swift
-   //we will look for Cactus as the current plan. We'll go over how to query in future lessons.
+//we will look for Fido for this example. We'll go over how to query in future lessons.
 
    let species = "Cactus"
    let mainPlant: NSFetchRequest<Plant> = Plant.fetchRequest()
@@ -272,8 +274,13 @@ Finally modify the add method to create new Dates accordingly.
 
 ```
 
+## Stretch challenges
+1. Include the functionality to delete dates in today's activity.
+1. We will eventually practice unit testing using Core Data. While we get there, take your activity from the Keychain class and include unit tests for getting, deleting and updating values using the library KeychainSwift.
+
 # Additional resources
 
+- [Slides](https://docs.google.com/presentation/d/1N3LG8h3dnLpqIQmhTOqqiX8x3cP87dFn0ybqDy7M4CA/edit?usp=sharing)
 - Walkthrough the creation of Entities, Attributes and Relationships can be found [here](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/KeyConcepts.html)
 - Configuring entities [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
 - Configuring attributes [here](https://developer.apple.com/documentation/coredata/modeling_data/configuring_entities)<br>
