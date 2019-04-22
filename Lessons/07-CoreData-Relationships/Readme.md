@@ -227,19 +227,19 @@ Add the following to `viewDidLoad`
 ```swift
 //we will look for Fido for this example. We'll go over how to query in future lessons.
 
-   let species = "Cactus"
-   let mainPlant: NSFetchRequest<Plant> = Plant.fetchRequest()
-   mainPlant.predicate = NSPredicate(format: "%K == %@", #keyPath(Plant.species), species)
+   let plantSpecies = "Cactus"
+   let plantSearch: NSFetchRequest<Plant> = Plant.fetchRequest()
+   plantSearch.predicate = NSPredicate(format: "%K == %@", #keyPath(Plant.species), plantSpecies)
 
    do {
-     let results = try managedContext.fetch(plant)
+     let results = try managedContext.fetch(plantSearch)
      if results.count > 0 {
        // cactus found
        mainPlant = results.first
      } else {
        // not found, create cactus
        mainPlant = Plant(context: managedContext)
-       mainPlant?.species = species
+       mainPlant?.species = plantSpecies
        try managedContext.save()
      }
    } catch let error as NSError {
