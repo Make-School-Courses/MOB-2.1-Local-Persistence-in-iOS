@@ -64,6 +64,7 @@ This section provides requirements for some of the more complex screens.
 - Add an *Edit* button on the Main Screen and/or the Trip Detail Screen that puts the table view into edit mode; this provides the user with another way of deleting elements.
 - Synchronize all Trips and Waypoints with your Server - this should include user authentication so that persisted data is user specific.  
 - Use Keychain to store the user's password, maybe try the sync with iCloud feature.
+- Include unit testing for at least one module.
 
 ## Project evaluation criteria
 
