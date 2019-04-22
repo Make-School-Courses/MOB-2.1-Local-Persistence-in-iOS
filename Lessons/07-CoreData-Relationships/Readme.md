@@ -262,7 +262,7 @@ Finally modify the add method to create new Dates accordingly.
 
   if let plant = mainPlant, let dates = plant.waterDates?.mutableCopy() as? NSMutableOrderedSet {
     dates.add(waterDate)
-    plant.dates = dates
+    plant.waterDates = dates
   }
 
 //save the managed object context  
