@@ -162,9 +162,9 @@ Go to `ViewController.swift` and import Core Data. then add a property for the m
 
 Now go to the app delegate and import Core Data. Add a property to hold the stack.
 
-``swift
+```swift
 lazy var coreDataStack = CoreDataStack(modelName: "WaterLog")
-``
+```
 
 **Q: Why do you think this is a lazy initialization?**
 <!-- The stack won't be set up until we need to access the property -->
@@ -225,7 +225,7 @@ Go back to the main ViewController. Suppose we can only see the data of one plan
 
 Add the following to `viewDidLoad`
 ```swift
-//we will look for Fido for this example. We'll go over how to query in future lessons.
+//we will look for Cactus for this example. We'll go over how to query in future lessons.
 
    let plantSpecies = "Cactus"
    let plantSearch: NSFetchRequest<Plant> = Plant.fetchRequest()
@@ -262,7 +262,7 @@ Finally modify the add method to create new Dates accordingly.
 
   if let plant = mainPlant, let dates = plant.waterDates?.mutableCopy() as? NSMutableOrderedSet {
     dates.add(waterDate)
-    plant.dates = dates
+    plant.waterDates = dates
   }
 
 //save the managed object context  
