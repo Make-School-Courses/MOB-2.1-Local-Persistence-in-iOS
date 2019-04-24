@@ -223,6 +223,10 @@ override func viewWillAppear(_ animated: Bool) {
 ```
 ## In Class Activity II (30 min)
 
+Individually - follow the activity described [here]
+
+[here]:/Activity.md.
+
 ## Resources
 
 [Realm Predicate Cheatsheet](https://academy.realm.io/posts/nspredicate-cheatsheet/)
