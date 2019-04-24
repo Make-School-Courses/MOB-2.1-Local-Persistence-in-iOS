@@ -13,24 +13,14 @@
 
 ## Why you should know this or industry application (optional) (5 min)
 
-Explain why students should care to learn the material presented in this class.
+So far we have been experimenting with Core Data and learning how it works below the surface. When retrieving data, we've used simple examples of fetching all entities. There are ways to make more refined or specific fetches and it will save us time and resources if we learn how to do them.
 
 ## Learning Objectives (5 min)
 
 - Fetch data from Core Data with NSFetchedRequest
-- Filter through data stored in Core Data with NSPredicate
+- Refine a search using NSPredicate
 - Sort data with NSSortDescriptor
 - Fetch and display data with NSFetchedResultsController
-
-## Overview/TT I (20 min)
-
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
-
-## In Class Activity I (30 min)
-
 
 ### Predicates
 
@@ -99,7 +89,42 @@ let pred = NSPredicate(format: "name == %@", "Eliel")
 
 [Realm Predicate Cheatsheet](https://academy.realm.io/posts/nspredicate-cheatsheet/)
 
-## In Class Activity II (30 min)
+## In Class Activity I (30 min)
+
+https://github.com/dfreniche/NSPredicate-Swift/tree/master/NSPredicate.playground
+
+## NSFetchRequest
+
+We fetch entities from Core Data by creating an instance of NSFetchRequest. Then we configure it as we need and hand it over to NSManagedObjectContext to to the search and work.
+
+There are different ways to set up a fetch request, here are a few:
+
+```swift
+let fetchRequest = NSFetchRequest<Shop>()
+let entity = NSEntityDescription.entity(forEntityName: "Shop",in: managedContext)!
+fetchRequest.entity = entity
+```
+
+Initializing an instance of `NSFetchRequest` using a generic type `NSFetchRequest<Shop>`. Then initialize an instance of `NSEntityDescription` and use it to set the fetch request's entity.
+
+```swift
+let fetchRequest = NSFetchRequest<Venue>(entityName: "Shop")
+```
+Using NSFetchRequest's convenience initializer. It also sets the entity property in the same step. You only need to specify the string for the entity name, instead of a description.
+
+```swift
+let fetchRequest = managedObjectModel.fetchRequestTemplate(forName: "coffeeShop")
+```
+Retrieve the fetch request from the `NSManagedObjectModel`.
+
+```swift
+let fetchRequest = managedObjectModel.fetchRequestFromTemplate(
+    withName: "coffeeShop",
+    substitutionVariables: ["Name" : "Sightglass"])
+```
+
+Get the fetch request from the managed object model with some extra variables. These are used in a predicate to filter the results.
+
 
 ### Sort Descriptors
 
@@ -109,11 +134,12 @@ Sort Descriptors enables us to sort results from a fetch request.
 let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
 fetchRequest.sortDescriptors = [sortDescriptor]
 ```
+To initialize an instance of NSSortDescriptor you need three things: a key path to specify the attribute which you want to sort, a specification of whether the sort is ascending or descending and an optional selector to perform the comparison operation.
 
 ### NSFetchedResultsController
 
 Performing queries to Core Data and displaying them has never been easier.
-Using NSFetchedResultsController, we can perform 
+Using NSFetchedResultsController, we can perform
 
 1. Initialize your fetch request
 
@@ -174,7 +200,7 @@ func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> 
 
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryCell", for: indexPath)
-    
+
     // FetchedResultsController controls fetching of ManagedObjects
     let item = fetchedResultsController.object(at: indexPath)
 
@@ -195,6 +221,7 @@ override func viewWillAppear(_ animated: Bool) {
     tableView.reloadData()
 }
 ```
+## In Class Activity II (30 min)
 
 ## Resources
 
