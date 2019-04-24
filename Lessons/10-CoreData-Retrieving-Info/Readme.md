@@ -1,4 +1,4 @@
-# NSFetchRequests, NSSortDescriptors & NSFetchedResultsController
+# Fetching Data
 
 ## Minute-by-Minute [OPTIONAL]
 
@@ -225,7 +225,7 @@ override func viewWillAppear(_ animated: Bool) {
 
 Individually - follow the activity described [here]
 
-[here]:/Activity.md.
+[here]:/Activity.md
 
 ## Resources
 
