@@ -232,3 +232,7 @@ Individually - follow the activity described [here]
 [Realm Predicate Cheatsheet](https://academy.realm.io/posts/nspredicate-cheatsheet/)
 
 [NSPredicate](http://nshipster.com/nspredicate/)
+
+[Sort Descriptors]()
+
+Core Data by Tutorials by Pietro Rea.
