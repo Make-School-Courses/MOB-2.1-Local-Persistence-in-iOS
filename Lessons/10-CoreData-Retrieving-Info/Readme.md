@@ -1,6 +1,6 @@
 # Fetching Data
 
-## Minute-by-Minute [OPTIONAL]
+## Minute-by-Minute 
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
@@ -233,6 +233,6 @@ Individually - follow the activity described [here]
 
 [NSPredicate](http://nshipster.com/nspredicate/)
 
-[Sort Descriptors]()
+[Sort Descriptors](https://nshipster.com/nssortdescriptor/)
 
 Core Data by Tutorials by Pietro Rea.
