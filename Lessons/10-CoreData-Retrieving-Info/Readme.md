@@ -108,7 +108,7 @@ fetchRequest.entity = entity
 Initializing an instance of `NSFetchRequest` using a generic type `NSFetchRequest<Shop>`. Then initialize an instance of `NSEntityDescription` and use it to set the fetch request's entity.
 
 ```swift
-let fetchRequest = NSFetchRequest<Venue>(entityName: "Shop")
+let fetchRequest = NSFetchRequest<Shop>(entityName: "Shop")
 ```
 Using NSFetchRequest's convenience initializer. It also sets the entity property in the same step. You only need to specify the string for the entity name, instead of a description.
 
