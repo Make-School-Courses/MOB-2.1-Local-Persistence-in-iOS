@@ -52,9 +52,9 @@ Matthew: Wed/Fri 1:00 - 2:00
 |  5 |  Monday, April 15                        | [The iOS FileSystem - Introduction] |
 |  6 |  Wednesday, April 17                     | [CoreData - Introduction]  |
 |  7 |  Monday, April 22                        | [CoreData - Relationships and Hierarchies] |
-|  8 |  Wednesday, April 24                     | [CoreData - Caching] |
-|  9 |  Monday, April 29                        | [CoreData - Using multiple contexts and child contexts] |
-| 10 |  Wednesday, May 1                        | [CoreData - Retrieving information from the stack] |
+|  8 |  Wednesday, April 24                     | [CoreData - Retrieving information from the stack] |
+|  9 |  Monday, April 29                        | [CoreData - Unit Testing]|
+| 10 |  Wednesday, May 1                        | [CoreData - Using multiple contexts and child contexts] |
 | 11 |  Monday, May 6                           | [Third Party Persistence Options - Realm] |  
 | 12 |  Wednesday, May 8                        | Project Work Day |
 | 13 |  Monday, May 13                        | Final Class (presentations, etc) |
@@ -71,7 +71,7 @@ Matthew: Wed/Fri 1:00 - 2:00
 [CoreData - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
 [CoreData - Retrieving information from the stack]: Lessons/10-CoreData-Retrieving-Info/Readme.md
 [Third Party Persistence Options - Realm]: Lessons/11-Realm-Intro/Readme.md
-
+[CoreData - Unit Testing]: Lessons/12-CoreData-UnitTests/Readme.md
 
 
 ## Class Assignments
