@@ -1,6 +1,6 @@
 # Fetching Data
 
-## Minute-by-Minute 
+## Minute-by-Minute
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
@@ -225,11 +225,7 @@ override func viewWillAppear(_ animated: Bool) {
 
 Individually - follow the activity described [here]
 
-<<<<<<< HEAD
-[here]:Activity.md.
-=======
 [here]:Activity.md
->>>>>>> 2588f172398d60b63ae5349b3604aa1e5fb9b7b2
 
 ## Resources
 
