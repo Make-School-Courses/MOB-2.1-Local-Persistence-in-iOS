@@ -1,6 +1,6 @@
-# NSFetchRequests, NSSortDescriptors & NSFetchedResultsController
+# Fetching Data
 
-## Minute-by-Minute [OPTIONAL]
+## Minute-by-Minute 
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
@@ -225,7 +225,11 @@ override func viewWillAppear(_ animated: Bool) {
 
 Individually - follow the activity described [here]
 
+<<<<<<< HEAD
 [here]:Activity.md.
+=======
+[here]:Activity.md
+>>>>>>> 2588f172398d60b63ae5349b3604aa1e5fb9b7b2
 
 ## Resources
 
@@ -233,6 +237,6 @@ Individually - follow the activity described [here]
 
 [NSPredicate](http://nshipster.com/nspredicate/)
 
-[Sort Descriptors]()
+[Sort Descriptors](https://nshipster.com/nssortdescriptor/)
 
 Core Data by Tutorials by Pietro Rea.
