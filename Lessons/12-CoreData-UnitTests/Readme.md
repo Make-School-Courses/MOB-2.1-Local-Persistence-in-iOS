@@ -86,22 +86,24 @@ According to the class `ToDoStorageManager` we can create, fetch, save and remov
 
 Write the following tests, try using the GIVEN, WHEN, ASSERT methodology.
 
-1. insertItem()
+1. **insertItem()**
  - should return an item<br>
  Example of expected comments in each test:<br>
+ ```
  //Given the name & completion status<br>
  //When adding an item<br>
  //Assert the returned item is not nil
-1. fetchAllItems()
+ ```
+1. **fetchAllItems()**
   - should return correct number of ToDoItems
-1. removeItem()
+1. **removeItem()**
   - should remove an item from the database
 
 Stretch Challenges:
 
 1. Practice testing Core Data implementation with the WaterLog app (Lesson 7) of the Friends App (Lesson 6).
 1. save()
-  - should call NSManagedContext.save()
+  - should call `NSManagedContext.save()``
   - This last one needs more code, find the guide of how to go over it in the additional resources section.
 
 ## Additional Resources
