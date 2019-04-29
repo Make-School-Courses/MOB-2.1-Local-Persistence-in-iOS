@@ -84,14 +84,14 @@ According to the class `ToDoStorageManager` we can create, fetch, save and remov
 
 #### What you'll need to complete
 
-Write the following tests, try using the GIVEN, WHEN, ASSERT methodology.
+Write the following tests, try using the **GIVEN, WHEN, ASSERT** methodology.
 
 1. **insertItem()**
  - should return an item<br>
  Example of expected comments in each test:<br>
  ```
- //Given the name & completion status<br>
- //When adding an item<br>
+ //Given the name & completion status
+ //When adding an item
  //Assert the returned item is not nil
  ```
 1. **fetchAllItems()**
