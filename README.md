@@ -57,8 +57,8 @@ Matthew: Wed/Fri 1:00 - 2:00
 | 10 |  Wednesday, May 1                        | [CoreData - Using multiple contexts and child contexts] |
 | 11 |  Monday, May 6                           | [Third Party Persistence Options - Realm] |  
 | 12 |  Wednesday, May 8                        | Project Work Day |
-| 13 |  Monday, May 13                        | Final Class (presentations, etc) |
-| 14 |  Wednesday, May 15                     | Final Exams/Presentations |
+| 13 |  Monday, May 13                        | Final Exam|
+| 14 |  Wednesday, May 15                     | Final Class, presentations |
 
 [Introduction to Persistence Technologies in iOS]: Lessons/01-Intro-to-Persistence-Technologies/Readme.md
 [PList and UserDefaults]: Lessons/02-Plist-UserDefaults/Readme.md
