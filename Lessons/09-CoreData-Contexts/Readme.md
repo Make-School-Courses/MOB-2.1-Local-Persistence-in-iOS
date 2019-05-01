@@ -29,7 +29,7 @@ Long-running tasks like exporting data, will block the main thread on apps that 
 - Discuss thread safety with ManagedObjectContexts.
 
 
-### ManagedObjectContexts & Thread safety
+## ManagedObjectContexts & Thread safety
 
 ManagedObjectContexts are not thread safe. This means we can't just dispatch to a background queue and use the same Core Data stack. We have to use them with caution when concurrency is at play.
 
