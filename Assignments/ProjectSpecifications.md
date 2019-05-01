@@ -26,9 +26,6 @@ The goal for this project is to build an iOS app that allows users to plan trips
 - Save user settings using any simple persistence method of your preference.
     - For example: distance metrics, currency selector, dark mode preference...
     - _These features don't need to work_, you just want to demonstrate the case of saving simple data.
-- Data should be synchronized with a backend system that is set up using Firebase, or any other option of your preference
-    - Note: Firebase recommended for speed time and simplicity
-- Implement _at least one_ API call that successfully works together with your backend (e.g. only syncing new trips but not changes or deletions, or login in users)
 
 ## Screen Layout Requirements + Example
 
@@ -61,10 +58,15 @@ This section provides requirements for some of the more complex screens.
 
 ## Stretch challenges
 
+- Data should be synchronized with a backend system that is set up using Firebase, or any other option of your preference
+    - Note: Firebase recommended for speed time and simplicity
+- Implement _at least one_ API call that successfully works together with your backend (e.g. only syncing new trips but not changes or deletions, or login in users)
 - Add an *Edit* button on the Main Screen and/or the Trip Detail Screen that puts the table view into edit mode; this provides the user with another way of deleting elements.
 - Synchronize all Trips and Waypoints with your Server - this should include user authentication so that persisted data is user specific.  
 - Use Keychain to store the user's password, maybe try the sync with iCloud feature.
 - Include unit testing for at least one module.
+
+Depending on how many challenges you complete, you can earn credit for classwork you missed.
 
 ## Project evaluation criteria
 
