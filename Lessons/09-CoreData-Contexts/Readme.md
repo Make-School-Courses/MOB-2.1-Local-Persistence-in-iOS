@@ -1,55 +1,77 @@
-# CoreData - More on Contexts
+# CoreData - Multiple ManagedObjectContexts
 
-## Minute-by-Minute [OPTIONAL]
+## Minute-by-Minute
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:15      | Overview                  |
-| 0:20        | 0:45      | In Class Activity I       |
+| 0:05        | 0:25      | Overview                  |
+| 0:30        | 0:35      | In Class Activity I       |
 | 1:05        | 0:10      | BREAK                     |
-| 1:15        | 0:45      | In Class Activity II      |
-| TOTAL       | 2:00      |                           |
+| 1:15        | 0:15      | Discussion                |
+| 1:30        | 0:15      | Wrap Up                   |
+| TOTAL       | 1:45      |                           |
 
-## Why you should know this or industry application (optional) (5 min)
+## Why you should know this
 
-Explain why students should care to learn the material presented in this class.
+A managed object context is an in-memory scratchpad for working with your managed objects.
+
+Most apps need only one. This managed object context is associated with the main queue. As apps get more complex, this may cause the UI to fail.
+
+Multiple managed object contexts make apps harder to debug so it's important that you evaluate if you really need it.
+
+Long-running tasks like exporting data, will block the main thread on apps that have one managed object context. This looks like a good place to add another one and we must know how to do this.
 
 ## Learning Objectives (5 min)
 
-- Learn about ManagedObjectContexts
-- Discuss and use child contexts
-- Discuss thread safety with ManagedObjectContexts
+- Learn about having multiple ManagedObjectContexts.
+- Discuss and use child contexts.
+- Discuss thread safety with ManagedObjectContexts.
 
-## Overview/TT I (20 min)
 
-- Why learn this?
-- Industry examples of usage
-- Best practices
-- Personal anecdote
+### ManagedObjectContexts & Thread safety
 
-## In Class Activity I (30 min)
+ManagedObjectContexts are not thread safe. This means we can't just dispatch to a background queue and use the same Core Data stack. We have to use them with caution when concurrency is at play.
 
-### ManagedObjectContexts & Concurrency
+If we have multiple threads (main and some background thread for example) access the same ManagedObjects, we should have consistent behavior.
 
-ManagedObjectContexts are not threadsafe. We have to use them with caution when concurrency is at play.
+A solution is to use a private background queue for long running tasks.
 
-If we have multiple threads(main and some background thread for example) access the same ManagedObjects, we should have consistent behavior.
+### How?
+The PersistentContainer makes dealing with private contexts easy.
+
+The ```performBackgroundTask``` method of the PersistentContainer spins up a new private background context in a closure.
+
+
+```swift
+persistentContainer.performBackgroundTask { (context) in
+    for object in objectArray {
+        //heavy processing
+    }
+    do {
+      //save context
+        try context.save()
+    } catch {
+        fatalError("Failure to save context: \(error)")
+    }
+}
+```
 
 **Recomended Use of Contexts**
 
-We use the main context for interacting with core data on the application's view layer.
-But complex operation such as saving multiple ManagedObjects in core data take a long time and hence will block the main thread(if using main context).
+We use the **main context** for interacting with core data on the application's view layer.
 
-What we want to do is hand off saves to a background context so write operations can be performed on the background.
+But complex operation such as saving multiple ManagedObjects in core data takes a long time and hence will block the main thread(if using main context).
 
-#### Problem: Fetching ManagedObjects from the main ManagedObjectContext & saving on a background Context
+What we want to do is hand off saves to a **background context** so write operations can be performed on the background.
+
+## Fetching ManagedObjects from the main ManagedObjectContext & saving on a background Context
 
 One way we can handle a save in this situation is to change the ManagedObjectContext.
 Since fetching from the main context, all objects retrieved will be associated with the main managed object context.
 
 **Option 1: Changing Contexts**
-1. Grab the objectID from the ManagedObject. 
+1. Grab the objectID from the ManagedObject.
 ```swift
 let objectID = myManagedObject.objectID
 ```
@@ -63,53 +85,61 @@ let myBackgroundManagedObject = coreDataStack.privateContext.object(with: object
 
 **Option 2: Using Child Contexts**
 
-## In Class Activity II (optional) (30 min)
+Think of a notes application. We create a new note and make edits, delete text, modify, keep changing the content until we're happy with our text and then we want to hit save. In an app like this, we can simplify how Core Data works by making the changes as the user edits the note. Then we either save the changes or discard them. Depending on the final decision of the user.
 
-### Child ManagedObjectContexts
+Child managed object contexts are temporary scratch pads that we can save or discard. If saved, we send the changes to the parent context.
+
+All managed object contexts have a parent store from which we can retrieve and change managed objects.
+
+The parent store is a persistent store coordinator. But we can also set the parent store to another managed object context, turning it into a child context.
+
+
+![Contexts](contexts.png)
+
+
+NOTE: Whenever we save a child context, the changes go up to the parent context. BUT these changes won't be sent to the persistent store coordinator until the parent context is saved.
 
 You can set one ManagedObjectContext as a child to another.
 
 To solve the problem of saving to a background context, we can create a new privateContext and set the main context as the parent.
 
-1.
 ```swift
 privateContext.parentContext = viewContext
 ```
 
-2. Save
-```swift
-privateMOC.performBlock {
-    // ... 
-    // ....
-    privateMox.save()
-}
-```
+## In Class Activity
 
-##### Contexts & Saves
+Making the necessary changes in a core data app to use multiple ManagedObjectContexts is not that complicated and it doesn't require many steps.
 
-*Notes*
-When you save on the child context, changes don't persist until a save happens on the parent context.
+What's challenging is identifying the need to apply multiple MOC.
 
-![Contexts](contexts.png)
+[This tutorial](https://www.raywenderlich.com/7586-multiple-managed-object-contexts-with-core-data-tutorial) uses an app that logs entries in a surf journal and rates surf sessions. The starter code can be found [here](https://koenig-media.raywenderlich.com/uploads/2018/09/multiple-managed-ob-ject-contexts-Swift-4.2.zip)
 
-#### Using the private context with the PersistentContainer
+Before starting the tutorial, make sure you are able to run the project. See that there is an export functionality that will take all the contents of the table into a CSV file. Try scrolling the table and then try to export the content. Look out for the main problem we want to solve. What is it?
 
-The PersistentContainer makes dealing with private contexts easy.
+Go over the tutorial to fix the issue.
+There are two main things you should have in the end:
+- Created a `ManagedObjectContext` that works in the background.
+- Used a child context to make edits in the ManagedObjects before hitting save.
 
-The ```performBackgroundTask``` method of the PersistentContainer spins up a new private background context in a closure.
+## Discussion questions
+
+- How did the app populated all the data when we fist opened it?
+- What was the problem with exporting the data to CSV?
+- When is it a good moment to start introducing multiple managed object contexts?
+- What is a benefit from doing this?
+- What can go wrong?
+- What is `performBackgroundTask` doing in the app?
+- What is the difference between Private an Main queues?
+- What is `childContext.parent = coreDataStack.mainContext` doing for us?
+- Why you we to pass the managed object *and* the managed object context to the `detailViewController`?
 
 
-```swift
-persistentContainer.performBackgroundTask { (context) in
-    for object in objectArray {
-        let mo = Inventory(context: context)
-        mo.populateFromStruct(object)
-    }
-    do {
-        try context.save()
-    } catch {
-        fatalError("Failure to save context: \(error)")
-    }
-}
+## Stretch Challenge for the tutorial
+Change `SegueListToDetailAdd` to use a child context when adding a new journal entry. You will need to create a child context that has the main context as its parent. And create the new entry on the correct context.
 
-```
+## Additional Resources
+
+- [Slides](https://docs.google.com/presentation/d/1mx-_ELFm5_zCMzEIgTnfM2RhxVgq_pX2k8tAo9bsUB8/edit#slide=id.g514c043897_0_135)
+- https://www.raywenderlich.com/7586-multiple-managed-object-contexts-with-core-data-tutorial
+- “Core Data by Tutorials.” By Pietro Rea.
