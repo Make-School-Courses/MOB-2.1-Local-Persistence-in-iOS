@@ -41,7 +41,7 @@ Realm is a cross platform database(iOS, Android, Web). It can be used in place o
 | Crossplatform   | -              | XX             |
 | Thread safe     | X              | X              |
 | Documentation   | X              | XXX            |
-| DB Management   | External tools | Realm browser  |
+| DB Management   | External tools | Realm studio   |
 
 ## Realm walkthrough
 
