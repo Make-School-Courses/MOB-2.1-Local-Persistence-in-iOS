@@ -1,7 +1,7 @@
 # Study Guide for MOB 2.1 Final Assessment
 **Overview**: Your final exam will focus on the learning outcomes for this course.  Review each outcome thoroughly and ask questions if you are unclear about the outcome or your level of understanding. 
 
-**Final Exam Format:** Your final exam will be on May 13th.  It will consist of two parts: one will be answered in your computer using an Xcode project, and the second one, will be written on paper. The exam will take 2 hours to complete.  If you have a disability that requires any accomodation for the final exam, please reach out to Jen or Anne to make sure this is documented according to the Make School Accommodations Policy and clarify with your instructor what accommodations will be made
+**Final Exam Format:** Your final exam will be on July 2nd.  It will consist of two parts: one will be answered in your computer using an Xcode project, and the second one, will be written on paper. The exam will take 2 hours to complete.  If you have a disability that requires any accomodation for the final exam, please reach out to Jen or Anne to make sure this is documented according to the Make School Accommodations Policy and clarify with your instructor what accommodations will be made
 Use the built in persistence mechanisms in iOS as well as some third party options for persistence
 Store and retrieve sensitive information in iOS.
 Learn and understand the iOS filesystem.
