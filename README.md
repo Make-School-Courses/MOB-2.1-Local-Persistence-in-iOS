@@ -48,7 +48,7 @@ Students by the end of the course will be able to ...
 | 19 |  Wed, July 15              | Final Exam |
 | 20 |  Fri, July 17              | Presentations |
 
-[Introduction to Persistence Technologies in iOS]: Lessons/01-Intro-to-Persistence-Technologies/README.md
+[Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
 [PList and UserDefaults]: Lessons/02-Plist-UserDefaults/Readme.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
 [Keychain and NSCoding]: Lessons/04-Keychain-NSCoding/Readme.md
