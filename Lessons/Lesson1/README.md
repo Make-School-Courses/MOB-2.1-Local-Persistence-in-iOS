@@ -106,7 +106,7 @@ This lesson is intended to portray an overview of each persistence method. And u
 
 Exploring all the options.
 
-Instructions [here]()
+Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson1/assignments/activity.md)
 
 
 <!-- > -->
