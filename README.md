@@ -13,9 +13,8 @@ This courses covers how and why to persist data in mobile development. We will l
 Students by the end of the course will be able to ...
 
 1. Build apps that store information locally on an iOS device
-1. Identify various ways of storing persistent information in iOS
 1. Compare and contrast various persistence options such as Core Data, Realm, NSCoder, UserDefaults, Keychain and chose the best options for their project.
-1. Use the built in persistence mechanisms in iOS as well as some third party options for persistence
+1. Identify and use the built in persistence mechanisms in iOS as well as some third party options for persistence
 1. Store and retrieve sensitive information in iOS.
 1. Learn and understand the iOS filesystem.
 
