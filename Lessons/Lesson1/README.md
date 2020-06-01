@@ -6,7 +6,7 @@
 
 # Intro to Persistence Technologies
 
-## [Slides](https://make-school-courses.github.io/MOB-2.1-Intro-to-Persistence-Technologies/Slides/Lesson1/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-2.1-Local-Persistence-in-iOS/Slides/Lesson1/README.html ':ignore')
 
 <!-- > -->
 
