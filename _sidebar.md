@@ -1,3 +1,4 @@
 - **[Syllabus](README.md)**
 - **Lessons**
   - [Intro to persistence](Lessons/Lesson1/README.md)
+  - [Plist & UserDefaults](Lessons/Lesson2/README.md)

@@ -27,29 +27,29 @@ Students by the end of the course will be able to ...
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Mon, June 1               | [Introduction to Persistence Technologies in iOS] |
-|  2 |  Wed, June 3               | [UserDefaults]        |
-|  3 |  Fri, June 5               | [Plist]               |
-|  4 |  Mon, June 8               | [Keychain & NSCoding] |
-|  5 |  Wed, June 10              | [The FileSystem] |
-|  6 |  Fri, June 12              | [CoreData tutorial] |
-|  7 |  Mon, June 15              | [CD - Introduction] |
-|  8 |  Wed, June 17              | [CD - Relationships]|
-|  9 |  Fri, June 19              | [CD - Hierarchies ] |
-| 10 |  Mon, June 22              | [CD - Retrieving information] |
-| 11 |  Wed, June 24              | [CD - Testing]|
-| 12 |  Fri, June 26              | [CD - multiple contexts]|
+|  2 |  Wed, June 3               | [Plist & UserDefaults]        |
+|  3 |  Fri, June 5               | [Keychain & NSCoding]         |
+|  4 |  Mon, June 8               | [The FileSystem]              |
+|  5 |  Wed, June 10              | [CoreData tutorial            |
+|  6 |  Fri, June 12              | [CD - Introduction]           |
+|  7 |  Mon, June 15              | [CD - Relationships]          |
+|  8 |  Wed, June 17              | [CD - Hierarchies ]           |
+|  9 |  Fri, June 19              | [CD - Retrieving information] |
+| 10 |  Mon, June 22              | [CD - Testing]                |
+| 11 |  Wed, June 24              | [CD - Multiple contexts]      |
+| 12 |  Fri, June 26              | [Realm]                       |
 | 13 |  Mon, June 29              | [Structured lab + final project intro]|
-| 14 |  Wed, July 1               | [Cloud Kit Pt. 1|  
+| 14 |  Wed, July 1               | [Cloud Kit Pt. 1              |  
 | -  |  Fri, July 3               | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
-| 15 |  Mon, July 6               | [Cloud Kit Pt. 2|
-| 16 |  Wed, July 8               | [Cloud Kit Pt. 3] |
-| 17 |  Fri, July 10              | [Project lab] |
-| 18 |  Mon, July 13              | [Review topics] |
-| 19 |  Wed, July 15              | Final Exam |
-| 20 |  Fri, July 17              | Presentations |
+| 15 |  Mon, July 6               | [Cloud Kit Pt. 2]             |
+| 16 |  Wed, July 8               | [Cloud Kit Pt. 3]             |
+| 17 |  Fri, July 10              | [Project lab]                 |
+| 18 |  Mon, July 13              | [Review topics]               |
+| 19 |  Wed, July 15              | Final Exam                    |
+| 20 |  Fri, July 17              | Presentations                 |
 
 [Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
-[PList and UserDefaults]: Lessons/02-Plist-UserDefaults/Readme.md
+[Plist & UserDefaults]: Lessons/Lesson2/README.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
 [Keychain and NSCoding]: Lessons/04-Keychain-NSCoding/Readme.md
 [The iOS FileSystem - Introduction]: Lessons/05-FileSystem/Readme.md
