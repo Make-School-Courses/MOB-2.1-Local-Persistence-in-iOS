@@ -300,6 +300,6 @@ Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persist
 [Plist - article](https://learnappmaking.com/plist-property-list-swift-how-to/)<br>
 [Info.plist - Apple Docs](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html#//apple_ref/doc/uid/TP40009254-102276)<br>
 [Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)<br>
-[Plist struct](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift)
-[User defaults - exercise](https://medium.com/@nimjea/userdefaults-in-swift-4-d1a278a0ec79)
+[Plist struct](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift)<br>
+[User defaults - exercise](https://medium.com/@nimjea/userdefaults-in-swift-4-d1a278a0ec79)<br>
 [Property Wrappers](https://www.vadimbulavin.com/swift-5-property-wrappers/)
