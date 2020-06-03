@@ -302,3 +302,4 @@ Instructions [here]()
 [Apple Documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)<br>
 [Plist struct](https://stackoverflow.com/questions/25100262/save-data-to-plist-file-in-swift)
 [User defaults - exercise](https://medium.com/@nimjea/userdefaults-in-swift-4-d1a278a0ec79)
+[Property Wrappers](https://www.vadimbulavin.com/swift-5-property-wrappers/)
