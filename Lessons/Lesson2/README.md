@@ -230,7 +230,7 @@ struct Plist {
 
 ## In Class Activity I
 
-Instructions [here]()
+Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson2/assignments/defaults.md)
 
 <!-- > -->
 
@@ -292,7 +292,7 @@ Items stored in UserDefault belong to an app. This means deleting your app will 
 
 ## In Class Activity II
 
-Instructions [here]()
+Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson2/assignments/defaults.md)
 
 <!-- > -->
 
