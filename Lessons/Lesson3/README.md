@@ -226,7 +226,7 @@ Apple’s API might be complex at first - Open Source Libraries such as
 
 ## In Class Activity
 
-Instructions [here]()
+Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson3/keychain.md)
 
 <!-- > -->
 
@@ -238,3 +238,5 @@ Instructions [here]()
 1. [Using keychain to manage user secrets](https://developer.apple.com/documentation/security/keychain_services/keychain_items/using_the_keychain_to_manage_user_secrets)<br>
 1. [Keychain items](https://developer.apple.com/documentation/security/keychain_services/keychain_items)
 1. [Library used](https://github.com/evgenyneu/keychain-swift)
+1. [Saving custom objects](https://fluffy.es/saving-custom-object-into-userdefaults/)
+1. [Load and save from UserDefaults](https://www.hackingwithswift.com/example-code/system/how-to-load-and-save-a-struct-in-userdefaults-using-codable)

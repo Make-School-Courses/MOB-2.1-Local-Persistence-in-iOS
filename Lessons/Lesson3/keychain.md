@@ -9,7 +9,7 @@
 1. To test the Persistence layer make an app that can **save, edit and delete** a message with keychain.
 
 1. Create a very simple UI for your demo. Maybe something similar to this:
-![keychaindemo](assets/keychaindemo.png) *Ignore the Synchronize toggle*
+![keychaindemo](assets/keychaindemo.png) <br> *Ignore the Synchronize toggle*
 
 1. We will compare implementations of both libraries and catch some tips along the way from our peers. 😀
 
