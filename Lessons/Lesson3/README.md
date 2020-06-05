@@ -178,6 +178,7 @@ Keychain Services consists of two parts: an **encrypted database** and **items i
 
 ![keychainhow](assets/keychainhow.png)
 
+<!-- > -->
 
 **Keychain Use Case - Logging in a User**
 
@@ -186,7 +187,6 @@ Saving a password.
 ![example](assets/example.png)
 
 <!-- > -->
-
 
 The keychain is automatically unlocked when the user unlocks the device and then locked when the device is locked.
 
