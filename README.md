@@ -51,7 +51,7 @@ Students by the end of the course will be able to ...
 [Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
 [Plist & UserDefaults]: Lessons/Lesson2/README.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
-[Keychain and NSCoding]: Lessons/04-Keychain-NSCoding/Readme.md
+[Keychain and NSCoding]: Lessons/Lesson3/README.md
 [The iOS FileSystem - Introduction]: Lessons/05-FileSystem/Readme.md
 [CoreData - Introduction]: Lessons/06-Intro-to-CoreData/Readme.md
 [CoreData - Relationships and Hierarchies]: Lessons/07-CoreData-Relationships/Readme.md
