@@ -209,6 +209,12 @@ Visit the documentation page for info on how to access specific directories in t
 
 <!-- > -->
 
+**Playground Walkthrough**
+
+Open a new playground and code along 😀
+
+<!-- > -->
+
 ## In Class Activity
 
 In this challenge you will use the file system to add persistence support to an app that reviews meals. 🍜
@@ -236,4 +242,5 @@ You can read Apple's guide to lead your way into this task,. The guide uses NSCo
 ## Resources
 
 [FileManger Documentation](https://developer.apple.com/documentation/foundation/filemanager)<br>
-[Apple's File system basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)
+[Apple's File system basics](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)<br>
+[String to data and back](https://www.objc.io/blog/2018/02/13/string-to-data-and-back/)
