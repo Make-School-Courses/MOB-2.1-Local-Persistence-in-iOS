@@ -30,7 +30,7 @@ Students by the end of the course will be able to ...
 |  2 |  Wed, June 3               | [Plist & UserDefaults]        |
 |  3 |  Fri, June 5               | [Keychain & NSCoding]         |
 |  4 |  Mon, June 8               | [The FileSystem]              |
-|  5 |  Wed, June 10              | [CoreData tutorial            |
+|  5 |  Wed, June 10              | [CoreData tutorial]           |
 |  6 |  Fri, June 12              | [CD - Introduction]           |
 |  7 |  Mon, June 15              | [CD - Relationships]          |
 |  8 |  Wed, June 17              | [CD - Hierarchies ]           |
@@ -39,7 +39,7 @@ Students by the end of the course will be able to ...
 | 11 |  Wed, June 24              | [CD - Multiple contexts]      |
 | 12 |  Fri, June 26              | [Realm]                       |
 | 13 |  Mon, June 29              | [Structured lab + final project intro]|
-| 14 |  Wed, July 1               | [Cloud Kit Pt. 1              |  
+| 14 |  Wed, July 1               | [Cloud Kit Pt. 1]             |  
 | -  |  Fri, July 3               | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
 | 15 |  Mon, July 6               | [Cloud Kit Pt. 2]             |
 | 16 |  Wed, July 8               | [Cloud Kit Pt. 3]             |
@@ -51,8 +51,8 @@ Students by the end of the course will be able to ...
 [Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
 [Plist & UserDefaults]: Lessons/Lesson2/README.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
-[Keychain and NSCoding]: Lessons/Lesson3/README.md
-[The iOS FileSystem - Introduction]: Lessons/05-FileSystem/Readme.md
+[Keychain & NSCoding]: Lessons/Lesson3/README.md
+[The FileSystem]: Lessons/Lesson4/README.md
 [CoreData - Introduction]: Lessons/06-Intro-to-CoreData/Readme.md
 [CoreData - Relationships and Hierarchies]: Lessons/07-CoreData-Relationships/Readme.md
 [CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md
