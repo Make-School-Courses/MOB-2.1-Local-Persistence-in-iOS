@@ -30,7 +30,7 @@ Students by the end of the course will be able to ...
 |  2 |  Wed, June 3               | [Plist & UserDefaults]        |
 |  3 |  Fri, June 5               | [Keychain & NSCoding]         |
 |  4 |  Mon, June 8               | [The FileSystem]              |
-|  5 |  Wed, June 10              | [CoreData tutorial]           |
+|  5 |  Wed, June 10              | [CD - Intro]                  |
 |  6 |  Fri, June 12              | [CD - Introduction]           |
 |  7 |  Mon, June 15              | [CD - Relationships]          |
 |  8 |  Wed, June 17              | [CD - Hierarchies ]           |
@@ -53,7 +53,7 @@ Students by the end of the course will be able to ...
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
 [Keychain & NSCoding]: Lessons/Lesson3/README.md
 [The FileSystem]: Lessons/Lesson4/README.md
-[CoreData - Introduction]: Lessons/06-Intro-to-CoreData/Readme.md
+[CD - Intro]: Lessons/Lesson5/README.md
 [CoreData - Relationships and Hierarchies]: Lessons/07-CoreData-Relationships/Readme.md
 [CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md
 [CoreData - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
