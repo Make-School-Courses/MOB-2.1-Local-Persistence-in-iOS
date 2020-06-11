@@ -28,9 +28,9 @@ Students by the end of the course will be able to ...
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Mon, June 1               | [Introduction to Persistence Technologies in iOS] |
 |  2 |  Wed, June 3               | [Plist & UserDefaults]        |
-|  3 |  Fri, June 5               | [Keychain & NSCoding]         |
+|  3 |  Fri, June 5               | [NSCoding & Codable]          |
 |  4 |  Mon, June 8               | [The FileSystem]              |
-|  5 |  Wed, June 10              | [CD - Intro]                  |
+|  5 |  Wed, June 10              | [Keychain]                    |
 |  6 |  Fri, June 12              | [CD - Introduction]           |
 |  7 |  Mon, June 15              | [CD - Relationships]          |
 |  8 |  Wed, June 17              | [CD - Hierarchies ]           |
@@ -51,8 +51,9 @@ Students by the end of the course will be able to ...
 [Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
 [Plist & UserDefaults]: Lessons/Lesson2/README.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
-[Keychain & NSCoding]: Lessons/Lesson3/README.md
+[NSCoding & Codable]: Lessons/Lesson3/README.md
 [The FileSystem]: Lessons/Lesson4/README.md
+[Keychain]: Lessons/Lesson6/README.md
 [CD - Intro]: Lessons/Lesson5/README.md
 [CoreData - Relationships and Hierarchies]: Lessons/07-CoreData-Relationships/Readme.md
 [CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md

@@ -4,4 +4,5 @@
   - [Plist & UserDefaults](Lessons/Lesson2/README.md)
   - [Keychain & NSCoder](Lessons/Lesson3/README.md)
   - [FileSystem](Lessons/Lesson4/README.md)
+  - [Keychain](Lessons/Lesson6/README.md)
   - [Intro to CD](Lessons/Lesson5/README.md)
