@@ -140,7 +140,7 @@ In the context of Apple’s definition of MVC, CoreData fits neatly as a compone
 
 ## In Class Activity I
 
-Read [these notes on CoreData]() and then complete the Gradescope assignment called: CoreData Components.
+Read [these notes on CoreData](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson5/assignments/notes.md) and then complete the Gradescope assignment called: CoreData Components.
 
 <!--
 [Worksheet](https://docs.google.com/document/d/19c2pzBkKVTdMj9aNBCDtRpFhIIzQOeNsLmIwzWjePtM/edit?usp=sharing)
