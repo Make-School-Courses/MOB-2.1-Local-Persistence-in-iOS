@@ -219,7 +219,7 @@ Excerpt From: By Pietro Rea. “Core Data by Tutorials.” Apple Books.
 
 ## In Class Activity II
 
-[Instructions here]()
+[Instructions here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson5/assignments/driver.md)
 
 <!-- > -->
 
