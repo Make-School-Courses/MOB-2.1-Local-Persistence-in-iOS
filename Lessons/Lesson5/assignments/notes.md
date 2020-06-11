@@ -19,7 +19,7 @@ Minimally, it contains:<br>
 **Persistent Object Store** — Maps between records in the store and objects in your application<br>
 
 
- ![corestack](/assets/corestack.png)
+ ![corestack](corestack.png)
 
 <!-- - An instance of `NSManagedObjectModel` represents your app’s model file describing your app’s types, properties, and relationships.
 - An instance of `NSManagedObjectContext` tracks changes to instances of your app’s types.
