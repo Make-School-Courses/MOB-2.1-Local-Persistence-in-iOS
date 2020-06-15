@@ -225,3 +225,4 @@ Excerpt From: By Pietro Rea. “Core Data by Tutorials.” Apple Books.
 
 # Additional Resources
 - Quoted excerpts from “Core Data by Tutorials.” By Pietro Rea.
+- [CoreData stack](https://cocoacasts.com/what-is-the-core-data-stack)
