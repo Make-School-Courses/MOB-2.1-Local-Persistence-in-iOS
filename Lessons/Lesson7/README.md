@@ -161,7 +161,7 @@ Model relationships in both directions; CoreData uses that to ensure consistency
 
 ## In Class Activity I
 
-Instructions [here]()
+Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson7/assignments/activity.md)
 
 <!-- > -->
 
