@@ -6,3 +6,4 @@
   - [FileSystem](Lessons/Lesson4/README.md)
   - [Keychain](Lessons/Lesson6/README.md)
   - [Intro to CD](Lessons/Lesson5/README.md)
+  - [CD - Relationships](Lessons/Lesson7/README.md)

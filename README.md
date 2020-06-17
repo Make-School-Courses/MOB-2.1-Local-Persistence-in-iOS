@@ -55,7 +55,7 @@ Students by the end of the course will be able to ...
 [The FileSystem]: Lessons/Lesson4/README.md
 [Keychain]: Lessons/Lesson6/README.md
 [CD - Introduction]: Lessons/Lesson5/README.md
-[CoreData - Relationships and Hierarchies]: Lessons/07-CoreData-Relationships/Readme.md
+[CD - Relationships]: Lessons/Lesson7/README.md
 [CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md
 [CoreData - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
 [CoreData - Retrieving information from the stack]: Lessons/10-CoreData-Retrieving-Info/Readme.md
