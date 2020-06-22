@@ -267,9 +267,7 @@ override func viewWillAppear(_ animated: Bool) {
 
 ## In Class Activity - NSFetchedResultsController
 
-Individually - follow the activity described [here]
-
-[here]:Activity.md
+Individually - follow the activity described [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson8/assignments/Activity.md)
 
 <!-- > -->
 

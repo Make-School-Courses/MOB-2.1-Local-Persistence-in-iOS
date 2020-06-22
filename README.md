@@ -33,9 +33,9 @@ Students by the end of the course will be able to ...
 |  5 |  Wed, June 10              | [Keychain]                    |
 |  6 |  Fri, June 12              | [CD - Introduction]           |
 |  7 |  Mon, June 15              | [CD - Relationships]          |
-|  8 |  Wed, June 17              | [CD - Fetching Data]          |
-|  9 |  Fri, June 19              | [CD - ]                       |
-| 10 |  Mon, June 22              | [CD - Testing]                |
+|  8 |  Wed, June 17              | [CD - Tutorial]               |
+|  9 |  Fri, June 19              | ** NO CLASS - Juneteenth **   |
+| 10 |  Mon, June 22              | [CD - Fetching Data]          |
 | 11 |  Wed, June 24              | [CD - Multiple contexts]      |
 | 12 |  Fri, June 26              | [Realm]                       |
 | 13 |  Mon, June 29              | [Structured lab + final project intro]|
@@ -61,7 +61,7 @@ Students by the end of the course will be able to ...
 [CD - Fetching Data]: Lessons/Lesson8/README.md
 [Third Party Persistence Options - Realm]: Lessons/11-Realm-Intro/Readme.md
 [CoreData - Unit Testing]: Lessons/12-CoreData-UnitTests/Readme.md
-
+[CD - Tutorial]: https://www.makeschool.com/academy/track/core-data-uy
 
 ## Class Assignments
 
