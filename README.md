@@ -34,7 +34,7 @@ Students by the end of the course will be able to ...
 |  6 |  Fri, June 12              | [CD - Introduction]           |
 |  7 |  Mon, June 15              | [CD - Relationships]          |
 |  8 |  Wed, June 17              | [CD - Tutorial]               |
-|  9 |  Fri, June 19              | ** NO CLASS - Juneteenth **   |
+|  9 |  Fri, June 19              | **NO CLASS - JUNETEENTH**   |
 | 10 |  Mon, June 22              | [CD - Fetching Data]          |
 | 11 |  Wed, June 24              | [CD - Multiple contexts]      |
 | 12 |  Fri, June 26              | [Realm]                       |
