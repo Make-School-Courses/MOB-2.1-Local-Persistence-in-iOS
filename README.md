@@ -33,8 +33,8 @@ Students by the end of the course will be able to ...
 |  5 |  Wed, June 10              | [Keychain]                    |
 |  6 |  Fri, June 12              | [CD - Introduction]           |
 |  7 |  Mon, June 15              | [CD - Relationships]          |
-|  8 |  Wed, June 17              | [CD - Hierarchies ]           |
-|  9 |  Fri, June 19              | [CD - Retrieving information] |
+|  8 |  Wed, June 17              | [CD - Fetching Data]          |
+|  9 |  Fri, June 19              | [CD - ]                       |
 | 10 |  Mon, June 22              | [CD - Testing]                |
 | 11 |  Wed, June 24              | [CD - Multiple contexts]      |
 | 12 |  Fri, June 26              | [Realm]                       |
@@ -57,8 +57,8 @@ Students by the end of the course will be able to ...
 [CD - Introduction]: Lessons/Lesson5/README.md
 [CD - Relationships]: Lessons/Lesson7/README.md
 [CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md
-[CoreData - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
-[CoreData - Retrieving information from the stack]: Lessons/10-CoreData-Retrieving-Info/Readme.md
+[CD - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
+[CD - Fetching Data]: Lessons/Lesson8/README.md
 [Third Party Persistence Options - Realm]: Lessons/11-Realm-Intro/Readme.md
 [CoreData - Unit Testing]: Lessons/12-CoreData-UnitTests/Readme.md
 

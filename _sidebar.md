@@ -7,3 +7,4 @@
   - [Keychain](Lessons/Lesson6/README.md)
   - [Intro to CD](Lessons/Lesson5/README.md)
   - [CD - Relationships](Lessons/Lesson7/README.md)
+  - [CD - Fetching Data](Lessons/Lesson8/README.md)
