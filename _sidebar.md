@@ -8,3 +8,4 @@
   - [Intro to CD](Lessons/Lesson5/README.md)
   - [CD - Relationships](Lessons/Lesson7/README.md)
   - [CD - Fetching Data](Lessons/Lesson8/README.md)
+  - [CD - Multiple Contexts](Lessons/Lesson9/README.md)
