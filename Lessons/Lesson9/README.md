@@ -114,7 +114,7 @@ let myBackgroundManagedObject = coreDataStack.privateContext.object(with: object
 
 **Option 2: Using Child Contexts**
 
-Think of a notes application.
+Think of a notes app. 📝
 
 We create a new note and make edits, delete text, modify, keep changing the content until we're happy with our text and then we want to hit save.
 
@@ -142,8 +142,7 @@ Whenever we save a child context, the changes go up to the parent context. BUT t
 
 ## Activity - online tutorial
 
-
-To practice how to work with more than one MOC, follow [this tutorial]().
+To practice how to work with more than one MOC, follow [this tutorial](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson9/assignments/assignment.md).
 
 <!-- > -->
 
