@@ -82,7 +82,7 @@ Students by the end of the course will be able to ...
 
 [Taskee]
 
-[Taskee]: 
+[Taskee]:
 
 ## Evaluation
 
