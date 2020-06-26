@@ -82,7 +82,7 @@ Students by the end of the course will be able to ...
 
 [Taskee]
 
-[Taskee]:
+[Taskee]: https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Assignments/Taskee/specifications.md
 
 ## Evaluation
 

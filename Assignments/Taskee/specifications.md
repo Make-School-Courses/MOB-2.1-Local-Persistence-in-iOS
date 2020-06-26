@@ -54,3 +54,8 @@ The interface is up to you to decide. I have provided a sample design, but you a
 - Create a widget companion for the app:
 
 ![widget](widget.png)
+
+
+## External Links
+
+Project idea based on: [The Task App](https://twitter.com/thetaskapp)
