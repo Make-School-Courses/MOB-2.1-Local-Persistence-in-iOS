@@ -1,28 +1,36 @@
-# Introduction to Realm
+<!-- Run this slideshow via the following command: -->
+<!-- reveal-md README.md -w -->
 
-## Minute-by-Minute
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:20      | Overview                  |
-| 0:25        | 0:40      | In Class Activity I       |
-| 1:05        | 0:10      | BREAK                     |
-| 1:15        | 0:45      | In Class Activity II      |
-| TOTAL       | 2:00      |                           |
+<!-- .slide: class="header" -->
+
+# Realm
+
+## [Slides](https://make-school-courses.github.io/MOB-2.1-Local-Persistence-in-iOS/Slides/Lesson10/README.html ':ignore')
+
+<!-- > -->
 
 ## Why you should know this
 
-We spent time learning about how Core Data works, building our own Core Data Stack and learning how it works under the hood. It's good to know there are other options that will give us the same results with maybe less effort and with a certain level of freedom. One of this options is Realm, and we'll see how to add it to our projects to get the same results as we did with Core Data.
+We spent time learning about how Core Data works, building our own Core Data Stack and learning how it works under the hood. It's good to know there are other options that will give us the same results with maybe less effort and with a certain level of freedom.
 
-## Learning Objectives (5 min)
+One of this options is Realm, and we'll see how to add it to our projects to get the same results as we did with Core Data.
+
+<!-- > -->
+
+## Learning Objectives
 
 1. Describe how Realm works and it's ties with Core Data.
 1. Implement CRUD methods using Realm.
 1. Design a solution for an app using Realm.
 
-## Overview (20 min)
+<!-- > -->
+
+## Realm
+
 Realm is a cross platform database(iOS, Android, Web). It can be used in place of CoreData for persisting data in iOS. It was designed to be faster and more efficient than other solutions.
+
+<!-- > -->
 
 ### Why Realm?
 
@@ -31,6 +39,8 @@ Realm is a cross platform database(iOS, Android, Web). It can be used in place o
 - Thread safe.
 - Reactive architecture to always show updated data.
 - Widely used.
+
+<!-- > -->
 
 ### Core Data vs Realm
 
@@ -43,17 +53,21 @@ Realm is a cross platform database(iOS, Android, Web). It can be used in place o
 | Documentation   | X              | XXX            |
 | DB Management   | External tools | Realm studio   |
 
+<!-- > -->
+
 ## Realm walkthrough
 
-### Installation up Realm
+**Installation**
 
-Download Realm here(Manual, Cocoapod, Carthage)
+Download Realm here(Manual, Cocoapods, Carthage)
 
 [Realm Download](https://realm.io/docs/swift/latest#installation)
 
-#### Realm
+<!-- > -->
 
-Realm has two products, a RealmObjectServer and RealmDatabase. We will be using the RealmDatabase product its open source and free to use in production.
+## Realm
+
+Realm has two products, a RealmObjectServer and RealmDatabase. We will be using the **RealmDatabase** product its open source and free to use in production.
 
 A **Realm** is an instance of a Realm Mobile Database container.<br>
 Realms can be in *memory, synchronized or local.*
@@ -62,22 +76,32 @@ Realms can be in *memory, synchronized or local.*
 - Synchronized Realms use a RealmObjectServer to sync with other devices (shopping carts, chats).
 - Local
 
+<!-- > -->
+
 A Realm is not:
 - A single application-wide database. We can have multiple Realms to organize data more efficiently.
 - A table. Tables typically store one kind of information, a Realm can have multiple kinds of objects.
 
-#### Opening a Local Realm
+<!-- > -->
+
+### Opening a Local Realm
 
 ```swift
 let realm = try! Realm()
 ```
+
+<!-- > -->
 
 ### Models
 
 Instances of items stored in Realm are referred to as *Objects* - Similar to ManagedObject in CoreData.
 
 Realm data models are defined as regular Swift classes with regular properties.<br>
-to create one, we simply subclass `Object`. These objects work like any other Swift object. We can define methods on them, conform them to protocols, etc. Only restriction: we can only use an object on the thread which it was created.
+to create one, we simply subclass `Object`.
+
+These objects work like any other Swift object. We can define methods on them, conform them to protocols, etc. Only restriction: we can only use an object on the thread which it was created.
+
+<!-- > -->
 
 ```swift
 // Dog model
@@ -92,6 +116,8 @@ class Person: Object {
 }
 ```
 
+<!-- > -->
+
 #### Relationships
 
 To set up a **many-to-one or one-to-one** relationship, give a model a property whose type is one of your Object subclasses.
@@ -103,6 +129,8 @@ class Dog: Object {
 }
 ```
 
+<!-- > -->
+
 To create a **many-to-many** relationship use List properties. Lists contain other Objects or primitive values of a single type and have an interface very similar to a mutable Array.
 
 ```swift
@@ -112,10 +140,11 @@ class Person: Object {
 }
 ```
 
+<!-- > -->
+
 #### Writing Objects
 
 ```swift
-
 // (1) Create a Dog object using the designated initializer
 var myDog = Dog()
 myDog.name = "Dexter"
@@ -140,6 +169,8 @@ try! realm.write {
 
 ```
 
+<!-- > -->
+
 #### Fetching Objects
 
 **Queries**
@@ -149,6 +180,8 @@ Queries return a `Results` instance which is a collection of Objects.
 ```swift
 let dogs = realm.objects(Dog.self)
 ```
+
+<!-- > -->
 
 **Filtering**
 
@@ -162,6 +195,8 @@ tanDogs = realm.objects(Dog.self).filter(predicate)
 
 ```
 
+<!-- > -->
+
 **Sorting**
 
 `Results` allows you to specify a sort criteria and order based on:
@@ -173,6 +208,8 @@ tanDogs = realm.objects(Dog.self).filter(predicate)
 let sortedDogs = realm.objects(Dog.self).filter("color = 'tan' AND name BEGINSWITH 'B'").sorted(byKeyPath: "name")
 ```
 
+<!-- > -->
+
 ### More things to check out
 - Chaining queries
 - Auto-updating results
@@ -181,7 +218,9 @@ let sortedDogs = realm.objects(Dog.self).filter("color = 'tan' AND name BEGINSWI
   To open your Realm file in the Manager, find it's location in the simulator<br>
   `(lldb) po Realm.Configuration.defaultConfiguration.fileURL` Then drag it into the manager app.
 
-## In Class Activity I (35 min)
+<!-- > -->
+
+## In Class Activity I
 
 Complete the activity on [this repo](https://github.com/amelinagzz/Realm-starter) to get started with Realm.
 
@@ -190,7 +229,9 @@ Stretch challenges:
 - Adjust the find method to bring values that contain the search text, in case the user can't remember the complete name.
 - Download Realm Studio and see how your data looks like and add entries right there.
 
-## In Class Activity II (35 min)
+<!-- > -->
+
+## In Class Activity II
 
 Clone this repo and integrate Realm with Cocoa pods:
 
@@ -198,6 +239,8 @@ Clone this repo and integrate Realm with Cocoa pods:
 
 Stretch challenges:
 - Add Realm notifications to the app to automatically update the table when answering questions.
+
+<!-- > -->
 
 ## External Resources
 - [Slides](https://docs.google.com/presentation/d/1pJCtx0sLkRzIvqfhDOyD2MRVCu78pcck2JL-bL2Wefc/edit?usp=sharing)

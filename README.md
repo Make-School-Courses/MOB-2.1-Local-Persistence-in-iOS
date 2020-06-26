@@ -59,7 +59,7 @@ Students by the end of the course will be able to ...
 [CoreData - Caching]: Lessons/08-CoreData-Caching/Readme.md
 [CD - Using multiple contexts and child contexts]: Lessons/09-CoreData-Contexts/Readme.md
 [CD - Fetching Data]: Lessons/Lesson8/README.md
-[Third Party Persistence Options - Realm]: Lessons/11-Realm-Intro/Readme.md
+[Realm]: Lessons/Lesson10/README.md
 [CoreData - Unit Testing]: Lessons/12-CoreData-UnitTests/Readme.md
 [CD - Tutorial]: https://www.makeschool.com/academy/track/core-data-uy
 [CD - Multiple contexts]: Lessons/Lesson9/README.md
@@ -80,9 +80,9 @@ Students by the end of the course will be able to ...
 [Course Planner]: Assignments/Project-Course-Planner/Readme.md
 [Document Management]: Assignments/Project-Document-Management/Readme.md -->
 
-[Trip Planner]
+[Taskee]
 
-[Trip Planner]: Assignments/ProjectSpecifications.md
+[Taskee]: 
 
 ## Evaluation
 
