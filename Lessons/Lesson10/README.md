@@ -242,6 +242,17 @@ Stretch challenges:
 
 <!-- > -->
 
+## Challenge
+
+Follow this [Realm tutorial](https://docs.realm.io/sync/getting-started-1/step-1-my-first-realm-app) to explore how to use Realm Cloud and Realm Studio.
+
+Topics:
+
+- Realm Notifications
+- Realm Cloud
+
+<!-- > -->
+
 ## External Resources
 - [Slides](https://docs.google.com/presentation/d/1pJCtx0sLkRzIvqfhDOyD2MRVCu78pcck2JL-bL2Wefc/edit?usp=sharing)
 - [Realm vs Core Data](http://www.rockersinfo.com/blog/realm-database-vs-coredata/)
