@@ -231,26 +231,6 @@ Stretch challenges:
 
 <!-- > -->
 
-## In Class Activity II
-
-Clone this repo and integrate Realm with Cocoa pods:
-
-[TriviaTime Starter](https://github.com/Product-College-Labs/TriviaTime)
-
-Stretch challenges:
-- Add Realm notifications to the app to automatically update the table when answering questions.
-
-<!-- > -->
-
-## Challenge
-
-Follow this [Realm tutorial](https://docs.realm.io/sync/getting-started-1/step-1-my-first-realm-app) to explore how to use Realm Cloud and Realm Studio.
-
-Topics:
-
-- Realm Notifications
-- Realm Cloud
-
 <!-- > -->
 
 ## External Resources
