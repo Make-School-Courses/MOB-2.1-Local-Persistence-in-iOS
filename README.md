@@ -64,6 +64,7 @@ Students by the end of the course will be able to ...
 [CD - Tutorial]: https://www.makeschool.com/academy/track/core-data-uy
 [CD - Multiple contexts]: Lessons/Lesson9/README.md
 [Structured lab + final project intro]: Lessons/Lab/README.md
+
 ## Class Assignments
 
 ### Tutorials
