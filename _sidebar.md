@@ -11,3 +11,4 @@
   - [CD - Multiple Contexts](Lessons/Lesson9/README.md)
   - [Realm](Lessons/Lesson10/README.md)
   - [Lab](Lessons/Lab/README.md)
+  - [Cloud Kit Pt. 1](Lessons/Lesson11/README.md)
