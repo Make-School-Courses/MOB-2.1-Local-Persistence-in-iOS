@@ -66,7 +66,7 @@ Using CloudKit, gives you a backend so that users can persist data between devic
 
 <!-- > -->
 
-![cloudkit](assets/cloudkit.png)
+![cloudkit](assets/cloudkit.jpeg)
 
 <!-- > -->
 
