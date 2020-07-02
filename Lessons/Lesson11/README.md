@@ -172,6 +172,35 @@ CKContainer.shared.publicCloudDatabase.add(operation)
 
 <!-- > -->
 
+## Useful code snippets
+
+Type safety 👌🏼
+
+```swift
+extension CKRecord.RecordType {
+    public static var Category: String = "Category"
+    public static var Post: String = "Post"
+}
+```
+
+<!-- > -->
+
+## Useful code snippets
+
+Type safety 👌🏼
+
+```swift
+enum CKRecordKey: String {
+    //Category
+    case title, order
+    //Post
+    case thumbnail, url, date, category
+}
+```
+*title is reusable in Post*
+
+<!-- > -->
+
 ## Stretch challenge
 
 Build UI for the Admin App.
