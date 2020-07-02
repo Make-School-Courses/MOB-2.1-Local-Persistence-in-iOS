@@ -172,6 +172,12 @@ CKContainer.shared.publicCloudDatabase.add(operation)
 
 <!-- > -->
 
+## Stretch challenge
+
+Build UI for the Admin App.
+
+<!-- > -->
+
 ## External resources
 
 - [Using Core Data with CloudKit](https://developer.apple.com/videos/play/wwdc2019/202/)
