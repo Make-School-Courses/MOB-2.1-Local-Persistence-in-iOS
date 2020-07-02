@@ -150,9 +150,9 @@ extension CKContainer {
 <!-- > -->
 
 ```swift
-let categoryRecord = CKRecord(recordType: "Category", recordID: .init(recordName: UUID().uuidString))
-categoryRecord["title"] = ""
-categoryRecord["order"] = ""
+let categoryRecord = CKRecord(recordType: .Category, recordID: .init(recordName: UUID().uuidString))
+categoryRecord[.title] = ""
+categoryRecord[.order] = ""
 
 let operation = CKModifyRecordsOperation(recordsToSave: [categoryRecord], recordIDsToDelete: nil)
 operation.modifyRecordsCompletionBlock = { savedRecords, deletedRecordIds, error in
