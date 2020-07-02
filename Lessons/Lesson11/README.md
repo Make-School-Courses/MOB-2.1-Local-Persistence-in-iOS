@@ -149,8 +149,6 @@ extension CKContainer {
 
 <!-- > -->
 
-## Useful code snippets
-
 ```swift
 let categoryRecord = CKRecord(recordType: "Category", recordID: .init(recordName: UUID().uuidString))
 categoryRecord["title"] = ""
@@ -172,8 +170,6 @@ CKContainer.shared.publicCloudDatabase.add(operation)
 
 <!-- > -->
 
-## Useful code snippets
-
 Type safety 👌🏼
 
 ```swift
@@ -184,8 +180,6 @@ extension CKRecord.RecordType {
 ```
 
 <!-- > -->
-
-## Useful code snippets
 
 Type safety 👌🏼
 
