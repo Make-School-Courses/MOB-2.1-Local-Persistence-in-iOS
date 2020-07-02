@@ -108,6 +108,8 @@ See more about this in [this video from WWDC](https://developer.apple.com/videos
 
 ![list](assets/list.png)
 
+Walktrough creating a project (refer to recording of the class).
+
 <!-- > -->
 
 When creating a new project we must make sure to select support for CoreData & CloudKit.
@@ -135,6 +137,41 @@ Create two new records:
 
 <!-- > -->
 
+## Useful code snippets
+
+```swift
+extension CKContainer {
+    static var shared: CKContainer {
+        return CKContainer(identifier: "iCloud.com.amgm.Trends.t5")
+    }
+}
+```
+
+<!-- > -->
+
+## Useful code snippets
+
+```swift
+let categoryRecord = CKRecord(recordType: "Category", recordID: .init(recordName: UUID().uuidString))
+categoryRecord["title"] = ""
+categoryRecord["order"] = ""
+
+let operation = CKModifyRecordsOperation(recordsToSave: [categoryRecord], recordIDsToDelete: nil)
+operation.modifyRecordsCompletionBlock = { savedRecords, deletedRecordIds, error in
+
+  if let error = error {
+      fatalError(error.localizedDescription)
+  } else if let records = savedRecords {
+      print(records)
+  } else {
+    fatalError()
+  }
+}
+CKContainer.shared.publicCloudDatabase.add(operation)
+```
+
+<!-- > -->
+
 ## External resources
 
 - [Using Core Data with CloudKit](https://developer.apple.com/videos/play/wwdc2019/202/)
@@ -142,3 +179,4 @@ Create two new records:
 - [Tutorial - free](https://www.raywenderlich.com/4878052-cloudkit-tutorial-getting-started)
 - [Apple's docs - start guide](https://developer.apple.com/library/archive/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987-CH1-SW1)
 - [CloudKit 101](https://rambo.codes/posts/2020-02-25-cloudkit-101)
+- [Code snippets](https://littlebitesofcocoa.com/topics/36-cloudkit)
