@@ -41,8 +41,8 @@ Students by the end of the course will be able to ...
 | 13 |  Mon, June 29              | [Structured lab + final project intro]|
 | 14 |  Wed, July 1               | [Cloud Kit Pt. 1]             |  
 | -  |  Fri, July 3               | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
-| 15 |  Mon, July 6               | [Cloud Kit Pt. 2]             |
-| 16 |  Wed, July 8               | [Cloud Kit Pt. 3]             |
+| 15 |  Mon, July 6               | Lab Session                   |
+| 16 |  Wed, July 8               | [CloudKit Pt. 2]              |
 | 17 |  Fri, July 10              | [Project lab]                 |
 | 18 |  Mon, July 13              | [Review topics]               |
 | 19 |  Wed, July 15              | Final Exam                    |
@@ -65,6 +65,7 @@ Students by the end of the course will be able to ...
 [CD - Multiple contexts]: Lessons/Lesson9/README.md
 [Structured lab + final project intro]: Lessons/Lab/README.md
 [Cloud Kit Pt. 1]: Lessons/Lesson11/README.md
+[Cloud Kit Pt. 2]: Lessons/Lesson12/README.md
 
 ## Class Assignments
 
