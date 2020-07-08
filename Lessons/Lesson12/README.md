@@ -166,7 +166,7 @@ You'll be given sample code for an app that's ready to fetch data from CloudKit.
 - Look for the warnings and check what each step is doing.
 - Try to focus only on CloudKit/CoreData related functions (there's a lot more to the project and it might feel overwhelming)
 - If you conceptually understand how the app works, that's the win we are going for. 💪🏼
-- Can you hook up the app with your own CloudKit instance? You might need to modify how you save records in the first place.
+- Can you hook up the app with your own CloudKit instance? 
 
 <!-- > -->
 
