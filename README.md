@@ -20,10 +20,28 @@ Students by the end of the course will be able to ...
 
 ## Lessons
 
-**Course Dates:** Monday, June 1 – Friday, July 17, 2020 (7 weeks)
+**Course Dates:** Thursday, August 20 – Tuesday, October 6, 2020 (7 weeks)
 
-**Class Times:** Monday, Wednesday, and Friday at 3:30–5:20pm (20 class sessions)
+**Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
 
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Thu, Aug 20               | [Introduction to Persistence Technologies in iOS] |
+|  2 |  Tue, Aug 25               | [Plist & UserDefaults] |
+|  3 |  Thu, Aug 27               | [NSCoding & Codable] |
+|  4 |  Tue, Sept 1               | [The FileSystem] |
+|  5 |  Thu, Sept 3               | [Keychain] |
+|  6 |  Tue, Sept 8               | [CD - Introduction] |
+|  7 |  Thu, Sept 10              | [CD - Relationships] |
+|  8 |  Tue, Sept 15              | [CD - Fetching Data] |
+|  9 |  Thu, Sept 17              | [CD - Multiple contexts] |
+| 10 |  Tue, Sept 22              | [Realm] |
+| 11 |  Thu, Sept 24              | [Notifications] |
+| 12 |  Tue, Sept 29              | [CloudKit] |
+| 13 |  Thu, Oct 1                | [Final Exam] |
+| 14 |  Tue, Oct 6                | [Project Presentations] |
+
+<!-- 3 times a week format
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Mon, June 1               | [Introduction to Persistence Technologies in iOS] |
@@ -47,6 +65,7 @@ Students by the end of the course will be able to ...
 | 18 |  Mon, July 13              | [Review topics]               |
 | 19 |  Wed, July 15              | Final Exam                    |
 | 20 |  Fri, July 17              | Presentations                 |
+-->
 
 [Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
 [Plist & UserDefaults]: Lessons/Lesson2/README.md
@@ -64,7 +83,7 @@ Students by the end of the course will be able to ...
 [CD - Tutorial]: https://www.makeschool.com/academy/track/core-data-uy
 [CD - Multiple contexts]: Lessons/Lesson9/README.md
 [Structured lab + final project intro]: Lessons/Lab/README.md
-[Cloud Kit Pt. 1]: Lessons/Lesson11/README.md
+[CloudKit]: Lessons/Lesson11/README.md
 [Cloud Kit Pt. 2]: Lessons/Lesson12/README.md
 
 ## Class Assignments
