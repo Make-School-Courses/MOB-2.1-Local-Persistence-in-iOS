@@ -22,7 +22,7 @@ Complete the implementation of this helper struct and then test it in an empty p
           //complete the method
         }
 
-        static var getToken = { () -> Model in
+        static var getToken = { () -> String? in
           //complete the method
         }
 
