@@ -58,3 +58,9 @@ Now take a look at how [this article](https://medium.com/better-programming/prop
 
 
 Complete the assignment for this activity on [Gradescope](https://www.gradescope.com).
+
+## Additional Resources:
+
+- [Video Explanation](https://www.youtube.com/watch?v=-sNog7Idqqg)
+- [Property Wrappers vs Extensions](https://www.youtube.com/watch?v=5WUx9NsP7-k)
+
