@@ -122,7 +122,7 @@ All relationships are by default to-one, meaning you can only track a date once.
 
 Now select the WaterDate entity and create an inverse relationship to Plant. Set `plant` as destination and `waterDates` as inverse. Again see how this changes in the chart.
 
-Also set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropiate one. Ask the instructor if you ar eunsure which one to use.
+Also set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropiate one. Ask the instructor if you are unsure which one to use.
 
 **Q: Why are we leaving this relationship as to-one?**
 <!-- A plant can be watered many times but each water date belongs to a plant -->
