@@ -99,6 +99,8 @@ We want to make sure the app will save any changes if it goes to the background 
 
 We're done. Now we need to model data. 😀
 
+Make sure you check the box that says "Ordered" before moving on. 
+
 Before going further, **change the roles** of who is coding and who guiding the activity.
 
 ## Step 5: Creating the models
@@ -124,7 +126,6 @@ Now select the WaterDate entity and create an inverse relationship to Plant. Set
 
 Also set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropiate one. Ask the instructor if you are unsure which one to use.
 
-Make sure you check the box that says "Ordered" before moving on. 
 
 **Q: Why are we leaving this relationship as to-one?**
 <!-- A plant can be watered many times but each water date belongs to a plant -->
