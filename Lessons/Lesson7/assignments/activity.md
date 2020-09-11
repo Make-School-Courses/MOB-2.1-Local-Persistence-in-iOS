@@ -124,6 +124,8 @@ Now select the WaterDate entity and create an inverse relationship to Plant. Set
 
 Also set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropiate one. Ask the instructor if you are unsure which one to use.
 
+Make sure you check the box that says "Ordered" before moving on. 
+
 **Q: Why are we leaving this relationship as to-one?**
 <!-- A plant can be watered many times but each water date belongs to a plant -->
 
