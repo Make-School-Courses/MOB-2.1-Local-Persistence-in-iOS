@@ -222,9 +222,14 @@ let sortedDogs = realm.objects(Dog.self).filter("color = 'tan' AND name BEGINSWI
 
 ## In Class Activity I
 
-Complete [this activity](assignments/realm.md).
+Complete [this activity](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson10/assignments/realm.md).
 
 <!-- > -->
+
+## Realm online tutorial
+
+For further practice you can go to the documentation and follow [this tutorial](https://docs.mongodb.com/realm/tutorial/ios-swift/) to create a task manager app.
+
 
 ## External Resources
 - [Slides](https://docs.google.com/presentation/d/1pJCtx0sLkRzIvqfhDOyD2MRVCu78pcck2JL-bL2Wefc/edit?usp=sharing)
