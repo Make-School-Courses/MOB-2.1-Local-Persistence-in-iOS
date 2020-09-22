@@ -59,6 +59,17 @@ Choosing the ideal method depending on your data will help you make the best use
 
 <!-- > -->
 
+## Intro
+
+Check out [these notes](https://maggieappleton.com/databases) on databases.
+
+Take 5 min to read it and think about:
+
+- When have you used persistence so far in your projects at MS?
+- Can you identify the database type that you used?
+
+<!-- > -->
+
 ## What is persistence?
 
 ![definition](assets/definition.png)

@@ -222,14 +222,7 @@ let sortedDogs = realm.objects(Dog.self).filter("color = 'tan' AND name BEGINSWI
 
 ## In Class Activity I
 
-Complete the activity on [this repo](https://github.com/amelinagzz/Realm-starter) to get started with Realm.
-
-Stretch challenges:
-- Make it possible to update all value types in a book (for example, the year).
-- Adjust the find method to bring values that contain the search text, in case the user can't remember the complete name.
-- Download Realm Studio and see how your data looks like and add entries right there.
-
-<!-- > -->
+Complete [this activity](assignments/realm.md).
 
 <!-- > -->
 

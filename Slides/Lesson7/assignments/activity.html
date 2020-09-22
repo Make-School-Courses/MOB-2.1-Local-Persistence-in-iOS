@@ -118,6 +118,8 @@ We want to make sure the app will save any changes if it goes to the background 
 
 We're done. Now we need to model data. 😀
 
+Make sure you check the box that says "Ordered" before moving on. 
+
 Before going further, **change the roles** of who is coding and who guiding the activity.
 
 ## Step 5: Creating the models
@@ -140,6 +142,9 @@ Change the view to graph (right option from lower right segmented control). This
 All relationships are by default to-one, meaning you can only track a date once. But we need this to be more times, or else your plant will die. So change the relationship in the Data Model Inspector and change `Type` to `To Many`. See how this changes in the chart.
 
 Now select the WaterDate entity and create an inverse relationship to Plant. Set `plant` as destination and `waterDates` as inverse. Again see how this changes in the chart.
+
+Also set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropiate one. Ask the instructor if you are unsure which one to use.
+
 
 **Q: Why are we leaving this relationship as to-one?**
 <!-- A plant can be watered many times but each water date belongs to a plant -->
