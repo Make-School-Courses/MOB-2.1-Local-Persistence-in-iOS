@@ -42,8 +42,8 @@ Students by the end of the course will be able to ...
 |  8 |  Tue, Sept 15              | [CD - Fetching Data] |
 |  9 |  Thu, Sept 17              | [CD - Multiple contexts] |
 | 10 |  Tue, Sept 22              | [Realm] |
-| 11 |  Thu, Sept 24              | [Notifications] |
-| 12 |  Tue, Sept 29              | [CloudKit] |
+| 11 |  Thu, Sept 24              | Lab Session |
+| 12 |  Tue, Sept 29              | [CloudKit/Notifications] |
 | 13 |  Thu, Oct 1                | [Final Exam] |
 | 14 |  Tue, Oct 6                | [Project Presentations] |
 
