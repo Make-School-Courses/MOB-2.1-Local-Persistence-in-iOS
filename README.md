@@ -43,7 +43,7 @@ Students by the end of the course will be able to ...
 |  9 |  Thu, Sept 17              | [CD - Multiple contexts] |
 | 10 |  Tue, Sept 22              | [Realm] |
 | 11 |  Thu, Sept 24              | Lab Session |
-| 12 |  Tue, Sept 29              | [CloudKit/Notifications] |
+| 12 |  Tue, Sept 29              | [Core Data Notifications] |
 | 13 |  Thu, Oct 1                | [Final Exam] |
 | 14 |  Tue, Oct 6                | [Project Presentations] |
 
@@ -91,6 +91,7 @@ Students by the end of the course will be able to ...
 [Structured lab + final project intro]: Lessons/Lab/README.md
 [CloudKit]: Lessons/Lesson11/README.md
 [Cloud Kit Pt. 2]: Lessons/Lesson12/README.md
+[Core Data Notifications]: Lessons/Lesson13/README.md
 
 ## Class Assignments
 
