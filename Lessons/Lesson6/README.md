@@ -6,7 +6,7 @@
 
 # Keychain 🔐
 
-## [Slides](https://make-school-courses.github.io/MOB-2.1-Local-Persistence-in-iOS/Slides/Lesson3/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-2.1-Local-Persistence-in-iOS/Slides/Lesson6/README.html ':ignore')
 
 <!-- > -->
 
