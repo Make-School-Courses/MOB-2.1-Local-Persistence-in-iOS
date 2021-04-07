@@ -15,7 +15,7 @@ You can add them manually or venture into trying XML format. 😜
 
 ## Step 3 - Display
 
-Using the methods to handle plists or your own implementation if you want, display the items in the Scores dictionary in a `UITableVie`w. It should look something like this:
+Using the methods to handle plists or your own implementation if you want, display the items in the Scores dictionary in a `UITableView`. It should look something like this:
 
 ![table](table.png)
 
