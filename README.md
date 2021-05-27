@@ -85,10 +85,6 @@ Students by the end of the course will be able to ...
 | [Core Data]          | Tutorial |  Jun 21      |  Jul 5  | Github link in Gradescope  |
 | [Course Project]     | Project  |  Jun 23      |  Jul 16  | Github link in Gradescope  |
 
-[Friends App]:
-[Keychain Demo]:
-[Food Rating App]:
-[CoreData Components]:
 [Course Project]: https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Assignments/Taskee/specifications.md
 [Core Data]: https://www.makeschool.com/academy/track/core-data-uy
 
