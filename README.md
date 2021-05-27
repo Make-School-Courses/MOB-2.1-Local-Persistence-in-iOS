@@ -10,9 +10,9 @@ This courses covers how and why to persist data in mobile development. We will l
 
 ## Course Specifics
 
-**Course Delivery**: online | 7 weeks | 14 sessions
+**Course Delivery**: Bichronous | 7 weeks | 16 sessions
 
-**Course Credits**: 3 units | 37.5 Seat Hours | 75 Total Hours
+**Course Credits**:3 units | 14 Contact Hours/Term | 115.5 Non-Contact Hours/Term | 129.5 Total Hours/Term
 
 ## Learning Outcomes
 
@@ -26,54 +26,33 @@ Students by the end of the course will be able to ...
 
 ## Lessons
 
-**Course Dates:** Thursday, August 20 – Tuesday, October 6, 2020 (7 weeks)
+**Course Dates:** Monday, May 31 – Wednesday, July 28, 2021 (9 weeks)
 
-**Class Times:** Tuesday and Thursday at 2:30–5:15pm (14 class sessions)
+**Class Times:** Monday, Wednesday at 4:00pm–5:30pm (16 class sessions)
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Thu, Aug 20               | [Introduction to Persistence Technologies in iOS] |
-|  2 |  Tue, Aug 25               | [Plist & UserDefaults] |
-|  3 |  Thu, Aug 27               | [NSCoding & Codable] |
-|  4 |  Tue, Sept 1               | [The FileSystem] |
-|  5 |  Thu, Sept 3               | [Keychain] |
-|  6 |  Tue, Sept 8               | [CD - Introduction] |
-|  7 |  Thu, Sept 10              | [CD - Relationships] |
-|  8 |  Tue, Sept 15              | [CD - Fetching Data] |
-|  9 |  Thu, Sept 17              | [CD - Multiple contexts] |
-| 10 |  Tue, Sept 22              | [Realm] |
-| 11 |  Thu, Sept 24              | Lab Session |
-| 12 |  Tue, Sept 29              | [Core Data Notifications] |
-| 13 |  Thu, Oct 1                | [Final Exam] |
-| 14 |  Tue, Oct 6                | [Project Presentations] |
+|  - |  Mon, May 31         | **No Class - Memorial Day**                  |
+|  1 |  Wed, June 2         | [Introduction to Persistence Technologies]   |
+|  2 |  Mon, June 7         | [Plist & UserDefaults]                       |
+|  3 |  Wed, June 9         | [NSCoding & Codable]                         |
+|  4 |  Mon, June 14        | [The FileSystem]                             |
+|  5 |  Wed, June 16        | [Keychain]                                   |
+|  6 |  Mon, June 21        | [CD - Introduction]                          |
+|  7 |  Wed, June 23        | Project Intro                                |
+|  8 |  Mon, June 28        | [CD - Relationships]                         |
+|  9 |  Wed, June 30        | [CD - Fetching Data]                         |
+| -  |  Mon, July 5         | **No Class - Independence Day Observed**     |
+| 10 |  Wed, July 7         | [CD - Multiple contexts]                     |
+| 11 |  Mon, July 12        | Project Lab                                  |
+| 12 |  Wed, July 14        | [Realm]                                      |
+| 13 |  Mon, July 19        | [Core Data Notifications]                    |
+| 14 |  Wed, July 21        | Project Lab                                  |
+| 15 |  Mon, July 26        | Final Exam                                   |
+| 16 |  Wed, July 28        | Presentations                                |
 
-<!-- 3 times a week format
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Mon, June 1               | [Introduction to Persistence Technologies in iOS] |
-|  2 |  Wed, June 3               | [Plist & UserDefaults]        |
-|  3 |  Fri, June 5               | [NSCoding & Codable]          |
-|  4 |  Mon, June 8               | [The FileSystem]              |
-|  5 |  Wed, June 10              | [Keychain]                    |
-|  6 |  Fri, June 12              | [CD - Introduction]           |
-|  7 |  Mon, June 15              | [CD - Relationships]          |
-|  8 |  Wed, June 17              | [CD - Tutorial]               |
-|  9 |  Fri, June 19              | **NO CLASS - JUNETEENTH**     |
-| 10 |  Mon, June 22              | [CD - Fetching Data]          |
-| 11 |  Wed, June 24              | [CD - Multiple contexts]      |
-| 12 |  Fri, June 26              | [Realm]                       |
-| 13 |  Mon, June 29              | [Structured lab + final project intro]|
-| 14 |  Wed, July 1               | [Cloud Kit Pt. 1]             |  
-| -  |  Fri, July 3               | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
-| 15 |  Mon, July 6               | Lab Session                   |
-| 16 |  Wed, July 8               | [CloudKit Pt. 2]              |
-| 17 |  Fri, July 10              | [Project lab]                 |
-| 18 |  Mon, July 13              | [Review topics]               |
-| 19 |  Wed, July 15              | Final Exam                    |
-| 20 |  Fri, July 17              | Presentations                 |
--->
 
-[Introduction to Persistence Technologies in iOS]: Lessons/Lesson1/README.md
+[Introduction to Persistence Technologies]: Lessons/Lesson1/README.md
 [Plist & UserDefaults]: Lessons/Lesson2/README.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
 [NSCoding & Codable]: Lessons/Lesson3/README.md
@@ -95,23 +74,17 @@ Students by the end of the course will be able to ...
 
 ## Class Assignments
 
-### Tutorials
-- [Core Data](https://www.makeschool.com/academy/track/core-data-uy)
+## Assignment Schedule
 
-<!--### Other Class assignments
-- [Keychain Playground]
+|    Assignment       | Type     | Date Assigned |   Due Date   |     Submission Form     |
+|:--------------------|:--------:|--------------:|:------------:|:-----------------------:|
+|         | In-Class |        |    | Github link in Gradescope  |
+|         | In-Class |        |    | Github link in Gradescope  |
+| [Core Data]         | Tutorial |  Jun 21      |  Jul 5  | Github link in Gradescope  |
+| [Course Project]    | Project  |  Jun 23      |  Jul 16  | Github link in Gradescope  |
 
-[Keychain Playground]: Assignments/KeychainSwiftPlayground-->
-
-### Projects
-<!-- - [Course Planner]
-- [Document Management]
-[Course Planner]: Assignments/Project-Course-Planner/Readme.md
-[Document Management]: Assignments/Project-Document-Management/Readme.md -->
-
-[Taskee]
-
-[Taskee]:Assignments/Taskee/specifications.md
+[Course Project]: https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Assignments/Taskee/specifications.md
+[Core Data]: https://www.makeschool.com/academy/track/core-data-uy
 
 ## Evaluation
 
@@ -134,10 +107,9 @@ Any additional resources you may need (online books, etc.) can be found here. Yo
 
 - [Program Learning Outcomes](https://make.sc/program-learning-outcomes) - What you will achieve after finishing Make School, all courses are designed around these outcomes.
 - [Grading System](https://make.sc/grading-system) - How grading is done at Make School
-- [Code of Conduct, Equity, and Inclusion](https://make.sc/code-of-conduct) - Learn about Diversity and Inclusion at Make School
+- [Diversity and Inclusion Statement](https://make.sc/diversity-and-inclusion-statement) - Learn about Diversity and Inclusion at Make School
 - [Academic Honesty](https://make.sc/academic-honesty-policy) - Our policies around plagerism, cheating, and other forms of academic misconduct
 - [Attendance Policy](https://make.sc/attendance-policy) - What we expect from you in terms of attendance for all classes at Make School
 - [Course Credit Policy](https://make.sc/course-credit-policy) - Our policy for how you obtain credit for your courses
 - [Disability Services (Academic Accommodations)](https://make.sc/disability-services) - Services and accommodations we provide for students
-- [Online Learning Tutorial](https://make.sc/online-learning-tutorial) - How to succeed in online learning at Make School
 - [Student Handbook](https://make.sc/student-handbook) - Guidelines, policies, and resources for all Make School students
