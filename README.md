@@ -76,13 +76,19 @@ Students by the end of the course will be able to ...
 
 ## Assignment Schedule
 
-|    Assignment       | Type     | Date Assigned |   Due Date   |     Submission Form     |
-|:--------------------|:--------:|--------------:|:------------:|:-----------------------:|
-|         | In-Class |        |    | Github link in Gradescope  |
-|         | In-Class |        |    | Github link in Gradescope  |
-| [Core Data]         | Tutorial |  Jun 21      |  Jul 5  | Github link in Gradescope  |
-| [Course Project]    | Project  |  Jun 23      |  Jul 16  | Github link in Gradescope  |
+|    Assignment        | Type     | Date Assigned |   Due Date   |     Submission Form     |
+|:---------------------|:--------:|--------------:|:------------:|:-----------------------:|
+| [Keychain Demo]      | Activity |        |    | Github link in Gradescope  |
+| [Food Rating App]    | Activity |        |    | Github link in Gradescope  |
+| [CoreData Components]| Activity |        |    | Github link in Gradescope  |
+| [Friends App]        | Activity |        |    | Github link in Gradescope  |
+| [Core Data]          | Tutorial |  Jun 21      |  Jul 5  | Github link in Gradescope  |
+| [Course Project]     | Project  |  Jun 23      |  Jul 16  | Github link in Gradescope  |
 
+[Friends App]:
+[Keychain Demo]:
+[Food Rating App]:
+[CoreData Components]:
 [Course Project]: https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Assignments/Taskee/specifications.md
 [Core Data]: https://www.makeschool.com/academy/track/core-data-uy
 
@@ -90,10 +96,10 @@ Students by the end of the course will be able to ...
 
 To pass this course you must meet the following requirements:
 
-- Complete all required assignments
-- Pass all projects according to the associated project rubric
-- Pass the final summative assessment according to the rubric as specified in this class
-    - This will be further explained in the [study guide](studyGuide.md)
+- Score at least 2 in the [Course Rubric](https://docs.google.com/document/d/1KyF6UiLereyqxblqYBVap9hUiNOyBKNavnWfwJQFDnQ/edit?usp=sharing)
+- Pass the final summative assessment with at least 70%
+    - [Study guide](studyGuide.md)
+- Get a score of at least 70% in the Course Project
 - Actively participate in class and abide by the attendance policy
 - Make up all classwork from all absences
 
