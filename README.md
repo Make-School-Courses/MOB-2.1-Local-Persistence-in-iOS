@@ -92,7 +92,7 @@ Students by the end of the course will be able to ...
 
 To pass this course you must meet the following requirements:
 
-- Score at least 2 in the [Course Rubric](https://docs.google.com/document/d/1KyF6UiLereyqxblqYBVap9hUiNOyBKNavnWfwJQFDnQ/edit?usp=sharing)
+- Score a passing grade in the [Course Rubric](https://docs.google.com/document/d/1KyF6UiLereyqxblqYBVap9hUiNOyBKNavnWfwJQFDnQ/edit?usp=sharing)
 - Pass the final summative assessment with at least 70%
     - [Study guide](studyGuide.md)
 - Get a score of at least 70% in the Course Project
