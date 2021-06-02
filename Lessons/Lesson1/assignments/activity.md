@@ -12,11 +12,11 @@ During this time each member of the group will contribute in a discussion to agr
 - Mention some use cases
 
 Methods to be assigned:
+- FileSystem
 - NSUserDefaults
 - Keychain
-- FileSystem
 - Plist
-- CoreData
+<!--- CoreData-->
 
 ## Part 2
 Each group will fill out a corresponding slide for their method with the 4 points that were required.

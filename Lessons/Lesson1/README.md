@@ -18,7 +18,7 @@
 - Activity
 - Persistence methods
 
-<!-- > -->
+<!--
 
 ## Zen counting 🔢
 
@@ -29,15 +29,18 @@
 - Only one person can speak at a time
 - The same person can’t say two consecutive numbers
 
+-->
+
 <!-- > -->
 
-## Intro to course
+## MOB 2.1
 
-Go over the course repo identifying:
-  - Course description & Learning outcomes
-  - Class schedule
-  - Course repo link
-  - Gradescope setup
+- 🤓 Course Description
+- 💻 Course Delivery
+- 🧠 Course Learning Outcomes
+- 🗓 Schedule
+- 📓 Assignments & Gradescope
+- 💯 Evaluation
 
 <!-- > -->
 
@@ -150,14 +153,15 @@ Its purpose is to make managing data faster and simpler.
 
 From the official [Github site](https://github.com/realm/realm-cocoa):
 
-- Mobile-first: First database built from the ground up to run directly inside phones, tablets and wearables.
-- Simple: Data exposed as objects and queryable by code. Most of our users pick it up intuitively, getting simple apps up & running in minutes.
-- Modern: Supports relationships, generics and Swift.
-- Fast: Faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.
+- **Mobile-first**: First database built from the ground up to run directly inside phones, tablets and wearables.
+- **Simple**: Data exposed as objects and queryable by code. Most of our users pick it up intuitively, getting simple apps up & running in minutes.
+- **Modern**: Supports relationships, generics and Swift.
+- **Fast**: Faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.
 
 <!-- > -->
 
 ### SQLite
+
 [SQLite](https://www.sqlite.org/index.html) is a relational database that can be used by iOS apps. It is contained in a C-library embedded to the app.
 
 - Lightweight
@@ -167,16 +171,9 @@ From the official [Github site](https://github.com/realm/realm-cocoa):
 
 <!-- > -->
 
-## New addition to course
+## CloudKit
 
 **[CloudKit](https://developer.apple.com/icloud/cloudkit/)** ☁️
-
-<!-- > -->
-
-
-## Closing Exercise
-
-Small closing prompt in [Gradescope](https://www.gradescope.com).
 
 <!-- > -->
 
