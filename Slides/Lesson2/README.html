@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Syllabus Template Slides</title>
-    <link rel="stylesheet" href="./../css/reveal.css" />
-    <link rel="stylesheet" href="./../css/theme/black.css" id="theme" />
+    <link rel="shortcut icon" href="./../favicon.ico"/>
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/white.css" id="theme" />
     <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
     <link rel="stylesheet" href="./../assets/Reveal/makeschool.css" />
 
     <script>
@@ -29,10 +29,11 @@
 </script></section><section  data-markdown><script type="text/template">
 ## Agenda
 
-- Objectives
+**Sync**
 - Plist
-- Activity
 - NSUserDefaults
+
+**Async**
 - Activity w/property wrappers
 </script></section><section  data-markdown><script type="text/template">
 ## Learning Objectives
@@ -65,25 +66,6 @@ The file is called `Info.plist` by convention. The file name is case sensitive s
 
 The file is created automatically by Xcode when you create a new project.
 </script></section><section  data-markdown><script type="text/template">
-### Creating an Information Property List File
-
-The easiest way to create an information property list file is letting Xcode create it for us.
-
-Every project we create in Xcode comes with a file named `Info.plist`.
-
-The file comes preconfigured with keys that every plist should have.
-</script></section><section  data-markdown><script type="text/template">
-To edit the contents of the file:
-
-1. Select the file in files inspector.
-1. Double-click the value to select it and type a new value.
-
-Most of these values are specified as strings but Xcode also supports other types likes arrays, dictionaries, booleans, date, data and numbers.
-</script></section><section  data-markdown><script type="text/template">
-![plist](assets/plist.png)
-
-This is an example of a default plist that gets created with every new project. To see the XML structure, we right-click on the file and choose Open As/ Source Code.
-</script></section><section  data-markdown><script type="text/template">
 ### Adding keys
 
 The default `Info.plist` file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
@@ -93,40 +75,42 @@ The default `Info.plist` file given by Xcode has the required keys, but it's pos
 - To change the value, double-click on the Value column.
 - To remove a row, select it and hit Backspace.
 </script></section><section  data-markdown><script type="text/template">
-### Reading from a plist
+Reading from a plist
 
-Here's how to read the information:
-
-```Swift
+```swift
 var format = PropertyListSerialization.PropertyListFormat.xml
 var data:[String:AnyObject] = [:]
-let path:String? = Bundle.main.path(forResource: "name of your plist", ofType: "plist")!
+let path:String? = Bundle.main.path(forResource: "MyList", ofType: "plist")!
 let xmlContents = FileManager.default.contents(atPath: path!)!
-do{
-    data = try PropertyListSerialization.propertyList(from: xmlContents,options: .mutableContainersAndLeaves,format: &format)as! [String:AnyObject]
-    // data is available now
-catch{
+  do{
+    data = try PropertyListSerialization.propertyList(from: xmlContents,
+          options: .mutableContainersAndLeaves,
+          format: &format) as! [String:AnyObject]
+    print(data)
+  }
+  catch{
     print("Error reading plist: \(error)")
+  }
+```
+</script></section><section  data-markdown><script type="text/template">
+Writing to a plist
+
+```swift
+let path:String? = Bundle.main.path(forResource: "MyList", ofType: "plist")!
+let fileManager = FileManager.default
+if fileManager.fileExists(atPath: path!) {
+  guard let dict = NSMutableDictionary(contentsOfFile: path!) else { return }
+  //add values to dictionary
+  let fileManager = FileManager.default
+  if fileManager.fileExists(atPath: path!) {
+    if !dict.write(toFile: path!, atomically: false) {
+      print("File not written successfully")
+    }
+  }          
 }
 ```
 </script></section><section  data-markdown><script type="text/template">
-### Writing to a plist
-
-Aside from manually adding new elements to the plist, we can also write to it.
-
-The issue here is that we _can't write to our app bundle_. This means we first need to to save the existing file into a Documents folder and then write and read from there.
-</script></section><section  data-markdown><script type="text/template">
-#### What's the difference?
-
-The **main bundle** is everything that the user gets when they install the app.
-- This is read only.
-- When the app is updated, the bundle gets replaced by a new one.
-
-The **documents directory** is where everything that the user generates is stored.
-- This is read/write
-- Remains the same even with updates.
-</script></section><section  data-markdown><script type="text/template">
-### Writing to a plist
+### Handling Plist operations
 
 We can write small helper methods to help handling plists easier.
 
@@ -137,7 +121,6 @@ We can write small helper methods to help handling plists easier.
 struct Plist {
 
   enum PlistError: Error {
-
     case FileNotWritten
     case FileDoesNotExist
   }
@@ -210,7 +193,6 @@ struct Plist {
   }
 }
 
-
 ```
 </script></section><section  data-markdown><script type="text/template">
 ## In Class Activity I
@@ -233,7 +215,9 @@ Usually it should be used to store user preferences, or anything as long as it's
 
 Every piece of data we store will have a unique **key**, if we try saving things with the same key, new data will only replace the old data.
 </script></section><section  data-markdown><script type="text/template">
-🔓 Should **never be used for sensitive data** as its not encrypted (eg. Authentication Token, passwords).
+🔓 Should **never be used for sensitive data** as its not encrypted
+
+(eg. Authentication Token, passwords).
 </script></section><section  data-markdown><script type="text/template">
 ## Example
 
@@ -259,9 +243,11 @@ UserDefaults.standard.set("Karl", forKey: "name")
 let name = UserDefaults.standard.string(forKey: "name") ?? ""
 ```
 </script></section><section  data-markdown><script type="text/template">
-Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
+Items stored in UserDefault belong to an app.
+
+⚠️ This means deleting your app will clear out its UserDefaults.
 </script></section><section  data-markdown><script type="text/template">
-## In Class Activity II
+## In Class Activity II - Async
 
 Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson2/assignments/defaults.md)
 </script></section><section  data-markdown><script type="text/template">
@@ -275,8 +261,13 @@ Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persist
 </script></section></div>
     </div>
 
-    <script src="./../js/reveal.js"></script>
+    <script src="./../dist/reveal.js"></script>
 
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
     <script>
       function extend() {
         var target = {};
@@ -291,16 +282,6 @@ Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persist
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './../plugin/zoom-js/zoom.js', async: true },
-        { src: './../plugin/notes/notes.js', async: true },
-        { src: './../plugin/math/math.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -308,11 +289,17 @@ Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persist
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
       var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
     </script>

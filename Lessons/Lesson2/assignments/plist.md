@@ -1,17 +1,17 @@
 # Plist table
 
-## Step 1 - Create
+## Step 1 - Checkout starter files
 
-Create a project and a new plist file (CMD+N -> Plist).
+Download the [starter project](https://github.com/Make-School-Labs/plistDemo-starter/tree/main).
 
 ## Step 2 - Populate
 
-The goal for your plist is to have these items:
+The goal for your plist is to have these or other example items:
 
 ![plistimg](plistexample.png)
 
 
-You can add them manually or venture into trying XML format. 😜
+You can add them manually.
 
 ## Step 3 - Display
 
@@ -26,4 +26,5 @@ Add two more entries to the Scores array in code.
 
 ## Step 5 - Show
 
-When you are done, share a screenshot of you tableview on the slack channel for the class.
+- When you are done, share a screenshot of you tableview on the slack channel for the class.
+- Also submit your project to Gradescope.

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Syllabus Template Slides</title>
-    <link rel="stylesheet" href="./../css/reveal.css" />
-    <link rel="stylesheet" href="./../css/theme/black.css" id="theme" />
+    <link rel="shortcut icon" href="./../favicon.ico"/>
+    <link rel="stylesheet" href="./../dist/reveal.css" />
+    <link rel="stylesheet" href="./../dist/theme/white.css" id="theme" />
     <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
     <link rel="stylesheet" href="./../assets/Reveal/makeschool.css" />
 
     <script>
@@ -34,7 +34,9 @@
 - Objectives
 - Activity
 - Persistence methods
-</script></section><section  data-markdown><script type="text/template">
+
+<!--
+
 ## Zen counting 🔢
 
 **Goal:** Count to 10
@@ -43,14 +45,17 @@
 - Everyone umute their mic
 - Only one person can speak at a time
 - The same person can’t say two consecutive numbers
-</script></section><section  data-markdown><script type="text/template">
-## Intro to course
 
-Go over the course repo identifying:
-  - Course description & Learning outcomes
-  - Class schedule
-  - Course repo link
-  - Gradescope setup
+-->
+</script></section><section  data-markdown><script type="text/template">
+## MOB 2.1
+
+- 🤓 Course Description
+- 💻 Course Delivery
+- 🧠 Course Learning Outcomes
+- 🗓 Schedule
+- 📓 Assignments & Gradescope
+- 💯 Evaluation
 </script></section><section  data-markdown><script type="text/template">
 ## Why you should know this
 
@@ -137,12 +142,13 @@ Its purpose is to make managing data faster and simpler.
 </script></section><section  data-markdown><script type="text/template">
 From the official [Github site](https://github.com/realm/realm-cocoa):
 
-- Mobile-first: First database built from the ground up to run directly inside phones, tablets and wearables.
-- Simple: Data exposed as objects and queryable by code. Most of our users pick it up intuitively, getting simple apps up & running in minutes.
-- Modern: Supports relationships, generics and Swift.
-- Fast: Faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.
+- **Mobile-first**: First database built from the ground up to run directly inside phones, tablets and wearables.
+- **Simple**: Data exposed as objects and queryable by code. Most of our users pick it up intuitively, getting simple apps up & running in minutes.
+- **Modern**: Supports relationships, generics and Swift.
+- **Fast**: Faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.
 </script></section><section  data-markdown><script type="text/template">
 ### SQLite
+
 [SQLite](https://www.sqlite.org/index.html) is a relational database that can be used by iOS apps. It is contained in a C-library embedded to the app.
 
 - Lightweight
@@ -150,14 +156,9 @@ From the official [Github site](https://github.com/realm/realm-cocoa):
 - Fast & reliable
 - SQL knowledge can be used
 </script></section><section  data-markdown><script type="text/template">
-## New addition to course
+## CloudKit
 
 **[CloudKit](https://developer.apple.com/icloud/cloudkit/)** ☁️
-</script></section><section  data-markdown><script type="text/template">
-
-## Closing Exercise
-
-Small closing prompt in [Gradescope](https://www.gradescope.com).
 </script></section><section  data-markdown><script type="text/template">
 ## Additional resources
 
@@ -168,8 +169,13 @@ Small closing prompt in [Gradescope](https://www.gradescope.com).
 </script></section></div>
     </div>
 
-    <script src="./../js/reveal.js"></script>
+    <script src="./../dist/reveal.js"></script>
 
+    <script src="./../plugin/markdown/markdown.js"></script>
+    <script src="./../plugin/highlight/highlight.js"></script>
+    <script src="./../plugin/zoom/zoom.js"></script>
+    <script src="./../plugin/notes/notes.js"></script>
+    <script src="./../plugin/math/math.js"></script>
     <script>
       function extend() {
         var target = {};
@@ -184,16 +190,6 @@ Small closing prompt in [Gradescope](https://www.gradescope.com).
         return target;
       }
 
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './../plugin/zoom-js/zoom.js', async: true },
-        { src: './../plugin/notes/notes.js', async: true },
-        { src: './../plugin/math/math.js', async: true }
-      ];
-
       // default options to init reveal.js
       var defaultOptions = {
         controls: true,
@@ -201,11 +197,17 @@ Small closing prompt in [Gradescope](https://www.gradescope.com).
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
       };
 
       // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
+      var queryOptions = Reveal().getQueryHash() || {};
 
       var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
     </script>

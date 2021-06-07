@@ -12,10 +12,11 @@
 
 ## Agenda
 
-- Objectives
+**Sync**
 - Plist
-- Activity
 - NSUserDefaults
+
+**Async**
 - Activity w/property wrappers
 
 <!-- > -->
@@ -64,31 +65,6 @@ The file is created automatically by Xcode when you create a new project.
 
 <!-- > -->
 
-### Creating an Information Property List File
-
-The easiest way to create an information property list file is letting Xcode create it for us.
-
-Every project we create in Xcode comes with a file named `Info.plist`.
-
-The file comes preconfigured with keys that every plist should have.
-
-<!-- > -->
-
-To edit the contents of the file:
-
-1. Select the file in files inspector.
-1. Double-click the value to select it and type a new value.
-
-Most of these values are specified as strings but Xcode also supports other types likes arrays, dictionaries, booleans, date, data and numbers.
-
-<!-- > -->
-
-![plist](assets/plist.png)
-
-This is an example of a default plist that gets created with every new project. To see the XML structure, we right-click on the file and choose Open As/ Source Code.
-
-<!-- > -->
-
 ### Adding keys
 
 The default `Info.plist` file given by Xcode has the required keys, but it's possible that you will need to add more for your project. We can use the plist as a key-value data store.
@@ -100,46 +76,46 @@ The default `Info.plist` file given by Xcode has the required keys, but it's pos
 
 <!-- > -->
 
-### Reading from a plist
+Reading from a plist
 
-Here's how to read the information:
-
-```Swift
+```swift
 var format = PropertyListSerialization.PropertyListFormat.xml
 var data:[String:AnyObject] = [:]
-let path:String? = Bundle.main.path(forResource: "name of your plist", ofType: "plist")!
+let path:String? = Bundle.main.path(forResource: "MyList", ofType: "plist")!
 let xmlContents = FileManager.default.contents(atPath: path!)!
-do{
-    data = try PropertyListSerialization.propertyList(from: xmlContents,options: .mutableContainersAndLeaves,format: &format)as! [String:AnyObject]
-    // data is available now
-catch{
+  do{
+    data = try PropertyListSerialization.propertyList(from: xmlContents,
+          options: .mutableContainersAndLeaves,
+          format: &format) as! [String:AnyObject]
+    print(data)
+  }
+  catch{
     print("Error reading plist: \(error)")
+  }
+```
+
+<!-- > -->
+
+Writing to a plist
+
+```swift
+let path:String? = Bundle.main.path(forResource: "MyList", ofType: "plist")!
+let fileManager = FileManager.default
+if fileManager.fileExists(atPath: path!) {
+  guard let dict = NSMutableDictionary(contentsOfFile: path!) else { return }
+  //add values to dictionary
+  let fileManager = FileManager.default
+  if fileManager.fileExists(atPath: path!) {
+    if !dict.write(toFile: path!, atomically: false) {
+      print("File not written successfully")
+    }
+  }          
 }
 ```
 
 <!-- > -->
 
-### Writing to a plist
-
-Aside from manually adding new elements to the plist, we can also write to it.
-
-The issue here is that we _can't write to our app bundle_. This means we first need to to save the existing file into a Documents folder and then write and read from there.
-
-<!-- > -->
-
-#### What's the difference?
-
-The **main bundle** is everything that the user gets when they install the app.
-- This is read only.
-- When the app is updated, the bundle gets replaced by a new one.
-
-The **documents directory** is where everything that the user generates is stored.
-- This is read/write
-- Remains the same even with updates.
-
-<!-- > -->
-
-### Writing to a plist
+### Handling Plist operations
 
 We can write small helper methods to help handling plists easier.
 
@@ -150,7 +126,6 @@ We can write small helper methods to help handling plists easier.
 struct Plist {
 
   enum PlistError: Error {
-
     case FileNotWritten
     case FileDoesNotExist
   }
@@ -223,7 +198,6 @@ struct Plist {
   }
 }
 
-
 ```
 
 <!-- > -->
@@ -254,7 +228,9 @@ Every piece of data we store will have a unique **key**, if we try saving things
 
 <!-- > -->
 
-🔓 Should **never be used for sensitive data** as its not encrypted (eg. Authentication Token, passwords).
+🔓 Should **never be used for sensitive data** as its not encrypted
+
+(eg. Authentication Token, passwords).
 
 <!-- > -->
 
@@ -286,11 +262,13 @@ let name = UserDefaults.standard.string(forKey: "name") ?? ""
 
 <!-- > -->
 
-Items stored in UserDefault belong to an app. This means deleting your app will clear out its UserDefaults.
+Items stored in UserDefault belong to an app.
+
+⚠️ This means deleting your app will clear out its UserDefaults.
 
 <!-- > -->
 
-## In Class Activity II
+## In Class Activity II - Async
 
 Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson2/assignments/defaults.md)
 
