@@ -7,18 +7,18 @@ Complete the implementation of this helper struct and then test it in an empty p
 ```Swift
    struct Defaults {
 
-        static let token = "email"
-        static let tokenKey = "emailKey"
+        static let email = "email"
+        static let emailKey = "emailKey"
 
         struct EmailModel {
             var email: String?
         }
 
-        static var saveToken = { (token: String) in
+        static var saveEmail = { (email: String) in
           //complete the method
         }
 
-        static var getToken = { () -> String? in
+        static var getEmail = { () -> String? in
           //complete the method
         }
 
