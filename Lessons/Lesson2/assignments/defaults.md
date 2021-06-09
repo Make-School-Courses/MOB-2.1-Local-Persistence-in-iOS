@@ -1,34 +1,5 @@
 ## UserDefaults & Property Wrappers
 
-Let's say we want to manage saving a user's email with UserDefaults. We will be accessing this email in several parts within the app. We can make the process of requesting data much easier if we have the UserDefault request in one place only, in a way that we can reuse that piece of code. (Similar to what we did with the Plist)
-
-Complete the implementation of this helper struct and then test it in an empty project to see if you can successfully store and retrieve the email.
-
-```Swift
-   struct Defaults {
-
-        static let email = "email"
-        static let emailKey = "emailKey"
-
-        struct EmailModel {
-            var email: String?
-        }
-
-        static var saveEmail = { (email: String) in
-          //complete the method
-        }
-
-        static var getEmail = { () -> String? in
-          //complete the method
-        }
-
-        static func clearUserData(){
-          //complete the method using removeObject
-        }
-    }
-
-```
-
 ## What if...?
 
 We not only want to save the email, but also the first time the user entered a section of the app, or user settings, whether they prefer light or dark mode, language selection etc.
