@@ -210,6 +210,10 @@ Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persist
 
 ## UserDefaults
 
+<iframe src="https://www.youtube.com/embed/D0dp7f_atO0" data-autoplay  width="700" height="500"></iframe>
+
+<!-- > -->
+
 UserDefaults allows us to store:
 - Strings
 - Numbers
