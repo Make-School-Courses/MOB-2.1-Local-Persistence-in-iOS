@@ -12,11 +12,10 @@
 
 ## Agenda
 
-**Sync**
 - Plist
-- NSUserDefaults
 
-**Async**
+
+- NSUserDefaults
 - Activity w/property wrappers
 
 <!-- > -->
@@ -240,7 +239,7 @@ Every piece of data we store will have a unique **key**, if we try saving things
 
 ## Example
 
-Storing a boolean indicating when a user opened an app for the first time.
+Storing a Boolean
 
 ```swift
 // Set
@@ -254,11 +253,11 @@ let value = UserDefaults.standard.bool(forKey: "FirstTime")
 
 ## Example
 
-Storing a string.
+Storing a String.
 
 ```swift
 // Set
-UserDefaults.standard.set("Karl", forKey: "name")
+UserDefaults.standard.set("Mika", forKey: "name")
 
 // Get
 let name = UserDefaults.standard.string(forKey: "name") ?? ""
@@ -272,7 +271,7 @@ Items stored in UserDefault belong to an app.
 
 <!-- > -->
 
-## In Class Activity II - Async
+## In Class Activity II
 
 Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson2/assignments/defaults.md)
 

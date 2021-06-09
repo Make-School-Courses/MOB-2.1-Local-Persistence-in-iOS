@@ -34,8 +34,8 @@ Students by the end of the course will be able to ...
 |:-----:|:----------------------:|:---------------------------------------:|
 |  - |  Mon, May 31         | **No Class - Memorial Day**                  |
 |  1 |  Wed, June 2         | [Introduction to Persistence Technologies]   |
-|  2 |  Mon, June 7         | [Plist & UserDefaults]                       |
-|  3 |  Wed, June 9         | [NSCoding & Codable]                         |
+|  2 |  Mon, June 7         | [Plist]                                      |
+|  3 |  Wed, June 9         | [UserDefaults] & [NSCoding & Codable]        |
 |  4 |  Mon, June 14        | [The FileSystem]                             |
 |  5 |  Wed, June 16        | [Keychain]                                   |
 |  6 |  Mon, June 21        | [CD - Introduction]                          |
@@ -53,7 +53,8 @@ Students by the end of the course will be able to ...
 
 
 [Introduction to Persistence Technologies]: Lessons/Lesson1/README.md
-[Plist & UserDefaults]: Lessons/Lesson2/README.md
+[Plist]: Lessons/Lesson2/README.md
+[UserDefaults]: Lessons/Lesson2/README.md
 [Unit Testing]: Lessons/03-Unit-Testing/Readme.md
 [NSCoding & Codable]: Lessons/Lesson3/README.md
 [The FileSystem]: Lessons/Lesson4/README.md
