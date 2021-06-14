@@ -4,7 +4,7 @@
 
 <!-- .slide: class="header" -->
 
-# The FileSystem 🗃
+# The File System 🗃
 
 ## [Slides](https://make-school-courses.github.io/MOB-2.1-Local-Persistence-in-iOS/Slides/Lesson4/README.html ':ignore')
 
@@ -20,13 +20,12 @@ This includes not abusing how much we save into files, using the correct file hi
 
 ## Learning Objectives
 
-- Identify the parts of the filesystem in an iOS app.
-- Access, store & edit data from the filesystem.
-- Combine persistence methods with the filesystem.
+- Identify the components of the File System in an iOS app.
+- Access, store & edit data from the File System.
 
 <!-- > -->
 
-## Filesystem
+## File System
 
 Handles the persistent storage of data files, apps, and the files associated with the operating system itself.
 
@@ -135,22 +134,14 @@ Where would you store:
 
 <!-- > -->
 
-## Accessing files
+**FileManger demo**
 
-Accessing files within the application bundle:
+- Identifying the DocumentsDirectory url
+- Writing to a file
+- Reading from a file
+- Creating directories
 
-```swift
-let path = Bundle.main.path(forResource: "file1", ofType: ".jpg")
-if let path = path {
-    let image = UIImage(contentsOfFile: path)
-}
-```
-Short form:
-```swift
-UIImage(named: "file1.jpg")
-```
-
-<!-- > -->
+<!-- v -->
 
 ## Writing files
 
@@ -173,10 +164,9 @@ if let documentDirectory: URL = urls.first {
 }
 ```
 
-<!-- > -->
+<!-- v -->
 
 ## Accessing files within the documents directory:
-
 
 ```swift
 let fileManager = FileManager.default
@@ -194,7 +184,19 @@ if let documentDirectory: URL = urls.first {
 }
  ```
 
-<!-- > -->
+<!-- v -->
+
+## Creating directories
+
+```swift
+do{
+  try manager.createDirectory(atPath: (urls.first?.appendingPathComponent("notes").path)!, withIntermediateDirectories: true, attributes: nil)
+}catch{
+  print(error)
+}
+```
+
+<!-- v -->
 
 Visit the documentation page for info on how to access specific directories in the filesystem
 
@@ -209,33 +211,12 @@ Visit the documentation page for info on how to access specific directories in t
 
 <!-- > -->
 
-**Playground Walkthrough**
-
-Open a new playground and code along 😀
-
-<!-- > -->
-
 ## In Class Activity
 
-In this challenge you will use the file system to add persistence support to an app that reviews meals. 🍜
+In this activity you will use the file system to add persistence support to an app that reviews meals. 🍜
 
-Use [this project](https://developer.apple.com/sample-code/swift/downloads/08_ImplementEditAndDeleteBehavior.zip) that has all the functionality you need except for persistence. If you delete the app, all the content will be gone. Your job is to fix this.
+Use [this project](https://github.com/amelinagzz/FoodRating-starter/tree/main) that has all the functionality you need except for persistence. If you delete the app, all the content will be gone. Your job is to fix this.
 
-<!-- > -->
-
-You can read Apple's guide to lead your way into this task,. The guide uses NSCoding, but you can try with Codable 😄
-
-[Link to guide](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/PersistData.html#//apple_ref/doc/uid/TP40015214-CH14-SW1)
-
-<!--Clone/Download the repo below to get started:
-
-[Bundle Challenge - Robo Profiles](https://github.com/Product-College-Labs/RoboProfiles) -->
-
-<!-- > -->
-
-## Stretch challenges
-
-1. Refactor the last activity to have a proper way to manage persistence in the app. In other words, build a persistence layer.
 
 <!-- > -->
 

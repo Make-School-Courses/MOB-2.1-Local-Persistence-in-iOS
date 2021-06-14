@@ -23,7 +23,7 @@
 
 <!-- .slide: class="header" -->
 
-# The FileSystem 🗃
+# The File System 🗃
 
 ## [Slides](https://make-school-courses.github.io/MOB-2.1-Local-Persistence-in-iOS/Slides/Lesson4/README.html ':ignore')
 </script></section><section  data-markdown><script type="text/template">
@@ -35,11 +35,10 @@ This includes not abusing how much we save into files, using the correct file hi
 </script></section><section  data-markdown><script type="text/template">
 ## Learning Objectives
 
-- Identify the parts of the filesystem in an iOS app.
-- Access, store & edit data from the filesystem.
-- Combine persistence methods with the filesystem.
+- Identify the components of the File System in an iOS app.
+- Access, store & edit data from the File System.
 </script></section><section  data-markdown><script type="text/template">
-## Filesystem
+## File System
 
 Handles the persistent storage of data files, apps, and the files associated with the operating system itself.
 
@@ -127,22 +126,14 @@ Where would you store:
 <p class="fragment fade-up">Downloaded images (ex. profile pictures)</p>
 <p class="fragment fade-up">Videos and audio files</p>
 
-</script></section><section  data-markdown><script type="text/template">
-## Accessing files
+</script></section><section ><section data-markdown><script type="text/template">
+**FileManger demo**
 
-Accessing files within the application bundle:
-
-```swift
-let path = Bundle.main.path(forResource: "file1", ofType: ".jpg")
-if let path = path {
-    let image = UIImage(contentsOfFile: path)
-}
-```
-Short form:
-```swift
-UIImage(named: "file1.jpg")
-```
-</script></section><section  data-markdown><script type="text/template">
+- Identifying the DocumentsDirectory url
+- Writing to a file
+- Reading from a file
+- Creating directories
+</script></section><section data-markdown><script type="text/template">
 ## Writing files
 
 Writing a file to the documents directory:
@@ -163,9 +154,8 @@ if let documentDirectory: URL = urls.first {
     }
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ## Accessing files within the documents directory:
-
 
 ```swift
 let fileManager = FileManager.default
@@ -182,37 +172,32 @@ if let documentDirectory: URL = urls.first {
     }
 }
  ```
-</script></section><section  data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
+## Creating directories
+
+```swift
+do{
+  try manager.createDirectory(atPath: (urls.first?.appendingPathComponent("notes").path)!, withIntermediateDirectories: true, attributes: nil)
+}catch{
+  print(error)
+}
+```
+</script></section><section data-markdown><script type="text/template">
 Visit the documentation page for info on how to access specific directories in the filesystem
 
 [FileManager Documentation](https://developer.apple.com/documentation/foundation/filemanager)
-</script></section><section  data-markdown><script type="text/template">
+</script></section></section><section  data-markdown><script type="text/template">
 ## When to use filesystem
 
 - Primarily when storing/caching binary data such as images/ audio/ video
 - Can also be used to store **serialized Objects**
 </script></section><section  data-markdown><script type="text/template">
-**Playground Walkthrough**
-
-Open a new playground and code along 😀
-</script></section><section  data-markdown><script type="text/template">
 ## In Class Activity
 
-In this challenge you will use the file system to add persistence support to an app that reviews meals. 🍜
+In this activity you will use the file system to add persistence support to an app that reviews meals. 🍜
 
-Use [this project](https://developer.apple.com/sample-code/swift/downloads/08_ImplementEditAndDeleteBehavior.zip) that has all the functionality you need except for persistence. If you delete the app, all the content will be gone. Your job is to fix this.
-</script></section><section  data-markdown><script type="text/template">
-You can read Apple's guide to lead your way into this task,. The guide uses NSCoding, but you can try with Codable 😄
+Use [this project](https://github.com/amelinagzz/FoodRating-starter/tree/main) that has all the functionality you need except for persistence. If you delete the app, all the content will be gone. Your job is to fix this.
 
-[Link to guide](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/PersistData.html#//apple_ref/doc/uid/TP40015214-CH14-SW1)
-
-<!--Clone/Download the repo below to get started:
-
-[Bundle Challenge - Robo Profiles](https://github.com/Product-College-Labs/RoboProfiles) -->
-</script></section><section  data-markdown><script type="text/template">
-## Stretch challenges
-
-1. Refactor the last activity to have a proper way to manage persistence in the app. In other words, build a persistence layer.
 </script></section><section  data-markdown><script type="text/template">
 ## Resources
 
