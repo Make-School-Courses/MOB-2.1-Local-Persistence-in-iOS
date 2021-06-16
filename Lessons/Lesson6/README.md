@@ -21,7 +21,6 @@
 
 - Describe how to handle the Keychain in iOS.
 - Implement data storing/retrieval through Keychain.
-- Implementing unit tests for the Keychain
 
 <!-- > -->
 
@@ -112,7 +111,7 @@ Apple’s API might be complex at first - Open Source Libraries such as
 
 ## In Class Activity
 
-Instructions [here](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/Lesson6/assignments/keychain.md)
+Instructions [here](https://github.com/Make-School-Labs/keychainDemo-starter/tree/main)
 
 <!-- > -->
 
