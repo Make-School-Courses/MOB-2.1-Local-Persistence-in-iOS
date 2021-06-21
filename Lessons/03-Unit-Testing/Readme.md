@@ -174,6 +174,8 @@ TodoTests.defaultTestSuite.run()
 - Highly recommended to complete the tutorial listed in additional resources.
 - Keep practicing with small tests.
 
+<!-- > -->
+
 ## Additional Resources
 
 1. [Unit testing tutorial](https://www.raywenderlich.com/709-ios-unit-testing-and-ui-testing-tutorial)
