@@ -38,8 +38,8 @@ Students by the end of the course will be able to ...
 |  3 |  Wed, June 9         | [UserDefaults] & [NSCoding & Codable]        |
 |  4 |  Mon, June 14        | [The FileSystem]                             |
 |  5 |  Wed, June 16        | [Keychain]                                   |
-|  6 |  Mon, June 21        | [CD - Introduction]                          |
-|  7 |  Wed, June 23        | Project Intro                                |
+|  6 |  Mon, June 21        | [Unit Testing]                               |
+|  7 |  Wed, June 23        | [CD - Introduction]                          |
 |  8 |  Mon, June 28        | [CD - Relationships]                         |
 |  9 |  Wed, June 30        | [CD - Fetching Data]                         |
 | -  |  Mon, July 5         | **No Class - Independence Day Observed**     |
