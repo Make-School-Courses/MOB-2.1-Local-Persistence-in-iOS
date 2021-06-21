@@ -115,9 +115,9 @@ Xcode compiles the project and runs the test. You should see all diamonds green,
 
 ## Activity - First unit tests
 
-[Write 2 unit tests]()
+[Write 2 unit tests](https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Lessons/03-Unit-Testing/assignments/activity.md)
 
-[list of Test Assertions](https://developer.apple.com/documentation/xctest)
+[List of Test Assertions](https://developer.apple.com/documentation/xctest)
 
 <!-- > -->
 
@@ -176,7 +176,6 @@ TodoTests.defaultTestSuite.run()
 
 ## Additional Resources
 
-1. [Slides](https://docs.google.com/presentation/d/1h519-4J6P5sj9xbunEg9Il-LR4MlUgbbXEHFqV_40ss/edit?usp=sharing)
 1. [Unit testing tutorial](https://www.raywenderlich.com/709-ios-unit-testing-and-ui-testing-tutorial)
 1. [XCTest in Apple's Docs](https://developer.apple.com/documentation/xctest)
 1. [Book resource (not free)](https://roadfiresoftware.com/unit-testing-in-swift/)
