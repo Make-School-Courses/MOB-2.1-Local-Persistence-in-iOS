@@ -148,11 +148,12 @@ What happens here?
 15. Now just fetch the data when we open the app.
 
 ```swift
-//2
- let fetchRequest =  NSFetchRequest<NSManagedObject>(entityName: "Person")
+let fetchRequest =  NSFetchRequest<NSManagedObject>(entityName: "Person")
+guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
 
- //3
-  do {
+let managedContext = appDelegate.persistentContainer.viewContext
+
+do {
     people = try managedContext.fetch(fetchRequest)
    } catch let error as NSError {
        print("Could not fetch. \(error), \(error.userInfo)")
