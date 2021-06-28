@@ -45,7 +45,7 @@ Represents each object type in the data model, along with its properties and rel
 - **NSPersistentStore**
 Reads and writes data to the storage we want. Core Data gives us four types of NSPersistentStore: three atomic and one non-atomic.
 
-<!-- > -->
+<!--
 
 1. **NSQLiteStoreType** - SQLite database. (the only non-atomic store type, that comes ready to use). Lightweight & efficient = used by default.
 
@@ -55,7 +55,7 @@ Reads and writes data to the storage we want. Core Data gives us four types of N
 
 1. **NSInMemoryStoreType** - Not persistent, only helpful for testing and maybe caching.
 
-<!-- > -->
+-->
 
 - **NSPersistentStoreCoordinator**
 Bridge between the managed object model and persistent store.

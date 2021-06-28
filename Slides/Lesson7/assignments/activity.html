@@ -73,7 +73,7 @@ Notice everything is private except for the `NSManagedObjectContext`.
 
 ## Step 3: Save method
 
-We need a method to save the context. If we don't call it, data in the store won't change.
+We need a method to save the context. If we don't call it, data in the store won't change. Add this inside the CoreDataStack class.
 
 ```swift
   func saveContext () {
@@ -93,6 +93,10 @@ Now we can move on to use the stack in the main view controller.
 
 Go to `ViewController.swift` and import Core Data. then add a property for the managed object context. Call it `managedContext`.
 
+```swift
+var managedContext : NSManagedObjectContext!
+
+```
 Now go to the app delegate and import Core Data. Add a property to hold the stack.
 
 ```swift
@@ -114,13 +118,11 @@ guard let navController = window?.rootViewController as? UINavigationController,
 viewController.managedContext = coreDataStack.managedContext
 ```
 
-We want to make sure the app will save any changes if it goes to the background or if it gets terminated. For this, add the `applicationDidenterBackground` and `applicationWillTerminate` methods and call the method `saveContext` in our stack property.
+We want to make sure the app will save any changes if it goes to the background or if it gets terminated. For this, find the `applicationDidenterBackground` and `applicationWillTerminate` methods and call the method `saveContext` in our stack property.
 
 We're done. Now we need to model data. 😀
 
-Make sure you check the box that says "Ordered" before moving on. 
-
-Before going further, **change the roles** of who is coding and who guiding the activity.
+Make sure you check the box that says "Ordered" before moving on.
 
 ## Step 5: Creating the models
 
@@ -141,10 +143,11 @@ Change the view to graph (right option from lower right segmented control). This
 
 All relationships are by default to-one, meaning you can only track a date once. But we need this to be more times, or else your plant will die. So change the relationship in the Data Model Inspector and change `Type` to `To Many`. See how this changes in the chart.
 
+At this point, make sure to also check the box that says Arrangement: Ordered.
+
+Select the relationship in the Plant entity and set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropriate one. Ask the instructor if you are unsure which one to use.
+
 Now select the WaterDate entity and create an inverse relationship to Plant. Set `plant` as destination and `waterDates` as inverse. Again see how this changes in the chart.
-
-Also set the delete rule of the relationship. Read more about [deletion rules here](https://cocoacasts.com/core-data-relationships-and-delete-rules) and choose the appropiate one. Ask the instructor if you are unsure which one to use.
-
 
 **Q: Why are we leaving this relationship as to-one?**
 <!-- A plant can be watered many times but each water date belongs to a plant -->
@@ -164,7 +167,7 @@ Open the `Plant+CoreDataProperties.swift` and notice how the relationship is mod
 
 Open the `WaterDate+CoreDataProperties.swift` and notice how the inverse relationship is modeled.
 
-Everything is ready for the app to implement Core Data.
+Everything is ready for the app to save entities with Core Data.
 
 ## Step 8: Everything put together
 
@@ -203,23 +206,23 @@ Finally modify the add method to create new Dates accordingly.
 
 ```swift
 //new water date entity
-  let waterDate = WaterDate(context: managedContext)
-  waterDate.date = NSDate()
+let waterDate = WaterDate(context: managedContext)
+waterDate.date = NSDate()
 
 //add it to the Plant's dates set
 
-  if let plant = mainPlant, let dates = plant.waterDates?.mutableCopy() as? NSMutableOrderedSet {
-    dates.add(waterDate)
-    plant.waterDates = dates
-  }
+if let plant = mainPlant, let dates = plant.waterDates?.mutableCopy() as? NSMutableOrderedSet {
+  dates.add(waterDate)
+  plant.waterDates = dates
+}
 
 //save the managed object context  
-  do {
-    try managedContext.save()    
-  } catch let error as NSError {
-    print("Error: \(error), description: \(error.userInfo)")
-  }
-
+do {
+  try managedContext.save()    
+} catch let error as NSError {
+  print("Error: \(error), description: \(error.userInfo)")
+}
+tableView.reloadData()
 ```
 
 Try it out, check to see if you got persistence to work.

@@ -26,9 +26,9 @@ Students by the end of the course will be able to ...
 
 ## Lessons
 
-**Course Dates:** Monday, May 31 – Wednesday, July 28, 2021 (9 weeks)
+**Course Dates:** Monday, May 31 – Wednesday, July 14, 2021 (7 weeks)
 
-**Class Times:** Monday, Wednesday at 4:00pm–5:30pm (16 class sessions)
+**Class Times:** Monday, Wednesday at 4:00pm–5:30pm (12 class sessions)
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
@@ -41,16 +41,11 @@ Students by the end of the course will be able to ...
 |  6 |  Mon, June 21        | [Unit Testing]                               |
 |  7 |  Wed, June 23        | [CD - Introduction]                          |
 |  8 |  Mon, June 28        | [CD - Relationships]                         |
-|  9 |  Wed, June 30        | [CD - Fetching Data]                         |
+|  9 |  Wed, June 30        | [CD - Fetching Data] + Project Intro         |
 | -  |  Mon, July 5         | **No Class - Independence Day Observed**     |
 | 10 |  Wed, July 7         | [CD - Multiple contexts]                     |
 | 11 |  Mon, July 12        | Project Lab                                  |
 | 12 |  Wed, July 14        | [Realm]                                      |
-| 13 |  Mon, July 19        | [Core Data Notifications]                    |
-| 14 |  Wed, July 21        | Project Lab                                  |
-| 15 |  Mon, July 26        | Final Exam                                   |
-| 16 |  Wed, July 28        | Presentations                                |
-
 
 [Introduction to Persistence Technologies]: Lessons/Lesson1/README.md
 [Plist]: Lessons/Lesson2/README.md
@@ -83,8 +78,9 @@ Students by the end of the course will be able to ...
 | [Food Rating App]    | Activity |        |    | Github link in Gradescope  |
 | [CoreData Components]| Activity |        |    | Github link in Gradescope  |
 | [Friends App]        | Activity |        |    | Github link in Gradescope  |
-| [Core Data]          | Tutorial |  Jun 21      |  Jul 5  | Github link in Gradescope  |
-| [Course Project]     | Project  |  Jun 23      |  Jul 16  | Github link in Gradescope  |
+| [Plants App]         | Activity |        |    | Github link in Gradescope  |
+| [World Cup App]      | Activity |        |    | Github link in Gradescope  |
+| [Course Project]     | Project  |  Jun 30      |  Jul 16  | Github link in Gradescope  |
 
 [Course Project]: https://github.com/Make-School-Courses/MOB-2.1-Local-Persistence-in-iOS/blob/master/Assignments/Taskee/specifications.md
 [Core Data]: https://www.makeschool.com/academy/track/core-data-uy
