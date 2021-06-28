@@ -103,7 +103,6 @@ We want to make sure the app will save any changes if it goes to the background 
 
 We're done. Now we need to model data. 😀
 
-Make sure you check the box that says "Ordered" before moving on.
 
 ## Step 5: Creating the models
 
