@@ -187,7 +187,7 @@ Finally modify the add method to create new Dates accordingly.
 ```swift
 //new water date entity
 let waterDate = WaterDate(context: managedContext)
-waterDate.date = NSDate()
+waterDate.date = NSDate() as Date
 
 //add it to the Plant's dates set
 
