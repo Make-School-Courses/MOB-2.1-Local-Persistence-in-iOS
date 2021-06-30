@@ -95,9 +95,10 @@ let pred = NSPredicate(format: "name == %@", "Eliel")
 
 <!-- > -->
 
-## Full Cheatsheet of Predicates
+## Useful Cheatsheets
 
-[Realm Predicate Cheatsheet](https://academy.realm.io/posts/nspredicate-cheatsheet/)
+[Predicate Cheatsheet](https://nspredicate.xyz)
+[CoreData Cheatsheet](https://nspredicate.xyz/coredata)
 
 <!-- > -->
 
